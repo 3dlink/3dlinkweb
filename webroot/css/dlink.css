@@ -1198,6 +1198,8 @@ body{
   }
   .offer-table {
     max-width: 700px;
+    padding-left: 4px;
+    padding-right: 4px;
   }
   .services-square {
     font-size: 15px;
@@ -1264,8 +1266,9 @@ body{
 }
 
 @media(max-width: 890px){
-  .contact-icons{
-    margin-left: 10vw!important;  
+  .contact-icons {
+    margin-left: 7vw!important;
+    width: 80%;
   }
   .formulario{
     padding-left:40px;
@@ -1420,6 +1423,8 @@ body{
   }
   .insp-quote {
     font-size: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -1652,5 +1657,11 @@ body{
   .contact-icons {
     margin-left: 12vw!important;
     width: 75%;
+  }
+
+  .copyright {
+    width: 33%;
+    font-size: 14px;
+    margin-top: 0px;
   }  
 }
