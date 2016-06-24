@@ -1448,7 +1448,8 @@ body{
 
   .contact-punch {
     top: 30px;
-    left: 360px;
+    right: 0;
+    left: inherit;
     position: absolute;
   }
 
@@ -1512,11 +1513,11 @@ body{
   }
 }
 
-@media(max-width: 550px){
+/*@media(max-width: 550px){
   body{
     overflow-x:hidden;
   }
-}
+}*/
 
 @media(max-width: 530px){
   .team-carousel .owl-next {
@@ -1537,6 +1538,12 @@ body{
   }
 }
 
+@media(max-width: 515px){
+  .offer-title {
+    margin-left: 0px !important;
+  }
+}
+
 @media(max-width: 500px){
   .contact-text-back {
     top: -90px;
@@ -1545,10 +1552,6 @@ body{
   }
   .contact-text-back img {
     width: 420px;
-  }
-  .contact-punch {
-    top: 30px;
-    left: 340px;
   }
   .offer-title {
     font-size: 10vw;
@@ -1564,16 +1567,18 @@ body{
 .offer-table {
   margin-bottom: 0;
 }
+  .contact-punch {
+    top: 30px;
+    right: 0;
+    position: absolute;
+    left: inherit;
+  }
 
 }
 
 @media(max-width: 480px){
   .contact-text-back img {
     width: 360px;
-  }
-  .contact-punch {
-    top: 30px;
-    left: 300px;
   }
 
   .team-img{
@@ -1587,11 +1592,17 @@ body{
     height: 120px;
     margin: 2px 1px;
   }
-}
-
-@media(max-width: 440px){
   .contact-icons{
     margin-left: 15vw!important;  
+  }
+  .contact-text-back {
+    top: -90px;
+    left: 0;
+    position: absolute;
+    width: 80%;
+  }
+  .contact-text-back img{
+    width: 100%;
   }
 }
 
@@ -1606,20 +1617,18 @@ body{
   .services-square {
     font-size: 16px;
   }
-  .contact-text-back {
+ /* .contact-text-back {
     top: -90px;
     left: 269px;
     position: absolute;
-  }
-  .contact-text-back img {
+  }*/
+  /*.contact-text-back img {
     width: 300%;
+  }*/
+
+  .slick-cloned{
+    display: none;
   }
-  .contact-punch {
-    top: 30px;
-    left: -11px;
-    position: absolute;
-  }
-  
 }
 
 @media(max-width: 400px){
@@ -1635,12 +1644,7 @@ body{
   }
   .contact-text-back {
     left: 0px;
-    width: 25%;
-  }
-  .contact-punch {
-    top: 30px;
-    left: 210px;
-    position: absolute;
+    width: 70%;
   }
   .work-selector {
     margin-left: 15px;
