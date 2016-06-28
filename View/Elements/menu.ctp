@@ -88,6 +88,20 @@
                 <li><a href="<?php echo $this->webroot.'quotes'; ?>">Todos</a></li>
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Personal<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo $this->webroot.'personals/add'; ?>">Nuevo</a></li>
+                <li><a href="<?php echo $this->webroot.'personals'; ?>">Todos</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clientes<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo $this->webroot.'clients/add'; ?>">Nuevo</a></li>
+                <li><a href="<?php echo $this->webroot.'clients'; ?>">Todos</a></li>
+              </ul>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
