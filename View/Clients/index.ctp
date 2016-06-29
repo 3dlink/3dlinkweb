@@ -49,6 +49,8 @@
 	  	                      </a>
 	  	                      <a href="<?php echo $this->webroot;?>clients/delete/<?php echo $item['Client']['id'];?>" onclick="if (confirm(&quot;¿Seguro que desea borrar el Client?&quot;)) { return true; } return false;" class="menuTable">
 	  	                        <span class="glyphicon glyphicon-remove"></span></a>
+                            <a href="<?php echo $this->webroot;?>clients/view/<?php echo $item['Client']['id'];?>" title="Ver Detalles" class="menuTable">
+                              <span class="glyphicon glyphicon-eye-open"></span></a>
 	                        <?php } ?>
 		                    </div>                  
 		                </td>

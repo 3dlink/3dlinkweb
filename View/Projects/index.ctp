@@ -1,68 +1,73 @@
-<div class="projects index">
-	<h2><?php echo __('Projects'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<thead>
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<th><?php echo $this->Paginator->sort('description'); ?></th>
-			<th><?php echo $this->Paginator->sort('init_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('end_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('asana_url'); ?></th>
-			<th><?php echo $this->Paginator->sort('price'); ?></th>
-			<th><?php echo $this->Paginator->sort('status'); ?></th>
-			<th><?php echo $this->Paginator->sort('personal_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('client_id'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	</thead>
-	<tbody>
-	<?php foreach ($projects as $project): ?>
-	<tr>
-		<td><?php echo h($project['Project']['id']); ?>&nbsp;</td>
-		<td><?php echo h($project['Project']['name']); ?>&nbsp;</td>
-		<td><?php echo h($project['Project']['description']); ?>&nbsp;</td>
-		<td><?php echo h($project['Project']['init_date']); ?>&nbsp;</td>
-		<td><?php echo h($project['Project']['end_date']); ?>&nbsp;</td>
-		<td><?php echo h($project['Project']['asana_url']); ?>&nbsp;</td>
-		<td><?php echo h($project['Project']['price']); ?>&nbsp;</td>
-		<td><?php echo h($project['Project']['status']); ?>&nbsp;</td>
-		<td>
-			<?php echo $this->Html->link($project['Personal']['name'], array('controller' => 'personals', 'action' => 'view', $project['Personal']['id'])); ?>
-		</td>
-		<td>
-			<?php echo $this->Html->link($project['Client']['id'], array('controller' => 'clients', 'action' => 'view', $project['Client']['id'])); ?>
-		</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $project['Project']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $project['Project']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $project['Project']['id']), array(), __('Are you sure you want to delete # %s?', $project['Project']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</tbody>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Project'), array('action' => 'add')); ?></li>
-		<li><?php echo $this->Html->link(__('List Personals'), array('controller' => 'personals', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Personal'), array('controller' => 'personals', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Clients'), array('controller' => 'clients', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Client'), array('controller' => 'clients', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
+<div class="Project index">
+ <!--List  Open-->
+      <article class="card shadow-1">
+          <fieldset>
+            <legend>Projects</legend>
+            <!--Search Open-->
+            <div class="margenesHorizontales">
+              <div class="col-md-6">
+                <div class=" margenesVerticales">
+	              	<form class="right" role="search" method="get">
+	                 <div class="input-group">
+	                    <!-- <input type="text" class="form-control" placeholder="Buscar projects..." name="filtro">
+	                    <span class="input-group-btn">
+	                      <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+	                    </span> -->
+	                  </div>  
+									</form>            
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class=" margenesVerticales" style="text-align: right;">
+                  <buttom onclick="window.location.href=WEBROOT+'projects/add';" class="btn btn-primary">Add Project</buttom>
+                </div>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <!--Search Close-->
+            <div class="margenesHorizontales">
+              <table class="table table-striped">
+                <tr>
+                  <th>Nombre</th>
+                  <th>Cliente</th>
+                  <th>Tipo</th>
+                  <th>Lider de Proyecto</th>
+                  <th>Status</th>
+                  <th></th>
+                </th>
+                
+                <?php foreach ($projects as $item): ?>
+					<tr>
+	                    <td><?php echo h($item['Project']['name']); ?>&nbsp;</td>
+          						<td><?php echo h($item['Client']['company_name']); ?>&nbsp;</td>
+                      <td><?php echo h($item['Project']['type']); ?>&nbsp;</td>
+          						<td><?php echo h($item['Personal']['name']); ?>&nbsp;</td>
+          						<td><?php echo h($item['Project']['status']); ?>&nbsp;</td>
+		                <td>
+		                    <div style="display: block; width: 80px; margin: 0 auto;">
+	                        <?php if($this->UserAuth->getGroupId() == 1){ ?>
+	  	                      <a href="<?php echo $this->webroot;?>projects/edit/<?php echo $item['Project']['id'];?>" title="Editar Item" class="menuTable">
+	  	                        <span class="glyphicon glyphicon-pencil"></span>
+	  	                      </a>
+	  	                      <a href="<?php echo $this->webroot;?>projects/delete/<?php echo $item['Project']['id'];?>" onclick="if (confirm(&quot;¿Seguro que desea borrar el Project?&quot;)) { return true; } return false;" class="menuTable">
+	  	                        <span class="glyphicon glyphicon-remove"></span></a>
+                            <a href="<?php echo $this->webroot;?>projects/view/<?php echo $item['Project']['id'];?>" title="Ver Detalles" class="menuTable">
+                              <span class="glyphicon glyphicon-eye-open"></span></a>
+	                        <?php } ?>
+		                    </div>                  
+		                </td>
+					</tr>
+								<?php endforeach; ?>
+              </table>
+            </div> 
+          </fieldset>          
+      </article>
+<ul class="pagination">
+<?php
+  echo $this->Paginator->prev('&laquo;', array('tag' => 'li', 'escape' => false), '<a href="#">&laquo;</a>', array('class' => 'prev disabled', 'tag' => 'li', 'escape' => false));
+  echo $this->Paginator->numbers(array('separator' => '', 'tag' => 'li', 'currentLink' => true, 'currentClass' => 'active', 'currentTag' => 'a'));
+  echo $this->Paginator->next('&raquo;', array('tag' => 'li', 'escape' => false), '<a href="#">&raquo;</a>', array('class' => 'prev disabled', 'tag' => 'li', 'escape' => false));
+?>
+</ul>
+
+</div>	

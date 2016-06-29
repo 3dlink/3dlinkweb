@@ -8,6 +8,9 @@ App::uses('AppController', 'Controller');
  */
 class ProjectsController extends AppController {
 
+
+	public $uses = array('Project','Personal');
+
 /**
  * Components
  *
@@ -21,6 +24,7 @@ class ProjectsController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout="admin";
 		$this->Project->recursive = 0;
 		$this->set('projects', $this->Paginator->paginate());
 	}
@@ -57,9 +61,11 @@ class ProjectsController extends AppController {
 				$this->Session->setFlash(__('The project could not be saved. Please, try again.'));
 			}
 		}
+		$lideres = $this->Personal->find('list',array('conditions'=>array('position'=>'Lider de Proyecto')));
 		$personals = $this->Project->Personal->find('list');
 		$clients = $this->Project->Client->find('list');
-		$this->set(compact('personals', 'clients'));
+		$this->set(compact('personals', 'clients','lideres'));
+
 	}
 
 /**
@@ -85,9 +91,10 @@ class ProjectsController extends AppController {
 			$options = array('conditions' => array('Project.' . $this->Project->primaryKey => $id));
 			$this->request->data = $this->Project->find('first', $options);
 		}
+		$lideres = $this->Personal->find('list',array('conditions'=>array('position'=>'Lider de Proyecto')));
 		$personals = $this->Project->Personal->find('list');
 		$clients = $this->Project->Client->find('list');
-		$this->set(compact('personals', 'clients'));
+		$this->set(compact('personals', 'clients','lideres'));
 	}
 
 /**

@@ -1,96 +1,59 @@
-<div class="clients view">
-<h2><?php echo __('Client'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($client['Client']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Company Name'); ?></dt>
-		<dd>
-			<?php echo h($client['Client']['company_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Country'); ?></dt>
-		<dd>
-			<?php echo h($client['Client']['country']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Phone'); ?></dt>
-		<dd>
-			<?php echo h($client['Client']['phone']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Email'); ?></dt>
-		<dd>
-			<?php echo h($client['Client']['email']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Type'); ?></dt>
-		<dd>
-			<?php echo h($client['Client']['type']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Observation'); ?></dt>
-		<dd>
-			<?php echo h($client['Client']['observation']); ?>
-			&nbsp;
-		</dd>
-	</dl>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Client'), array('action' => 'edit', $client['Client']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Client'), array('action' => 'delete', $client['Client']['id']), array(), __('Are you sure you want to delete # %s?', $client['Client']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Clients'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Client'), array('action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Projects'), array('controller' => 'projects', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Project'), array('controller' => 'projects', 'action' => 'add')); ?> </li>
-	</ul>
-</div>
-<div class="related">
-	<h3><?php echo __('Related Projects'); ?></h3>
-	<?php if (!empty($client['Project'])): ?>
-	<table cellpadding = "0" cellspacing = "0">
-	<tr>
-		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Name'); ?></th>
-		<th><?php echo __('Description'); ?></th>
-		<th><?php echo __('Init Date'); ?></th>
-		<th><?php echo __('End Date'); ?></th>
-		<th><?php echo __('Asana Url'); ?></th>
-		<th><?php echo __('Price'); ?></th>
-		<th><?php echo __('Status'); ?></th>
-		<th><?php echo __('Personal Id'); ?></th>
-		<th><?php echo __('Client Id'); ?></th>
-		<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($client['Project'] as $project): ?>
-		<tr>
-			<td><?php echo $project['id']; ?></td>
-			<td><?php echo $project['name']; ?></td>
-			<td><?php echo $project['description']; ?></td>
-			<td><?php echo $project['init_date']; ?></td>
-			<td><?php echo $project['end_date']; ?></td>
-			<td><?php echo $project['asana_url']; ?></td>
-			<td><?php echo $project['price']; ?></td>
-			<td><?php echo $project['status']; ?></td>
-			<td><?php echo $project['personal_id']; ?></td>
-			<td><?php echo $project['client_id']; ?></td>
-			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'projects', 'action' => 'view', $project['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'projects', 'action' => 'edit', $project['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'projects', 'action' => 'delete', $project['id']), array(), __('Are you sure you want to delete # %s?', $project['id'])); ?>
-			</td>
-		</tr>
-	<?php endforeach; ?>
-	</table>
-<?php endif; ?>
-
-	<div class="actions">
-		<ul>
-			<li><?php echo $this->Html->link(__('New Project'), array('controller' => 'projects', 'action' => 'add')); ?> </li>
-		</ul>
-	</div>
-</div>
+<article class="card shadow-1">
+  <fieldset>
+      <legend>Cargo<?php echo ': '; if (!empty($client)) { echo '<small>'.$client['Client']['company_name'].'</small>'; }?></legend>
+      <div class="margenesHorizontales">
+      	<div>
+      		<div class="col-md-6">
+      			<div class="form-group">
+				<label>Nombre del Cliente: </label>
+                <?php echo h($client['Client']['company_name'])?>
+			</div>
+      		</div>
+      		<div class="col-md-6">
+      			<div class="form-group">
+				<label>Pais:</label>
+                <?php echo h($client['Client']['country'])?>
+                </select>
+			</div>
+      		</div>
+      		<div style="clear:both;"></div>
+      	</div>           	
+      	<div>
+      		<div class="col-md-6">
+      			<div class="form-group">
+                <label>Telefono:</label>
+                <?php echo h($client['Client']['phone'])?>
+			</div>
+      		</div>
+      		<div class="col-md-6">
+      			<div class="form-group">
+				<label>Email:</label>
+                <?php echo h($client['Client']['email'])?>
+			</div>
+      		</div>
+      		<div style="clear:both;"></div>
+      	</div>
+      	<div>
+      		<div class="col-md-6">
+      			<div class="form-group">
+                <label>Tipo de Cliente:</label>
+                <?php echo h($client['Client']['type'])?>
+			      </div>
+      		</div>
+      		<div style="clear:both;"></div>
+      	</div>
+      	<div>
+      		<div class="col-md-12">
+      			<div class="form-group">
+                <label>Observaciones:</label>
+                <p><?php echo nl2br($client['Client']['observation'])?></p>
+                
+			      </div>
+      		</div>
+      		<div class="margenesVerticales" style="text-align:right;">
+	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'clients';" title="regresar" value = "Atr&aacute;s" style="width: 79px;"> 	  
+				  </div>
+      	</div>    
+</div>          
+    </fieldset>  
+</article>

@@ -18,11 +18,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
     echo $this->Html->css('admin');
     echo $this->Html->css('dropzone');
     echo $this->Html->css('main');
+    echo $this->Html->css('bootstrap-datetimepicker.min');
+
     echo $this->Html->script('jquery-2.2.0.min');
     echo $this->Html->script('jquery.mask.min');
     echo $this->Html->script('bootstrap.min');
     echo $this->Html->script('dropzone');
-
+    echo $this->Html->script('moment.js');
+    echo $this->Html->script('bootstrap-datetimepicker.min');
+    
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
     echo $this->fetch('script');

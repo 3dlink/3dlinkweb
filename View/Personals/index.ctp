@@ -36,7 +36,7 @@
 
                 <?php foreach ($personals as $item): ?>
 					<tr>
-	                    <td><?php echo h($item['Personal']['name']); ?>&nbsp;</td>
+	           <td><?php echo h($item['Personal']['name']); ?>&nbsp;</td>
 						<td><?php echo h($item['Personal']['ci']); ?>&nbsp;</td>
 						<td><?php echo h($item['Personal']['position']); ?>&nbsp;</td>
 		                <td>
@@ -47,6 +47,8 @@
 	  	                      </a>
 	  	                      <a href="<?php echo $this->webroot;?>personals/delete/<?php echo $item['Personal']['id'];?>" onclick="if (confirm(&quot;¿Seguro que desea borrar el Personal?&quot;)) { return true; } return false;" class="menuTable">
 	  	                        <span class="glyphicon glyphicon-remove"></span></a>
+                            <a href="<?php echo $this->webroot;?>personals/view/<?php echo $item['Personal']['id'];?>" title="Ver Detalles" class="menuTable">
+                              <span class="glyphicon glyphicon-eye-open"></span></a>
 	                        <?php } ?>
 		                    </div>                  
 		                </td>
