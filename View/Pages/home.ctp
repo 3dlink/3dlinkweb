@@ -9,9 +9,8 @@
         <img class="back-about-img" src="<?php echo $this->webroot;?>img/About-Us.png">
     </div>
     <div class="about-descrip">
-        <p>Diego
-          The 3D Link team is made up of young professionals, each and every one complementing an effective team for the development of technologies. We are keeping our minds open for challenges in order to generate new ideas in this digital era with its growing potentiality. All members have formed their skills at prestigious universities with recognitions throughout their studies and research projects. 
-          puto el que lo lea
+        <p>
+          The 3D Link team is made up of young professionals, each and every one complementing an effective team for the development of technologies. We are keeping our minds open for challenges in order to generate new ideas in this digital era with its growing potentiality. All members have formed their skills at prestigious universities with recognitions throughout their studies and research projects.
         </p>
     </div>
 

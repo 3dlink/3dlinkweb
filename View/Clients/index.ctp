@@ -28,7 +28,7 @@
             <div class="margenesHorizontales">
               <table class="table table-striped">
                 <tr>
-                  <th>Nombre</th>
+                  <th>Nombre hola</th>
                   <th>Pais</th>
                   <th>Tipo</th>
                   <th>Email</th>
