@@ -35,7 +35,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Quote','Team','Work');
+	public $uses = array('Quote','Team','Work','Ingreso','Egreso');
 
 /**
  * Displays a view
@@ -76,5 +76,17 @@ class PagesController extends AppController {
 			}
 			throw new NotFoundException();
 		}
+	}
+
+	public function balance(){
+
+		$this->layout="admin";
+		$totaling = $this->Ingreso->find('first', array('fields' => array('sum(Ingreso.monto) AS itotal')));
+		$totaling = $totaling[0]['itotal'];
+		$this->set('totali', $totaling);
+		$totalegr = $this->Egreso->find('first', array('fields' => array('sum(Egreso.monto) AS etotal')));
+		$totalegr = $totalegr[0]['etotal'];
+		$this->set('totale', $totalegr);
+		$this->set('balance',($totaling - $totalegr));
 	}
 }

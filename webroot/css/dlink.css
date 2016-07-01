@@ -168,6 +168,14 @@ body{
   background: white;
 }
 
+.type-selector-ow{
+  border: 2px solid #00deed;
+  padding: 5px 15px;
+  border-radius: 6px;
+  color: #00dedd;
+  background: white;
+}
+
 .left{
   float:left;
 }
@@ -510,39 +518,53 @@ body{
 }
 
 .development-sel{
+  border: 2px solid #00deed;
+  padding: 5px 15px;
+  border-radius: 6px;
+  color: #00dedd;
+  background: white;
   float: left;
   font-family: 'Exo2-ThinItalic';
-  width: 48%;
-  text-align: right;
+  width: 46%;
+  text-align: center;
   font-size: 26px;
   cursor: pointer;
-  padding-right: 40px;
+  *padding-right: 40px;
   margin-top: 11px;
 }
 
 .design-sel{
+  border: 2px solid #00deed;
+  padding: 5px 15px;
+  border-radius: 6px;
+  color: #00dedd;
+  background: white;
   float: left;
   font-family: 'Exo2-ThinItalic';
-  width: 48%;
-  text-align: left;
+  width: 46%;
+  text-align: center;
   font-size: 26px;
   margin-left: 10px;
   cursor: pointer;
-  padding-left: 40px;
+  *padding-left: 40px;
   margin-top: 11px;
 }
 
 .vert-separator {
-  border-right: 5px solid #1bd8e7;
-  height: 60px;
+  background-color: #1bd8e7;
+  height: 70px;
   float: left;
-  margin-left: 12px;
+  margin-left: 15px;
+  margin-right: 5px;
+  width: 5px;
 }
 
 .development-sel:hover,.design-sel:hover,.letter_active{
-  font-family: 'Exo2-ExtraBoldCondensed';
-  font-size: 30px;
-  margin-top: 7px;
+  *font-family: 'Exo2-ExtraBoldCondensed';
+  *font-size: 30px;
+  *margin-top: 7px;
+  background-color: #00deed;
+  color:#fff;
 }
 
 .sel-title{
@@ -1259,10 +1281,14 @@ body{
     font-size: 25px;
     margin-left: 0px;
   }
-  .development-sel:hover, .design-sel:hover {
+  .vert-separator {
+    margin-left: 15px;
+    margin-right: 12px;
+  }
+  /*.development-sel:hover, .design-sel:hover {
     font-size: 30px;
     margin-top: -5px;
-  } 
+  } */
 }
 
 @media(max-width: 890px){
@@ -1477,10 +1503,10 @@ body{
     font-size: 17px;
     margin-left: 0px;
   }
-  .development-sel:hover, .design-sel:hover {
+  /*.development-sel:hover, .design-sel:hover {
     font-size: 21px;
     margin-top: 0px;
-  }
+  }*/
 
   
   .offer-text-back{

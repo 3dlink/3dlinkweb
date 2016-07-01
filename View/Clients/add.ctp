@@ -35,7 +35,7 @@
 	      		<div class="col-md-6">
 			        <div class="form-group">
 			          <label>Tipo</label>
-			          <?php echo $this->Form->input('type',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Tipo','options'=>array('0'=>'Seleccionar','Diseño'=>'Diseño','Desarrollo'=>'Desarrollo'), 'required'=>true)); ?>
+			          <?php echo $this->Form->input('type',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Tipo','options'=>array('0'=>'Seleccionar','Persona'=>'Persona','Empresa'=>'Empresa'), 'required'=>true)); ?>
 			        </div>
 	      		</div>
 

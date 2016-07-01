@@ -109,6 +109,26 @@
                 <li><a href="<?php echo $this->webroot.'projects'; ?>">Todos</a></li>
               </ul>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ingresos<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo $this->webroot.'ingresos/add'; ?>">Nuevo</a></li>
+                <li><a href="<?php echo $this->webroot.'ingresos'; ?>">Todos</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Egresos<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo $this->webroot.'egresos/add'; ?>">Nuevo</a></li>
+                <li><a href="<?php echo $this->webroot.'egresos'; ?>">Todos</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Balance<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="<?php echo $this->webroot.'/balance'; ?>">Ver Balance</a></li>
+              </ul>
+            </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
