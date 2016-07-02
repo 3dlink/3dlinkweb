@@ -51,8 +51,8 @@
     </div>
     <div class="work-selector">
         <div class="development-sel">DEVELOPMENT</div>
-        <div class="vert-separator"></div>
         <div class="design-sel">DESIGN</div>
+        <div class="vert-separator"></div>
         <div class="clear"></div>    
     </div>
 
