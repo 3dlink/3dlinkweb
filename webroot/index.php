@@ -63,7 +63,7 @@ if (!defined('APP_DIR')) {
  */
 //define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
 
-define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'republico' .DS . 'cakephp'. DS . 'lib');
+define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . '3dlinkweb' .DS . 'cakephp'. DS . 'lib');
 /**
  * Editing below this line should NOT be necessary.
  * Change at your own risk.

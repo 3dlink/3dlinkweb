@@ -40,6 +40,12 @@
                 <?php echo h($client['Client']['type'])?>
 			      </div>
       		</div>
+          <div class="col-md-6">
+            <div class="form-group">
+                <label>Persona de contacto:</label>
+                <?php echo h($client['Client']['manager'])?>
+            </div>
+          </div>
       		<div style="clear:both;"></div>
       	</div>
       	<div>

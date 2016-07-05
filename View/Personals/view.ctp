@@ -16,6 +16,32 @@
                 </select>
 			</div>
       		</div>
+          <div class="col-md-6">
+            <div class="form-group">
+        <label>Rif: </label>
+                <?php echo h($personal['Personal']['rif'])?>
+      </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+        <label>Telefono:</label>
+                <?php echo h($personal['Personal']['phone'])?>
+                </select>
+      </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+        <label>Email Corporativo: </label>
+                <?php echo h($personal['Personal']['email_company'])?>
+      </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+        <label>Email Personal:</label>
+                <?php echo h($personal['Personal']['email_personal'])?>
+                </select>
+      </div>
+          </div>
       		<div style="clear:both;"></div>
       	</div>           	
       	<div>

@@ -21,7 +21,7 @@
 				<div class="col-md-6">
 			        <div class="form-group">
 			          <label>Tipo</label>
-			          <?php echo $this->Form->input('type',array('div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','options'=>array('0'=>'Seleccionar','Desarrollo'=>'Desarrollo','Diseño'=>'Diseño'), 'required'=>true)); ?>
+			          <?php echo $this->Form->input('type',array('div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','options'=>array('0'=>'Seleccionar','Desarrollo'=>'Desarrollo','Diseño'=>'Diseño','Desarrollo y Diseño'=>'Desarrollo y Diseño','Extra (SEO, Social Media, Marketing)'=>'Extra (SEO, Social Media, Marketing)','Todos los servicios'=>'Todos los servicios'), 'required'=>true)); ?>
 			        </div>
 				</div>
 
@@ -64,6 +64,13 @@
 			        <div class="form-group">
 			          <label>Precio</label>
 			          <?php echo $this->Form->input('price',array('div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','placeholder'=>'Agregue el precio del proyecto', 'required'=>true)); ?>
+			        </div>
+				</div>
+
+				<div class="col-md-6">
+			        <div class="form-group">
+			          <label>Moneda</label>
+			          <?php echo $this->Form->input('currency',array('div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','required'=>true,'options'=>array('0'=>'Seleccionar','VEF (Bs)'=>'VEF (Bs)','USD ($)'=>'USD ($)','EUR (€)'=>'EUR (€)','GBP (£)'=>'GBP (£)'))); ?>
 			        </div>
 				</div>
 

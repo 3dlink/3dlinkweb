@@ -18,6 +18,34 @@
 			        </div>
 	      		</div>
 
+				<div class="col-md-6">
+			        <div class="form-group">
+			          <label>Rif</label>
+			          <?php echo $this->Form->input('rif',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Rif')); ?>
+			        </div>
+	      		</div>
+
+	      		<div class="col-md-6">
+			        <div class="form-group">
+			          <label>Telefono</label>
+			          <?php echo $this->Form->input('phone',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Telefono')); ?>
+			        </div>
+	      		</div>
+
+				<div class="col-md-6">
+			        <div class="form-group">
+			          <label>Correo corporativo</label>
+			          <?php echo $this->Form->input('email_company',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Correo corporativo')); ?>
+			        </div>
+	      		</div>
+
+	      		<div class="col-md-6">
+			        <div class="form-group">
+			          <label>Correo personal</label>
+			          <?php echo $this->Form->input('email_personal',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Correo personal')); ?>
+			        </div>
+	      		</div>
+
 	      		<div class="col-md-6">
 			        <div class="form-group">
 			          <label>Numero de Cuenta</label>

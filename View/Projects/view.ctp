@@ -70,6 +70,12 @@
                 <?php echo h($project['Project']['price'])?>
 			</div>
       		</div>
+          <div class="col-md-6">
+            <div class="form-group">
+        <label>Moneda:</label>
+                <?php echo h($project['Project']['currency'])?>
+      </div>
+          </div>
       		<div style="clear:both;"></div>
       	</div>    	
       	<div>

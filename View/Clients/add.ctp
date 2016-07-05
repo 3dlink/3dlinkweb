@@ -34,6 +34,13 @@
 
 	      		<div class="col-md-6">
 			        <div class="form-group">
+			          <label>Persona de contacto</label>
+			          <?php echo $this->Form->input('manager',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Persona de contacto')); ?>
+			        </div>
+	      		</div>
+
+	      		<div class="col-md-6">
+			        <div class="form-group">
 			          <label>Tipo</label>
 			          <?php echo $this->Form->input('type',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Tipo','options'=>array('0'=>'Seleccionar','Persona'=>'Persona','Empresa'=>'Empresa'), 'required'=>true)); ?>
 			        </div>
