@@ -3,9 +3,12 @@
 App::uses('AppController', 'Controller');
 App::uses('CakeEmail', 'Network/Email');
 
+
 class StartController extends AppController{
 
 	public $components = array('Paginator', 'Session');
+	public $uses = array('Egreso','Ingreso');
+
 
 	public function sendMail(){
 		$this->autoRender = false;
@@ -94,6 +97,90 @@ class StartController extends AppController{
 		}
 	
 		return $str;
+	}
+
+
+	public function balance(){
+		
+		$this->layout="admin";
+		// $totaling = $this->Ingreso->find('first', array('fields' => array('sum(Ingreso.monto) AS itotal')));
+		// $totaling = $totaling[0]['itotal'];
+		// $this->set('totali', $totaling);
+		// $totalegr = $this->Egreso->find('first', array('fields' => array('sum(Egreso.monto) AS etotal')));
+		// $totalegr = $totalegr[0]['etotal'];
+		// $this->set('totale', $totalegr);
+		// $this->set('balance',($totaling - $totalegr));
+		//////////////////////////////////////////////EGRESOS
+		$search_eg = [];
+		$search_in = [];
+        if(isset($this->request->query['filtro']) && isset($this->request->query['year-fil'])){
+
+        	$mes_eg = $this->request->query['filtro'];
+        	$year_eg = $this->request->query['year-fil'];
+        	$mes_next_eg = $mes_eg+1;
+        	$mes_next_eg = '0'.$mes_next_eg;
+        	$day_eg = '01';
+
+        	if($mes_eg == '12'){ 
+        		$mes_next_eg= $mes_eg;
+        		$day_eg = '31';
+
+        	}
+        	$search_eg = $this->Egreso->find('all', array('conditions'=> array('egr_date >=' => $year_eg.'-'.$mes_eg.'-01', 'egr_date <=' => $year_eg.'-'.$mes_next_eg.'-'.$day_eg )));
+        	$total_eg = 0;
+        	foreach ($search_eg as $key => $value) {
+        		$total_eg += $value['Egreso']['monto'];
+        	}
+   			//$total = $this->Egreso->find('first', array('fields' => array('sum(Egreso.monto) AS ctotal')));
+			//$total = $total[0]['ctotal'];
+			// debug($total);
+			$this->set('total_eg', $total_eg);
+			$this->set('search_eg', $search_eg);
+
+			/////////////////////////////////////////INGRESOS
+
+			$mes_in = $this->request->query['filtro'];
+        	$year_in = $this->request->query['year-fil'];
+        	$mes_next_in = $mes_in+1;
+        	$mes_next_in = '0'.$mes_next_in;
+        	$day_in = '01';
+
+        	if($mes_in == '12'){ 
+        		$mes_next_in= $mes_in;
+        		$day_in = '31';
+
+        	}
+        	$search_in = $this->Ingreso->find('all', array('conditions'=> array('ing_date >=' => $year_in.'-'.$mes_in.'-01', 'ing_date <=' => $year_in.'-'.$mes_next_in.'-'.$day_in )));
+        	$total_in = 0;
+        	foreach ($search_in as $key => $value) {
+        		$total_in += $value['Ingreso']['monto'];
+        	}
+   			//$total = $this->Ingreso->find('first', array('fields' => array('sum(Ingreso.monto) AS ctotal')));
+			//$total = $total[0]['ctotal'];
+			// debug($total);
+			$this->set('total_in', $total_in);
+			$this->set('search_in', $search_in);
+
+
+
+			/////////////////////////////////////////////SUMATORIA TOTAL
+
+			$result = $total_in - $total_eg;
+			$this->set('result', $result);
+
+        }else{
+        	$this->set('search_eg', $search_eg);
+        	$this->set('egresos', array());
+			$this->set('total_eg', 0);
+
+			$this->set('search_in', $search_in);
+        	$this->set('ingresos', array());
+			$this->set('total_in', 0);
+
+			$this->set('result', 0);
+        }
+
+
 	}
 
 }

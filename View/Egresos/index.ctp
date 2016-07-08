@@ -3,23 +3,32 @@
 
 
 <form id="pipigrande" class="right" role="search" method="get">
-   <div class="input-group">
+   <div class="input-group" style="float:left;">
       <select id='filtro'  name="filtro">
-        <option value='1'>enero</option>
-        <option value='2'>febrero</option>
-        <option value='3'>marzo</option>
-        <option value='4'>abril</option>
-        <option value='5'>mayo</option>
-        <option value='6'>junio</option>
-        <option value='7'>julio</option>
-        <option value='8'>agosto</option>
-        <option value='9'>septiembre</option>
+        <option value=''>Seleccione mes</option>
+        <option value='01'>enero</option>
+        <option value='02'>febrero</option>
+        <option value='03'>marzo</option>
+        <option value='04'>abril</option>
+        <option value='05'>mayo</option>
+        <option value='06'>junio</option>
+        <option value='07'>julio</option>
+        <option value='08'>agosto</option>
+        <option value='09'>septiembre</option>
         <option value='10'>octubre</option>
         <option value='11'>noviembre</option>
         <option value='12'>diciembre</option>
       </select>
+    </div>
+    <div class="input-group" style="float:left;">
+      <select id='year-fil'  name="year-fil">
+        <option value=''>Seleccione año</option>
+        <option value='2016'>2016</option>
+      </select>
     </div>  
 </form>
+
+<div style="clear: both;"></div>
 
       <article class="card shadow-1">
           <fieldset>
@@ -53,7 +62,7 @@
                   <th></th>
                 </th>
                 
-                <?php foreach ($egresos as $item): ?>
+                <?php foreach ($search as $item): ?>
 					<tr>
 	                    <td><?php echo h($item['Egreso']['egr_date']); ?>&nbsp;</td>
           						<td><?php echo h($item['Egreso']['concepto']); ?>&nbsp;</td>
@@ -75,19 +84,23 @@
             </div> 
           </fieldset>          
       </article>
-<!-- <ul class="pagination">
+<ul class="pagination">
 <?php
   echo $this->Paginator->prev('&laquo;', array('tag' => 'li', 'escape' => false), '<a href="#">&laquo;</a>', array('class' => 'prev disabled', 'tag' => 'li', 'escape' => false));
   echo $this->Paginator->numbers(array('separator' => '', 'tag' => 'li', 'currentLink' => true, 'currentClass' => 'active', 'currentTag' => 'a'));
   echo $this->Paginator->next('&raquo;', array('tag' => 'li', 'escape' => false), '<a href="#">&raquo;</a>', array('class' => 'prev disabled', 'tag' => 'li', 'escape' => false));
 ?> </ul>
--->
+
 
 </div>	
 
 <script type="text/javascript">
 
-  $('#filtro').change(function(){
+  // $('#filtro').change(function(){
+  //   $('#pipigrande').submit();
+  // })
+
+  $('#year-fil').change(function(){
     $('#pipigrande').submit();
   })
 

@@ -133,7 +133,7 @@
                   </ul>
                 </li>
                 <li class="dropdown">
-                  <a tabindex="-1" href="<?php echo $this->webroot.'balance'; ?>">Balance</a>
+                  <a tabindex="-1" href="<?php echo $this->webroot.'start/balance'; ?>">Balance</a>
                 </li>
               </ul>
             </li>

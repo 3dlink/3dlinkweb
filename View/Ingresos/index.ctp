@@ -1,5 +1,35 @@
 <div class="Ingreso index">
  <!--List  Open-->
+
+
+ <form id="pipigrandote" class="right" role="search" method="get">
+   <div class="input-group" style="float:left;">
+      <select id='filtro'  name="filtro">
+        <option value=''>Seleccione mes</option>
+        <option value='01'>enero</option>
+        <option value='02'>febrero</option>
+        <option value='03'>marzo</option>
+        <option value='04'>abril</option>
+        <option value='05'>mayo</option>
+        <option value='06'>junio</option>
+        <option value='07'>julio</option>
+        <option value='08'>agosto</option>
+        <option value='09'>septiembre</option>
+        <option value='10'>octubre</option>
+        <option value='11'>noviembre</option>
+        <option value='12'>diciembre</option>
+      </select>
+    </div>
+    <div class="input-group" style="float:left;">
+      <select id='year-fil'  name="year-fil">
+        <option value=''>Seleccione año</option>
+        <option value='2016'>2016</option>
+      </select>
+    </div>  
+</form>
+
+<div style="clear: both;"></div>
+
       <article class="card shadow-1">
           <fieldset>
             <legend style="float:left;width:50%;">Ingresos</legend>
@@ -32,7 +62,7 @@
                   <th></th>
                 </th>
                 
-                <?php foreach ($ingresos as $item): ?>
+                <?php foreach ($search as $item): ?>
 					<tr>
 	                    <td><?php echo h($item['Ingreso']['ing_date']); ?>&nbsp;</td>
           						<td><?php echo h($item['Ingreso']['concepto']); ?>&nbsp;</td>
@@ -63,3 +93,17 @@
 </ul>
 
 </div>	
+
+<script type="text/javascript">
+
+  // $('#filtro').change(function(){
+  //   $('#pipigrande').submit();
+  // })
+
+  $('#year-fil').change(function(){
+    $('#pipigrandote').submit();
+  })
+
+                    
+
+</script>

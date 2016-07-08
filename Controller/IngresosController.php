@@ -20,15 +20,42 @@ class IngresosController extends AppController {
  *
  * @return void
  */
-	public function index() {
+public function index() {
+
 		$this->layout="admin";
 		$this->Ingreso->recursive = 0;
 		$this->set('ingresos', $this->Paginator->paginate());
-		$total = $this->Ingreso->find('first', array('fields' => array('sum(Ingreso.monto) AS ctotal')));
-		$total = $total[0]['ctotal'];
-		//debug($total);
-		$this->set('total', $total);
-	}
+		$search = [];
+		if(isset($this->request->query['filtro']) && isset($this->request->query['year-fil'])){
+
+        	$mes = $this->request->query['filtro'];
+        	$year = $this->request->query['year-fil'];
+        	$mes_next = $mes+1;
+        	$mes_next = '0'.$mes_next;
+        	$day = '01';
+
+        	if($mes == '12'){ 
+        		$mes_next= $mes;
+        		$day = '31';
+
+        	}
+        	$search = $this->Ingreso->find('all', array('conditions'=> array('ing_date >=' => $year.'-'.$mes.'-01', 'ing_date <=' => $year.'-'.$mes_next.'-'.$day )));
+        	$total = 0;
+        	foreach ($search as $key => $value) {
+        		$total += $value['Ingreso']['monto'];
+        	}
+   			//$total = $this->Ingreso->find('first', array('fields' => array('sum(Ingreso.monto) AS ctotal')));
+			//$total = $total[0]['ctotal'];
+			// debug($total);
+			$this->set('total', $total);
+			$this->set('search', $search);
+			
+        }else{
+        	$this->set('search', $search);
+        	$this->set('ingresos', array());
+			$this->set('total', 0);
+        }
+}
 
 /**
  * view method

@@ -24,20 +24,38 @@ public function index() {
 
 		$this->layout="admin";
 		$this->Egreso->recursive = 0;
-
-        if(isset($this->request->query['filtro'])){
+		$this->set('egresos', $this->Paginator->paginate());
+		$search = [];
+        if(isset($this->request->query['filtro']) && isset($this->request->query['year-fil'])){
 
         	$mes = $this->request->query['filtro'];
+        	$year = $this->request->query['year-fil'];
+        	$mes_next = $mes+1;
+        	$mes_next = '0'.$mes_next;
+        	$day = '01';
 
-			$total = $this->Egreso->find('first', array('fields' => array('sum(Egreso.monto) AS ctotal')));
-			$total = $total[0]['ctotal'];
-			//debug($total);
+        	if($mes == '12'){ 
+        		$mes_next= $mes;
+        		$day = '31';
+
+        	}
+        	$search = $this->Egreso->find('all', array('conditions'=> array('egr_date >=' => $year.'-'.$mes.'-01', 'egr_date <=' => $year.'-'.$mes_next.'-'.$day )));
+        	$total = 0;
+        	foreach ($search as $key => $value) {
+        		$total += $value['Egreso']['monto'];
+        	}
+   			//$total = $this->Egreso->find('first', array('fields' => array('sum(Egreso.monto) AS ctotal')));
+			//$total = $total[0]['ctotal'];
+			// debug($total);
 			$this->set('total', $total);
+			$this->set('search', $search);
+
         }else{
+        	$this->set('search', $search);
         	$this->set('egresos', array());
 			$this->set('total', 0);
         }
-	}
+}
 
 /**
  * view method
