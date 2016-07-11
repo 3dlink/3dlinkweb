@@ -41,12 +41,30 @@ article {
 
       <article class="card shadow-1">
           <fieldset>
-            <legend style="float:left;width:50%;">Balance</legend>
+            <legend style="float:left;width:50%;">Balance Acumulado:</legend>
 
-            <legend style="float:right;width:50%;">Total: <?php 
+            <legend style="float:right;width:50%;"><?php 
+            if($result_acum>0){ echo '<span style="color:green;">'; echo $result_acum; echo'</span>'; }
+            else{echo '<span style="color:red;">'; echo $result_acum; echo'</span>';} ?> </legend>
+
+          </fieldset>
+
+          <fieldset>
+            <legend style="float:left;width:50%;">Balance del mes:</legend>
+            
+            <legend style="float:right;width:50%;"><?php 
+            if($result_mes>0){ echo '<span style="color:green;">'; echo $result_mes; echo'</span>'; }
+            else{echo '<span style="color:red;">'; echo $result_mes; echo'</span>';} ?> </legend>
+
+          </fieldset>
+          
+          <fieldset>
+            <legend style="float:left;width:50%;">Balance Total:</legend>
+
+            <legend style="float:right;width:50%;"><?php 
             if($result>0){ echo '<span style="color:green;">'; echo $result; echo'</span>'; }
             else{echo '<span style="color:red;">'; echo $result; echo'</span>';} ?> </legend>
-            <!--Search Open-->
+
           </fieldset>          
       </article>
 

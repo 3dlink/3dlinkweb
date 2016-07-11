@@ -453,11 +453,13 @@ $(document).ready(function(){
 
   $('#mtt').click(function(event) {
     if($('#meet_the_team').hasClass('meet_active')){
+      $('#mtt').removeClass('letter_mtt');
       $('#meet_the_team').removeClass('slideInDown');
       $('#meet_the_team').addClass('bounceOutUp');
       setTimeout(function(){ $('#meet_the_team').removeClass('meet_active'); }, 800);
     }else{
       $('body').scrollTo('#mtt',1000);
+      $('#mtt').addClass('letter_mtt');      
       $('#meet_the_team').addClass('meet_active');
       $('#meet_the_team').addClass('slideInDown');
       $('#meet_the_team').removeClass('bounceOutUp');
@@ -480,6 +482,7 @@ $('.design-sel').click(function(){
   $('#design_cont').addClass('slideInDown');
   $('#development_cont').removeClass('meet_active');   
 });
+
 
 });
 
