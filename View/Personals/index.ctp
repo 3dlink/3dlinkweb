@@ -31,14 +31,16 @@
                   <th>Nombre</th>
                   <th>CI</th>
                   <th>Cargo</th>
-                  <th></th>
+                  <th>Trabajo en Home 3DLink</th>
                 </th>
 
                 <?php foreach ($personals as $item): ?>
 					<tr>
 	           <td><?php echo h($item['Personal']['name']); ?>&nbsp;</td>
 						<td><?php echo h($item['Personal']['ci']); ?>&nbsp;</td>
-						<td><?php echo h($item['Personal']['position']); ?>&nbsp;</td>
+						<td><?php echo h($item['Cargo']['name']); ?>&nbsp;</td>
+            <td><?php echo h($item['Personal']['job']); ?>&nbsp;</td>
+            <td><?php echo h($item['Personal']['bio']); ?>&nbsp;</td>
 		                <td>
 		                    <div style="display: block; width: 80px; margin: 0 auto;">
 	                        <?php if($this->UserAuth->getGroupId() == 1){ ?>
@@ -49,6 +51,14 @@
 	  	                        <span class="glyphicon glyphicon-remove"></span></a>
                             <a href="<?php echo $this->webroot;?>personals/view/<?php echo $item['Personal']['id'];?>" title="Ver Detalles" class="menuTable">
                               <span class="glyphicon glyphicon-eye-open"></span></a>
+                              <?php if($item['Personal']['active'] == '1'){ ?>
+                                <a href="<?php echo $this->webroot;?>personals/makeinactive/<?php echo $item['Personal']['id'];?>" title="Quitar de home" class="menuTable">
+                                <span class="glyphicon glyphicon-thumbs-down"></span></a>
+                              <?php }else{ ?>
+                                <a href="<?php echo $this->webroot;?>personals/makeactive/<?php echo $item['Personal']['id'];?>" title="Agregar a home" class="menuTable">
+                                <span class="glyphicon glyphicon-thumbs-up"></span></a>
+                              <?php } ?>
+
 	                        <?php } ?>
 		                    </div>                  
 		                </td>

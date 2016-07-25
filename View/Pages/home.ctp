@@ -17,22 +17,22 @@
     <div class="resp-label" style="text-align: center;margin-top: 40px;">
       <button id="mtt">MEET THE TEAM</button>
     </div>
-
+    
     <div id="meet_the_team" class="animated">
       <div id="nav_team" class="slider-nav">
-        <?php foreach ($teams as $key => $value) { ?>
-              <div class="team-img" style="background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Team']['photo']?>');">
+        <?php foreach ($personals as $key => $value) { ?>
+              <div class="team-img" style="background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Personal']['photo']?>');">
                   <div class="mask"></div>
               </div>
         <?php } ?>
       </div>
       <div class="slider-for">
-        <?php foreach ($teams as $key => $value) { ?>
+        <?php foreach ($personals as $key => $value) { ?>
           <div id="bio_<?php echo ($key+1); ?>" class="bio">
               <div class="biography">
-                  <p><strong><?php echo $value['Team']['name']?></strong><br><i><?php echo $value['Team']['job']?></i></p>
+                  <p><strong><?php echo $value['Personal']['name']?></strong><br><i><?php echo $value['Personal']['job']?></i></p>
                   <img style="display: initial;" src="<?php echo $this->webroot;?>img/bluebar.png">
-                  <p><?php echo $value['Team']['bio']?></p>
+                  <p><?php echo $value['Personal']['bio']?></p>
               </div>
           </div>
         <?php } ?>

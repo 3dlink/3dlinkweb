@@ -5,6 +5,7 @@ App::uses('AppModel', 'Model');
  *
  * @property Personal $Personal
  * @property Client $Client
+ * @property Personal $Personal
  */
 class Project extends AppModel {
 
@@ -39,4 +40,26 @@ class Project extends AppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * hasAndBelongsToMany associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Persons' => array(
+			'className' => 'Personal',
+			'joinTable' => 'personals_projects',
+			'foreignKey' => 'project_id',
+			'associationForeignKey' => 'personal_id',
+			'unique' => 'keepExisting',
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'finderQuery' => '',
+		)
+	);
+
 }

@@ -33,6 +33,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('flip');
 		echo $this->Html->css('slick');
 		echo $this->Html->css('animate');
+		echo $this->Html->css('multiple-select');
 
 		echo $this->Html->script('jquery-2.2.0.min');
 		echo $this->Html->script('owl.carousel.min');
@@ -40,6 +41,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->script('parallax');
 		echo $this->Html->script('slick.min');
 		echo $this->Html->script('scrollTo');
+		echo $this->Html->script('multiple-select');
 
 
 		echo $this->fetch('meta');

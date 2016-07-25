@@ -1,33 +1,34 @@
 <article class="card shadow-1">
   <fieldset>
+
       <legend>Cargo<?php echo ': '; if (!empty($personal)) { echo '<small>'.$personal['Personal']['name'].'</small>'; }?></legend>
       <div class="margenesHorizontales">
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Nombre: </label>
-                <?php echo h($personal['Personal']['name'])?>
-			</div>
+      				        <label>Nombre: </label>
+                      <?php echo h($personal['Personal']['name'])?>
+      			</div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>CI:</label>
+				        <label>CI:</label>
                 <?php echo h($personal['Personal']['ci'])?>
                 </select>
-			</div>
+			       </div>
       		</div>
           <div class="col-md-6">
             <div class="form-group">
-        <label>Rif: </label>
+                <label>Rif: </label>
                 <?php echo h($personal['Personal']['rif'])?>
-      </div>
+            </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-        <label>Telefono:</label>
+                <label>Telefono:</label>
                 <?php echo h($personal['Personal']['phone'])?>
                 </select>
-      </div>
+            </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
@@ -48,14 +49,14 @@
       		<div class="col-md-6">
       			<div class="form-group">
                 <label>Cargo:</label>
-                <?php echo h($personal['Personal']['position'])?>
-			</div>
+                <?php echo h($personal['Cargo']['name'])?>
+			      </div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Numero de cuenta:</label>
+				        <label>Numero de cuenta:</label>
                 <?php echo h($personal['Personal']['account_number'])?>
-			</div>
+			      </div>
       		</div>
       		<div style="clear:both;"></div>
       	</div>
@@ -64,17 +65,33 @@
       			<div class="form-group">
                 <label>Tipo de cuenta:</label>
                 <?php echo h($personal['Personal']['account_type'])?>
-			</div>
+			      </div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Banco:</label>
+				        <label>Banco:</label>
                 <?php echo h($personal['Personal']['bank'])?>
-			</div>
+			      </div>
       		</div>
       		<div style="clear:both;"></div>
       	</div>
+        <div>
+          <div class="col-md-6">
+            <div class="form-group">
+                <label>Trabajo en 3DLinkweb:</label>
+                <?php echo h($personal['Personal']['job'])?>
+            </div>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
       	<div>
+          <div class="col-md-12">
+            <div class="form-group">
+                <label>Biografia:</label>
+                <p><?php echo nl2br($personal['Personal']['bio'])?></p>
+                
+            </div>
+          </div>
       		<div class="col-md-12">
       			<div class="form-group">
                 <label>Observaciones:</label>
@@ -83,6 +100,20 @@
 			      </div>
       		</div>
           <div style="clear:both;"></div>
+
+
+          <div id="content_imgs"></div>
+
+          <div class="col-md-12">
+              <div class="form-group">
+                <label>Imagen actual</label>
+                <div id="imagenes_content">
+                  <div id="img_edit" class="img_edit">
+                    <img src="<?php echo $this->webroot.'files/'.$personal['Personal']['photo']; ?>" style="width:25%;">
+                  </div>
+                </div>
+              </div>
+          </div>
 
           <div class="margenesHorizontales">
             <label>Proyectos:</label>

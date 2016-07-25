@@ -196,3 +196,14 @@ article {
   width:100%;
   padding-top: 30px;
 }
+
+.ms-choice {
+    height: 100%!important;
+    border: none!important;
+
+  }
+
+.ms-parent {
+    width: 100%!important;
+    padding: 0!important;
+}

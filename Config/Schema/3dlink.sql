@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-06-2016 a las 22:29:45
+-- Tiempo de generación: 25-07-2016 a las 20:45:52
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -23,6 +23,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `cargos`
+--
+
+CREATE TABLE IF NOT EXISTS `cargos` (
+`id` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `salary` double NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cargos`
+--
+
+INSERT INTO `cargos` (`id`, `name`, `salary`) VALUES
+(3, 'Desarrollador Carga Completa', 60000),
+(4, 'Lider de Proyecto', 100000),
+(5, 'Puto', 500000.12);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `clients`
 --
 
@@ -33,16 +54,65 @@ CREATE TABLE IF NOT EXISTS `clients` (
   `phone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
-  `observation` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `observation` varchar(255) NOT NULL,
+  `manager` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `clients`
 --
 
-INSERT INTO `clients` (`id`, `company_name`, `country`, `phone`, `email`, `type`, `observation`) VALUES
-(2, 'FC Barcelona', 'EspaÃ±a', '1230877378923', 'barcelona@email.com', 'DiseÃ±o', 'Esto es solo una prueba, pero esta quedando calidad. OjalÃ¡ nos contratara el BarÃ§a.'),
-(3, 'Real Madrid', 'EspaÃ±a', '3489812399123', 'Real@madrid.com', 'Desarrollo', ':O :)');
+INSERT INTO `clients` (`id`, `company_name`, `country`, `phone`, `email`, `type`, `observation`, `manager`) VALUES
+(2, 'FC Barcelona', 'EspaÃ±a', '1230877378923', 'barcelona@email.com', 'DiseÃ±o', 'Esto es solo una prueba, pero esta quedando calidad. OjalÃ¡ nos contratara el BarÃ§a.', ''),
+(3, 'Real Madrid', 'EspaÃ±a', '3489812399123', 'Real@madrid.com', 'Desarrollo', ':O :)', ''),
+(4, 'Caracas FC', 'Venezuela', '04120358359', 'aaranguren@3dlinkweb.com', 'Empresa', 'Una pruebita ahi....', 'Alirio');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `egresos`
+--
+
+CREATE TABLE IF NOT EXISTS `egresos` (
+`id` int(10) NOT NULL,
+  `concepto` varchar(255) NOT NULL,
+  `monto` float NOT NULL,
+  `egr_date` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `egresos`
+--
+
+INSERT INTO `egresos` (`id`, `concepto`, `monto`, `egr_date`) VALUES
+(1, 'Pago por ver otra vez', 30000, '2016-06-08'),
+(2, 'aDBAQV', 10000, '2016-06-30'),
+(3, 'Putas', 100000, '2016-05-29'),
+(5, 'askdjukjasd', 1287290000, '2016-07-15'),
+(6, 'asas', 34565, '2016-03-18');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ingresos`
+--
+
+CREATE TABLE IF NOT EXISTS `ingresos` (
+`id` int(10) NOT NULL,
+  `concepto` varchar(255) NOT NULL,
+  `monto` float NOT NULL,
+  `ing_date` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ingresos`
+--
+
+INSERT INTO `ingresos` (`id`, `concepto`, `monto`, `ing_date`) VALUES
+(2, 'Algo', 2000000, '2016-05-29'),
+(3, '123123123', 13123100, '2016-06-30'),
+(4, 'Prueba', 1900290, '2016-07-20'),
+(5, 'proxenetismo', 3908220, '2016-07-20');
 
 -- --------------------------------------------------------
 
@@ -70,22 +140,55 @@ CREATE TABLE IF NOT EXISTS `personals` (
 `id` int(10) NOT NULL,
   `name` varchar(255) NOT NULL,
   `ci` varchar(255) NOT NULL,
-  `account_number` int(255) NOT NULL,
+  `cargo_id` int(10) NOT NULL,
+  `bio` text NOT NULL,
+  `job` varchar(255) NOT NULL,
+  `photo` varchar(255) NOT NULL,
+  `account_number` varchar(255) NOT NULL,
   `account_type` varchar(255) NOT NULL,
   `bank` varchar(255) NOT NULL,
-  `position` varchar(255) NOT NULL,
-  `observations` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `observations` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `email_personal` varchar(255) NOT NULL,
+  `email_company` varchar(255) NOT NULL,
+  `rif` varchar(255) NOT NULL,
+  `active` int(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `personals`
 --
 
-INSERT INTO `personals` (`id`, `name`, `ci`, `account_number`, `account_type`, `bank`, `position`, `observations`) VALUES
-(2, 'Alirio Aranguren', 'V-17148680', 2147483647, 'Arrecha', 'Arrecho', 'EL MAS ARRECHO', 'Holis'),
-(3, 'Cristiano Ronaldo', 'E-299019774', 2147483647, 'Impagable', 'Venezuela', 'NO IMPORTA!!! Trabaja con nosotros!!! <3', 'hola'),
-(5, 'Hola', '124321412', 2147483647, 'una ahi', 'sofitasa', 'Lider de Proyecto', 'un tipo ahi'),
-(6, 'Rivaldo', '123123', 2147483647, 'Impagable', 'Brasileiro', 'Lider de Proyecto', 'Wao');
+INSERT INTO `personals` (`id`, `name`, `ci`, `cargo_id`, `bio`, `job`, `photo`, `account_number`, `account_type`, `bank`, `observations`, `phone`, `email_personal`, `email_company`, `rif`, `active`) VALUES
+(2, 'Alirio Aranguren', 'V-17148680', 4, '', '', '', '1234567890', 'Arrecha', 'Arrecho', 'Holis', '', '', '', '', 0),
+(3, 'Cristiano Ronaldo', 'E-299019774', 4, 'Guevo pelao', 'Guevo pelao', 'img1468869634J12.jpg', '2147483647', 'Impagable', 'Venezuela', 'hola', '123098123123', 'ronaldo@madrid.com', 'ronaldo@madrid.com', '12312421214', 1),
+(5, 'Hola', '124321412', 0, '', '', '', '2147483647', 'una ahi', 'sofitasa', 'un tipo ahi', '', '', '', '', 0),
+(6, 'Rivaldo', '123123', 0, '', '', '', '2147483647', 'Impagable', 'Brasileiro', 'Wao', '', '', '', '', 0),
+(7, 'Juan Arango', '13213123', 4, 'Un tipo serio', 'Goleador', 'img14688675689P7.png', '123354356546', 'Impagable', 'Bank of America', 'Hay que jalarle bola para que no se vaya con Farias', '123123123', 'el-mas-pipi@hotmail.com', 'arangol@3dlinkweb.com', '123123123', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `personals_projects`
+--
+
+CREATE TABLE IF NOT EXISTS `personals_projects` (
+`id` int(10) NOT NULL,
+  `personal_id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `personals_projects`
+--
+
+INSERT INTO `personals_projects` (`id`, `personal_id`, `project_id`) VALUES
+(1, 3, 3),
+(3, 6, 3),
+(4, 2, 4),
+(5, 3, 4),
+(6, 5, 4),
+(7, 6, 4);
 
 -- --------------------------------------------------------
 
@@ -104,15 +207,18 @@ CREATE TABLE IF NOT EXISTS `projects` (
   `price` float NOT NULL,
   `status` varchar(255) NOT NULL,
   `personal_id` int(10) NOT NULL,
-  `client_id` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `client_id` int(10) NOT NULL,
+  `currency` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `projects`
 --
 
-INSERT INTO `projects` (`id`, `name`, `type`, `description`, `init_date`, `end_date`, `asana_url`, `price`, `status`, `personal_id`, `client_id`) VALUES
-(2, 'Orgia 2016', 'Desarrollo', 'Buscando a las putas', '2016-06-30', '2016-07-04', 'https://app.asana.com/0/67192036044956/67192036044956', 20000, 'En DiseÃ±o', 6, 2);
+INSERT INTO `projects` (`id`, `name`, `type`, `description`, `init_date`, `end_date`, `asana_url`, `price`, `status`, `personal_id`, `client_id`, `currency`) VALUES
+(2, 'Orgia 2016', 'Desarrollo', 'Buscando a las putas', '2016-06-30', '2016-07-04', 'https://app.asana.com/0/67192036044956/67192036044956', 20000, 'En DiseÃ±o', 2, 2, '0'),
+(3, 'Colombiana', 'Todos los servicios', 'wola', '2016-07-20', '2016-07-29', 'asana.com', 100000000000, 'Aprobado', 2, 4, 'EUR (â‚¬)'),
+(4, 'Prueba', 'Desarrollo y DiseÃ±o', 'Pruebita', '2016-07-29', '2016-08-06', 'asana.com', 10000000, 'En Desarrollo', 3, 2, 'USD ($)');
 
 -- --------------------------------------------------------
 
@@ -350,9 +456,27 @@ INSERT INTO `work` (`id`, `name`, `description`, `url`, `type`, `img1`, `img2`, 
 --
 
 --
+-- Indices de la tabla `cargos`
+--
+ALTER TABLE `cargos`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `clients`
 --
 ALTER TABLE `clients`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `egresos`
+--
+ALTER TABLE `egresos`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `ingresos`
+--
+ALTER TABLE `ingresos`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -365,6 +489,12 @@ ALTER TABLE `login_tokens`
 -- Indices de la tabla `personals`
 --
 ALTER TABLE `personals`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `personals_projects`
+--
+ALTER TABLE `personals_projects`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -414,10 +544,25 @@ ALTER TABLE `work`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `cargos`
+--
+ALTER TABLE `cargos`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
 -- AUTO_INCREMENT de la tabla `clients`
 --
 ALTER TABLE `clients`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT de la tabla `egresos`
+--
+ALTER TABLE `egresos`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT de la tabla `ingresos`
+--
+ALTER TABLE `ingresos`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `login_tokens`
 --
@@ -427,12 +572,17 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT de la tabla `personals`
 --
 ALTER TABLE `personals`
-MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT de la tabla `personals_projects`
+--
+ALTER TABLE `personals_projects`
+MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `projects`
 --
 ALTER TABLE `projects`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `quotes`
 --

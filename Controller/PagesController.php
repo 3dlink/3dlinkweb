@@ -35,7 +35,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Quote','Team','Work','Ingreso','Egreso');
+	public $uses = array('Quote','Personal','Work','Ingreso','Egreso');
 
 /**
  * Displays a view
@@ -64,7 +64,7 @@ class PagesController extends AppController {
 			$title_for_layout = Inflector::humanize($path[$count - 1]);
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
-		$this->set('teams',$this->Team->find('all'));
+		$this->set('personals',$this->Personal->find('all',array('conditions'=> array('Personal.active'=>'1'))));
 		$this->set('works',$this->Work->find('all'));
 		$this->set('quotes',$this->Quote->find('all'));
 

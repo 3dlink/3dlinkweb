@@ -1,6 +1,9 @@
+             <?php debug($project['Persons']); ?>
+
+
 <article class="card shadow-1">
   <fieldset>
-      <legend>Cargo<?php echo ': '; if (!empty($project)) { echo '<small>'.$project['Project']['name'].'</small>'; }?></legend>
+      <legend>Proyecto<?php echo ': '; if (!empty($project)) { echo '<small>'.$project['Project']['name'].'</small>'; }?></legend>
       <div class="margenesHorizontales">
       	<div>
       		<div class="col-md-6">
@@ -37,23 +40,54 @@
       		<div class="col-md-6">
       			<div class="form-group">
                 <label>Lider de Proyecto:</label>
-                <?php echo h($project['Personal']['name'])?>
-			</div>
+              
+             <?php echo h($project['Personal']['name']); ?>
+            </div>
+              
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Status:</label>
-                <?php echo h($project['Project']['status'])?>
+				<label>Programadores Asignados:</label>
+
+        <table class="table table-striped">
+                <tr>
+                  <th>Nombre</th>
+                  <th>Salario</th>
+                  <th></th>
+                </th>
+
+                <?php foreach ($project['Persons'] as $dev): ?>
+          <tr>
+             <td><?php echo h($dev['name']); ?>&nbsp;</td>
+          </tr>
+                <?php endforeach; ?>
+        </table>
+        
 			</div>
       		</div>
       		<div style="clear:both;"></div>
       	</div>
+        <div>
+          <div class="col-md-6">
+            <div class="form-group">
+                <label>Asana URL:</label>
+                <a href="<?php echo h($project['Project']['asana_url'])?>" target='_blank'><?php echo h($project['Project']['asana_url'])?></a> 
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+        <label>Status:</label>
+                <?php echo h($project['Project']['status'])?>
+      </div>
+          </div>
+          <div style="clear:both;"></div>
+        </div>
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-                <label>Asana URL:</label>
-                <a href="<?php echo h($project['Project']['asana_url'])?>" target='_blank'><?php echo h($project['Project']['asana_url'])?></a> 
-			</div>
+                <label>Costo de Recursos:</label>
+                <?php echo h($project['Personal']['name'])?>
+            </div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">

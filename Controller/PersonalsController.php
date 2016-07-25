@@ -14,6 +14,8 @@ class PersonalsController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
+	public $uses = array('Personal','Cargo','Project');
+
 
 /**
  * index method
@@ -58,6 +60,8 @@ class PersonalsController extends AppController {
 				$this->Session->setFlash(__('The personal could not be saved. Please, try again.'));
 			}
 		}
+		$listac = $this->Cargo->find('list');
+		$this->set(compact('listac'));
 	}
 
 /**
@@ -83,6 +87,8 @@ class PersonalsController extends AppController {
 			$options = array('conditions' => array('Personal.' . $this->Personal->primaryKey => $id));
 			$this->request->data = $this->Personal->find('first', $options);
 		}
+		$listac = $this->Cargo->find('list');
+		$this->set(compact('listac'));
 	}
 
 /**
@@ -102,6 +108,20 @@ class PersonalsController extends AppController {
 		} else {
 			$this->Session->setFlash(__('The personal could not be deleted. Please, try again.'));
 		}
+		return $this->redirect(array('action' => 'index'));
+	}
+
+	public function makeactive($id = null){
+		$this->autoRender = false;
+		$this->Personal->id = $id;
+		$this->Personal->saveField('active',1);
+		return $this->redirect(array('action' => 'index'));
+	}
+
+	public function makeinactive($id = null){
+		$this->autoRender = false;
+		$this->Personal->id = $id;
+		$this->Personal->saveField('active',0);
 		return $this->redirect(array('action' => 'index'));
 	}
 }

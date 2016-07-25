@@ -53,6 +53,13 @@
 			        </div>
 				</div>
 
+	      		<div class="col-md-6">
+			        <div class="form-group">
+			          <label>Programadores asignados</label>
+			          <?php echo $this->Form->input('Personal',array('div'=>false,'required'=>true,'multiple'=>true,'label'=>false,'class'=>'form-control','required'=>true,'type'=>'select','id'=>'select_devs','options'=>$programadores)); ?>
+			        </div>
+				</div>
+
 				<div class="col-md-6">
 			        <div class="form-group">
 			          <label>Status</label>
@@ -117,5 +124,8 @@
 	$("#end").on("dp.change", function (e) {
 	 	$('#start').data("DateTimePicker").maxDate(e.date);
 	});
+
+    $('#select_devs').multipleSelect();
+
 
 </script>

@@ -98,6 +98,13 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-submenu">
+                  <a tabindex="-1" href="#">Cargos</a>
+                  <ul class="dropdown-menu submenu">
+                    <li><a href="<?php echo $this->webroot.'cargos/add'; ?>">Nuevo</a></li>
+                    <li><a href="<?php echo $this->webroot.'cargos'; ?>">Todos</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown-submenu">
                   <a tabindex="-1" href="#">Personal</a>
                   <ul class="dropdown-menu submenu">
                     <li><a href="<?php echo $this->webroot.'personals/add'; ?>">Nuevo</a></li>

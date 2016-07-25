@@ -7,7 +7,7 @@ App::uses('CakeEmail', 'Network/Email');
 class StartController extends AppController{
 
 	public $components = array('Paginator', 'Session');
-	public $uses = array('Egreso','Ingreso');
+	public $uses = array('Egreso','Ingreso','Personal');
 
 
 	public function sendMail(){
@@ -103,13 +103,6 @@ class StartController extends AppController{
 	public function balance(){
 		
 		$this->layout="admin";
-		// $totaling = $this->Ingreso->find('first', array('fields' => array('sum(Ingreso.monto) AS itotal')));
-		// $totaling = $totaling[0]['itotal'];
-		// $this->set('totali', $totaling);
-		// $totalegr = $this->Egreso->find('first', array('fields' => array('sum(Egreso.monto) AS etotal')));
-		// $totalegr = $totalegr[0]['etotal'];
-		// $this->set('totale', $totalegr);
-		// $this->set('balance',($totaling - $totalegr));
 		//////////////////////////////////////////////EGRESOS
 		$search_eg = [];
 		$search_in = [];
@@ -141,9 +134,6 @@ class StartController extends AppController{
         	foreach ($search_eg as $key => $value) {
         		$total_eg += $value['Egreso']['monto'];
         	}
-   			//$total = $this->Egreso->find('first', array('fields' => array('sum(Egreso.monto) AS ctotal')));
-			//$total = $total[0]['ctotal'];
-			// debug($total);
 			$this->set('total_eg', $total_eg);
 			$this->set('search_eg', $search_eg);
 			$this->set('search_acume', $search_acume);
@@ -176,9 +166,6 @@ class StartController extends AppController{
         	foreach ($search_in as $key => $value) {
         		$total_in += $value['Ingreso']['monto'];
         	}
-   			//$total = $this->Ingreso->find('first', array('fields' => array('sum(Ingreso.monto) AS ctotal')));
-			//$total = $total[0]['ctotal'];
-			// debug($total);
 			$this->set('total_in', $total_in);
 			$this->set('search_in', $search_in);
 			$this->set('search_acumi', $search_acumi);
@@ -209,21 +196,90 @@ class StartController extends AppController{
 
 
         }else{
-        	$this->set('search_eg', $search_eg);
-        	$this->set('egresos', array());
-			$this->set('total_eg', 0);
-			$this->set('total_acume', 0);
-			$this->set('total_eg_mes',0);
+        	//////////////////////////////////////////////////EGRESOS DEL MES ACTUAL
+        	$mes_eg = date("m");
+        	$year_eg = '20'.date("y");
+        	$mes_next_eg = $mes_eg+1;
+        	$mes_next_eg = '0'.$mes_next_eg;
+        	$day_eg = '01';
 
+        	$search_acume = $this->Egreso->find('all', array('conditions'=> array('egr_date >=' => $year_eg.'-'.'01'.'-01', 'egr_date <=' => $year_eg.'-'.$mes_eg.'-'.$day_eg )));
+        	$total_acume = 0;
+        	foreach ($search_acume as $key => $value) {
+        		$total_acume += $value['Egreso']['monto'];
+        	}
+        	if($mes_eg == '01'){
+        		$search_acume = '0';
+        	}
+
+        	if($mes_eg == '12'){ 
+        		$mes_next_eg= $mes_eg;
+        		$day_eg = '31';
+
+        	}
+
+        	$search_eg = $this->Egreso->find('all', array('conditions'=> array('egr_date >=' => $year_eg.'-'.$mes_eg.'-01', 'egr_date <=' => $year_eg.'-'.$mes_next_eg.'-'.$day_eg )));
+        	$total_eg = 0;
+        	foreach ($search_eg as $key => $value) {
+        		$total_eg += $value['Egreso']['monto'];
+        	}
+			$this->set('total_eg', $total_eg);
+			$this->set('search_eg', $search_eg);
+			$this->set('search_acume', $search_acume);
+			$this->set('total_acume', $total_acume);
+
+			//////////////////////////////////////////////////INGRESOS DEL MES ACTUAL
+
+			$mes_in = date("m");
+        	$year_in = date("y");
+        	$mes_next_in = $mes_in+1;
+        	$mes_next_in = '0'.$mes_next_in;
+        	$day_in = '01';
+
+        	$search_acumi = $this->Ingreso->find('all', array('conditions'=> array('ing_date >=' => $year_in.'-'.'01'.'-01', 'ing_date <=' => $year_in.'-'.$mes_in.'-'.$day_in )));
+        	$total_acumi = 0;
+        	foreach ($search_acumi as $key => $value) {
+        		$total_acumi += $value['Ingreso']['monto'];
+        	}
+        	if($mes_in == '01'){
+        		$search_acumi = '0';
+        	}
+
+        	if($mes_in == '12'){ 
+        		$mes_next_in= $mes_in;
+        		$day_in = '31';
+
+        	}
+        	$search_in = $this->Ingreso->find('all', array('conditions'=> array('ing_date >=' => $year_in.'-'.$mes_in.'-01', 'ing_date <=' => $year_in.'-'.$mes_next_in.'-'.$day_in )));
+        	$total_in = 0;
+        	foreach ($search_in as $key => $value) {
+        		$total_in += $value['Ingreso']['monto'];
+        	}
+			$this->set('total_in', $total_in);
 			$this->set('search_in', $search_in);
-        	$this->set('ingresos', array());
-			$this->set('total_in', 0);
-			$this->set('total_acumi', 0);
-			$this->set('total_in_mes',0);
+			$this->set('search_acumi', $search_acumi);
+			$this->set('total_acumi', $total_acumi);
 
-			$this->set('result', 0);
-			$this->set('result_mes', 0);
-			$this->set('result_acum', 0);
+			//////////////////////////////////////////////////////////////////////////////SUMATORIA TOTAL Y ADICIONALES
+			$result_acum = 0;
+			$result_mes = 0;
+
+			$result_acum = $total_acumi - $total_acume;
+
+			$total_in_mes = $total_in;
+			$total_eg_mes = $total_eg;
+			$result_mes = $total_in_mes - $total_eg_mes;
+			
+			$total_in = $total_in + $total_acumi;
+			$total_eg = $total_eg + $total_acume;
+			$result = $total_in - $total_eg;
+
+			$this->set('total_in_mes',$total_in_mes);
+			$this->set('total_eg_mes',$total_eg_mes);
+
+			$this->set('result_acum', $result_acum);
+			$this->set('result_mes', $result_mes);
+			$this->set('result', $result);
         }
 
 

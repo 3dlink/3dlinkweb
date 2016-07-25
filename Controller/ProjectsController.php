@@ -9,7 +9,7 @@ App::uses('AppController', 'Controller');
 class ProjectsController extends AppController {
 
 
-	public $uses = array('Project','Personal');
+	public $uses = array('Project','Cargo','Personal');
 
 /**
  * Components
@@ -53,6 +53,7 @@ class ProjectsController extends AppController {
 	public function add() {
 		$this->layout="admin";
 		if ($this->request->is('post')) {
+			// debug($this->request->data);die;
 			$this->Project->create();
 			if ($this->Project->save($this->request->data)) {
 				$this->Session->setFlash(__('The project has been saved.'));
@@ -61,10 +62,12 @@ class ProjectsController extends AppController {
 				$this->Session->setFlash(__('The project could not be saved. Please, try again.'));
 			}
 		}
-		$lideres = $this->Personal->find('list',array('conditions'=>array('position'=>'Lider de Proyecto')));
+		$programadores = $this->Personal->find('list');
+		$cargo_id = $this->Cargo->findByName('Lider de Proyecto');
+		$lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>$cargo_id['Cargo']['id'])));
 		$personals = $this->Project->Personal->find('list');
 		$clients = $this->Project->Client->find('list');
-		$this->set(compact('personals', 'clients','lideres'));
+		$this->set(compact('personals', 'clients','lideres','programadores'));
 
 	}
 
@@ -91,7 +94,8 @@ class ProjectsController extends AppController {
 			$options = array('conditions' => array('Project.' . $this->Project->primaryKey => $id));
 			$this->request->data = $this->Project->find('first', $options);
 		}
-		$lideres = $this->Personal->find('list',array('conditions'=>array('position'=>'Lider de Proyecto')));
+		$cargo_id = $this->Cargo->findByName('Lider de Proyecto');
+		$lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>$cargo_id['Cargo']['id'])));
 		$personals = $this->Project->Personal->find('list');
 		$clients = $this->Project->Client->find('list');
 		$this->set(compact('personals', 'clients','lideres'));

@@ -14,7 +14,10 @@ class PersonalTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'app.personal',
-		'app.project'
+		'app.cargo',
+		'app.project',
+		'app.client',
+		'app.personals_project'
 	);
 
 /**

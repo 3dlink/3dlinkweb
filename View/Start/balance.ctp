@@ -9,7 +9,10 @@ article {
 
 <div class="balance index">
  <!--List  Open-->
-
+<?php
+$mes_hoy = date("m");
+$year_hoy = date("y");
+?>
 
 <form id="pipigrande" class="right" role="search" method="get">
    <div class="input-group" style="float:left;">
@@ -41,7 +44,20 @@ article {
 
       <article class="card shadow-1">
           <fieldset>
-            <legend style="float:left;width:50%;">Balance Acumulado:</legend>
+            <legend style="float:left;width:50%;">Balance Acumulado hasta el mes de 
+              <?php if($mes_hoy=='01'){ echo 'enero';}
+                    if($mes_hoy=='02'){ echo 'febrero';}
+                    if($mes_hoy=='03'){ echo 'marzo';}
+                    if($mes_hoy=='04'){ echo 'abril';}
+                    if($mes_hoy=='05'){ echo 'mayo';}
+                    if($mes_hoy=='06'){ echo 'junio';}
+                    if($mes_hoy=='07'){ echo 'julio';}
+                    if($mes_hoy=='08'){ echo 'agosto';}
+                    if($mes_hoy=='09'){ echo 'septiembre';}
+                    if($mes_hoy=='10'){ echo 'octubre';}
+                    if($mes_hoy=='11'){ echo 'noviembre';}
+                    if($mes_hoy=='12'){ echo 'diciembre';}
+              ?>:</legend>
 
             <legend style="float:right;width:50%;"><?php 
             if($result_acum>0){ echo '<span style="color:green;">'; echo $result_acum; echo'</span>'; }
@@ -50,7 +66,20 @@ article {
           </fieldset>
 
           <fieldset>
-            <legend style="float:left;width:50%;">Balance del mes:</legend>
+            <legend style="float:left;width:50%;">Balance del mes de 
+              <?php if($mes_hoy=='01'){ echo 'enero';}
+                    if($mes_hoy=='02'){ echo 'febrero';}
+                    if($mes_hoy=='03'){ echo 'marzo';}
+                    if($mes_hoy=='04'){ echo 'abril';}
+                    if($mes_hoy=='05'){ echo 'mayo';}
+                    if($mes_hoy=='06'){ echo 'junio';}
+                    if($mes_hoy=='07'){ echo 'julio';}
+                    if($mes_hoy=='08'){ echo 'agosto';}
+                    if($mes_hoy=='09'){ echo 'septiembre';}
+                    if($mes_hoy=='10'){ echo 'octubre';}
+                    if($mes_hoy=='11'){ echo 'noviembre';}
+                    if($mes_hoy=='12'){ echo 'diciembre';}
+              ?>:</legend>
             
             <legend style="float:right;width:50%;"><?php 
             if($result_mes>0){ echo '<span style="color:green;">'; echo $result_mes; echo'</span>'; }
@@ -70,7 +99,20 @@ article {
 
       <article class="card shadow-1" style="float: left;width: 50%;">
           <fieldset>
-            <legend style="float:left;width:50%;">Egresos</legend>
+            <legend style="float:left;width:50%;">Egresos del mes de 
+              <?php if($mes_hoy=='01'){ echo 'enero';}
+                    if($mes_hoy=='02'){ echo 'febrero';}
+                    if($mes_hoy=='03'){ echo 'marzo';}
+                    if($mes_hoy=='04'){ echo 'abril';}
+                    if($mes_hoy=='05'){ echo 'mayo';}
+                    if($mes_hoy=='06'){ echo 'junio';}
+                    if($mes_hoy=='07'){ echo 'julio';}
+                    if($mes_hoy=='08'){ echo 'agosto';}
+                    if($mes_hoy=='09'){ echo 'septiembre';}
+                    if($mes_hoy=='10'){ echo 'octubre';}
+                    if($mes_hoy=='11'){ echo 'noviembre';}
+                    if($mes_hoy=='12'){ echo 'diciembre';}
+              ?>:</legend>
 
             <legend style="float:right;width:50%;">Total: <?php echo '<span style="color:red;"> -'; echo $total_eg; echo'</span>'?> </legend>
             <!--Search Open-->
@@ -109,7 +151,20 @@ article {
 
       <article class="card shadow-1" style="float: left;width: 50%;">
           <fieldset>
-            <legend style="float:left;width:50%;">Ingresos</legend>
+            <legend style="float:left;width:50%;">Ingresos del mes de 
+              <?php if($mes_hoy=='01'){ echo 'enero';}
+                    if($mes_hoy=='02'){ echo 'febrero';}
+                    if($mes_hoy=='03'){ echo 'marzo';}
+                    if($mes_hoy=='04'){ echo 'abril';}
+                    if($mes_hoy=='05'){ echo 'mayo';}
+                    if($mes_hoy=='06'){ echo 'junio';}
+                    if($mes_hoy=='07'){ echo 'julio';}
+                    if($mes_hoy=='08'){ echo 'agosto';}
+                    if($mes_hoy=='09'){ echo 'septiembre';}
+                    if($mes_hoy=='10'){ echo 'octubre';}
+                    if($mes_hoy=='11'){ echo 'noviembre';}
+                    if($mes_hoy=='12'){ echo 'diciembre';}
+              ?>:</legend>
 
             <legend style="float:right;width:50%;">Total: <?php echo '<span style="color:green;">'; echo $total_in; echo'</span>'?> </legend>
             <!--Search Open-->

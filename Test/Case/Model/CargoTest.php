@@ -1,11 +1,11 @@
 <?php
-App::uses('Project', 'Model');
+App::uses('Cargo', 'Model');
 
 /**
- * Project Test Case
+ * Cargo Test Case
  *
  */
-class ProjectTest extends CakeTestCase {
+class CargoTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,10 +13,9 @@ class ProjectTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.project',
-		'app.personal',
 		'app.cargo',
-		'app.personals_project',
+		'app.personal',
+		'app.project',
 		'app.client'
 	);
 
@@ -27,7 +26,7 @@ class ProjectTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Project = ClassRegistry::init('Project');
+		$this->Cargo = ClassRegistry::init('Cargo');
 	}
 
 /**
@@ -36,7 +35,7 @@ class ProjectTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->Project);
+		unset($this->Cargo);
 
 		parent::tearDown();
 	}

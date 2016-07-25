@@ -1,6 +1,9 @@
 <div class="Ingreso index">
  <!--List  Open-->
-
+<?php
+$mes_hoy = date("m");
+$year_hoy = date("y");
+?>
 
  <form id="pipigrandote" class="right" role="search" method="get">
    <div class="input-group" style="float:left;">
@@ -24,6 +27,8 @@
       <select id='year-fil'  name="year-fil">
         <option value=''>Seleccione año</option>
         <option value='2016'>2016</option>
+
+        <option value='2017'>2017</option>
       </select>
     </div>  
 </form>
@@ -32,7 +37,20 @@
 
       <article class="card shadow-1">
           <fieldset>
-            <legend style="float:left;width:50%;">Ingresos</legend>
+            <legend style="float:left;width:50%;">Ingresos del mes de 
+              <?php if($mes_hoy=='01'){ echo 'enero';}
+                    if($mes_hoy=='02'){ echo 'febrero';}
+                    if($mes_hoy=='03'){ echo 'marzo';}
+                    if($mes_hoy=='04'){ echo 'abril';}
+                    if($mes_hoy=='05'){ echo 'mayo';}
+                    if($mes_hoy=='06'){ echo 'junio';}
+                    if($mes_hoy=='07'){ echo 'julio';}
+                    if($mes_hoy=='08'){ echo 'agosto';}
+                    if($mes_hoy=='09'){ echo 'septiembre';}
+                    if($mes_hoy=='10'){ echo 'octubre';}
+                    if($mes_hoy=='11'){ echo 'noviembre';}
+                    if($mes_hoy=='12'){ echo 'diciembre';}
+              ?> </legend>
 
             <legend style="float:right;width:50%;">Total: <?php echo '<span style="color:green;">'; echo $total; echo'</span>'?> </legend>
             <!--Search Open-->
@@ -103,6 +121,10 @@
   $('#year-fil').change(function(){
     $('#pipigrandote').submit();
   })
+
+  // $(document).ready(function(){
+  //   $('#pipigrandote').submit();
+  // })
 
                     
 
