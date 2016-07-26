@@ -6,10 +6,36 @@ App::uses('AppController', 'Controller');
  * @property Project $Project
  * @property PaginatorComponent $Paginator
  */
+
+require_once("library/FPDF/fpdf.php");
+
+
+class PDF extends FPDF{
+// Cabecera de página
+	function Header(){
+	    // Logo
+	    $this->Image('img/Logo-Home.png',10,8,33);
+	    $this->SetFillColor(0,0,0);
+
+	    // Arial bold 15
+	    $this->SetFont('Arial','B',15);
+	    // Movernos a la derecha
+	    $this->Cell(60);
+	    // Título
+	    $this->Cell(80,10,'3DLink - Detalle del Proyecto',1,0,'C');
+	    // Salto de línea
+	    $this->Ln(20);
+	}
+
+}
+
 class ProjectsController extends AppController {
 
 
+
+
 	public $uses = array('Project','Cargo','Personal');
+	
 
 /**
  * Components
@@ -36,13 +62,47 @@ class ProjectsController extends AppController {
  * @param string $id
  * @return void
  */
+
+
+
 	public function view($id = null) {
 		$this->layout="admin";
 		if (!$this->Project->exists($id)) {
 			throw new NotFoundException(__('Invalid project'));
 		}
 		$options = array('conditions' => array('Project.' . $this->Project->primaryKey => $id));
-		$this->set('project', $this->Project->find('first', $options));
+		$project = $this->Project->find('first', $options);
+		$this->set('project', $project);
+		$devs = array();
+
+		$date_ini = date_create($project['Project']['init_date']);
+    	$date_end = date_create($project['Project']['end_date']);
+    	
+    
+    	$interval = date_diff($date_ini, $date_end);
+    	$interval = $interval->m;
+    	
+    	if($interval == '0'){
+    		$interval = '1';
+    	}
+
+    	$sumatotaldelsalariodemierdade3dlink = '0';
+
+		foreach ($project['Personal'] as $persona) {
+			if(is_array($persona)){
+				$salario = $this->Cargo->findById($persona['cargo_id']);
+				// array_push($devs,array('Nombre'=>$persona['name'], 'Salario' =>$salario['Cargo']['salary'] * $interval));
+				$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario['Cargo']['salary'] * $interval;
+			}
+		}
+		// $this->set('devs', $devs);
+		$this->set('sumatotaldelsalariodemierdade3dlink', $sumatotaldelsalariodemierdade3dlink);
+
+		///////////////////////////Seccion del PDF///////////////////////////////////////
+
+
+
+
 	}
 
 /**
@@ -71,6 +131,137 @@ class ProjectsController extends AppController {
 
 	}
 
+	
+
+	public function imprimir($id=0){
+		
+		$project = $this->Project->findById($id);
+
+		$devs = array();
+
+		foreach ($project['Personal'] as $persona) {
+			if(is_array($persona)){
+				$salario = $this->Cargo->findById($persona['cargo_id']);
+
+				array_push($devs,array('Nombre'=>$persona['name'], 'Salario' =>$salario['Cargo']['salary']));
+			}
+		}
+
+		$pdf = new PDF();
+		$pdf->AliasNbPages();
+		$pdf->AddPage();
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Ln();
+		$pdf->Ln();
+		$pdf->Ln();
+		$pdf->Cell(0,10,'Fecha: '.date("d") . "/" . date("m") . "/" . date("Y"),0,1);
+		$pdf->Ln();
+
+
+		$pdf->Cell(90,5,utf8_decode('Nombre del Proyecto: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['name']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Cliente: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Client']['company_name']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Fecha de Inicio: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['init_date']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Fecha de Entrega: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['end_date']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Lider del Proyecto: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Personal']['name']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Programadores Asignados: '),0,0);
+		$pdf->Ln();$pdf->Ln();
+		$pdf->SetFont('Arial','',16);
+		foreach ($devs as $item) {
+
+			$pdf->Cell(20,8,utf8_decode($item['Nombre'].' - Salario: '.$item['Salario']),0,1);
+
+		}
+		$pdf->Ln();
+		
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Precio: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['price']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Moneda: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['currency']),0,1);
+		$pdf->Ln();
+
+		$date_ini = date_create($project['Project']['init_date']);
+    	$date_end = date_create($project['Project']['end_date']);
+    	$interval = date_diff($date_ini, $date_end);
+    	$interval = $interval->m;
+    	if($interval == '0'){
+    		$interval = '1';
+    	}
+    	$sumatotaldelsalariodemierdade3dlink = '0';
+
+		foreach ($project['Personal'] as $persona) {
+			if(is_array($persona)){
+				$salario = $this->Cargo->findById($persona['cargo_id']);
+				array_push($devs,array('Nombre'=>$persona['name'], 'Salario' =>$salario['Cargo']['salary'] * $interval));
+				$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario['Cargo']['salary'] * $interval;
+			}
+		}
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Costo de Recursos: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($sumatotaldelsalariodemierdade3dlink),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Asana URL: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['asana_url']),0,1);
+		$pdf->Ln();
+		
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Status: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['status']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Tipo: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['type']),0,1);
+		$pdf->Ln();
+
+		$pdf->SetFont('Arial','B',16);
+		$pdf->Cell(90,5,utf8_decode('Descripcion: '),0,0);
+		$pdf->SetFont('Arial','',16);
+		$pdf->Cell(0,5,utf8_decode($project['Project']['description']),0,1);
+		$pdf->Ln();
+
+		$pdf->Output();
+
+		exit;
+	}
+
 /**
  * edit method
  *
@@ -94,11 +285,18 @@ class ProjectsController extends AppController {
 			$options = array('conditions' => array('Project.' . $this->Project->primaryKey => $id));
 			$this->request->data = $this->Project->find('first', $options);
 		}
+		// $cargo_id = $this->Cargo->findByName('Lider de Proyecto');
+		// $lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>$cargo_id['Cargo']['id'])));
+		// $personals = $this->Project->Personal->find('list');
+		// $clients = $this->Project->Client->find('list');
+		// $this->set(compact('personals', 'clients','lideres'));
+
+		$programadores = $this->Personal->find('list');
 		$cargo_id = $this->Cargo->findByName('Lider de Proyecto');
 		$lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>$cargo_id['Cargo']['id'])));
 		$personals = $this->Project->Personal->find('list');
 		$clients = $this->Project->Client->find('list');
-		$this->set(compact('personals', 'clients','lideres'));
+		$this->set(compact('personals', 'clients','lideres','programadores'));
 	}
 
 /**

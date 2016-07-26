@@ -47,7 +47,7 @@ class Project extends AppModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array(
-		'Persons' => array(
+		'Personal' => array(
 			'className' => 'Personal',
 			'joinTable' => 'personals_projects',
 			'foreignKey' => 'project_id',

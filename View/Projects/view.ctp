@@ -1,7 +1,5 @@
-             <?php debug($project['Persons']); ?>
-
-
 <article class="card shadow-1">
+  <?php //debug($project['Personal']); ?>
   <fieldset>
       <legend>Proyecto<?php echo ': '; if (!empty($project)) { echo '<small>'.$project['Project']['name'].'</small>'; }?></legend>
       <div class="margenesHorizontales">
@@ -50,20 +48,40 @@
 				<label>Programadores Asignados:</label>
 
         <table class="table table-striped">
-                <tr>
-                  <th>Nombre</th>
-                  <th>Salario</th>
-                  <th></th>
-                </th>
 
-                <?php foreach ($project['Persons'] as $dev): ?>
+
+                <?php 
+                foreach ($project['Personal'] as $item): ?>
+                <?php if(is_array($item)){ ?>
           <tr>
-             <td><?php echo h($dev['name']); ?>&nbsp;</td>
+             <td><?php echo h($item['name']); ?>&nbsp;</td>
           </tr>
-                <?php endforeach; ?>
+                <?php }
+                endforeach; 
+              ?>
         </table>
         
 			</div>
+      		</div>
+      		<div style="clear:both;"></div>
+      	</div>
+      	<div>
+          <div class="col-md-6">
+            <div class="form-group">
+                <label>Precio:</label>
+                <?php echo h($project['Project']['price'])?>
+           </div>
+          </div>
+      		<div class="col-md-6">
+      			<div class="form-group">
+                <label>Costo del Proyecto:</label>
+                <table>
+                  
+                    <tr>
+                     <td><?php echo h($sumatotaldelsalariodemierdade3dlink); ?>&nbsp;</td>
+                    </tr>
+                </table>
+            </div>
       		</div>
       		<div style="clear:both;"></div>
       	</div>
@@ -76,34 +94,20 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-        <label>Status:</label>
+                <label>Status:</label>
                 <?php echo h($project['Project']['status'])?>
-      </div>
+            </div>
           </div>
           <div style="clear:both;"></div>
         </div>
       	<div>
-      		<div class="col-md-6">
-      			<div class="form-group">
-                <label>Costo de Recursos:</label>
-                <?php echo h($project['Personal']['name'])?>
-            </div>
-      		</div>
-      		<div class="col-md-6">
-      			<div class="form-group">
-				<label>Tipo:</label>
+          <div class="col-md-6">
+            <div class="form-group">
+            <label>Tipo:</label>
                 <?php echo h($project['Project']['type'])?>
-			</div>
-      		</div>
-      		<div style="clear:both;"></div>
-      	</div>
-      	<div>
-      		<div class="col-md-6">
-      			<div class="form-group">
-				<label>Precio:</label>
-                <?php echo h($project['Project']['price'])?>
-			</div>
-      		</div>
+            </div>
+          </div>
+      		
           <div class="col-md-6">
             <div class="form-group">
         <label>Moneda:</label>
@@ -121,7 +125,17 @@
 			</div>
       		</div>
       		<div class="margenesVerticales" style="text-align:right;">
-	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'projects';" title="regresar" value = "Atr&aacute;s" style="width: 79px;"> 	  
+	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'projects';" title="regresar" value = "Atr&aacute;s" style="width: 79px;">
+                  <?php
+                    // require('fpdf.php');
+
+                    // $pdf = new FPDF();
+                    // $pdf->AddPage();
+                    // $pdf->SetFont('Arial','B',16);
+                    // $pdf->Cell(40,10,'¡Hola, Mundo!');
+                    // $pdf->Output();
+                  ?>
+                  <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'projects/imprimir/<?php echo $project['Project']['id']; ?>';" title="Click para imprimir" value = "Imprimir" style="width: 79px;"> 	  
 				</div>
       	</div>    
 </div>          

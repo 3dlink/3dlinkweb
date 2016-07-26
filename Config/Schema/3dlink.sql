@@ -2,10 +2,10 @@
 -- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 25-07-2016 a las 20:45:52
--- Versión del servidor: 5.6.21
--- Versión de PHP: 5.6.3
+-- Host: 127.0.0.1
+-- Generation Time: Jul 27, 2016 at 12:13 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `3dlink`
+-- Database: `3dlink`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cargos`
+-- Table structure for table `cargos`
 --
 
 CREATE TABLE IF NOT EXISTS `cargos` (
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `cargos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `cargos`
+-- Dumping data for table `cargos`
 --
 
 INSERT INTO `cargos` (`id`, `name`, `salary`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `cargos` (`id`, `name`, `salary`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `clients`
+-- Table structure for table `clients`
 --
 
 CREATE TABLE IF NOT EXISTS `clients` (
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `clients` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `clients`
+-- Dumping data for table `clients`
 --
 
 INSERT INTO `clients` (`id`, `company_name`, `country`, `phone`, `email`, `type`, `observation`, `manager`) VALUES
@@ -70,7 +70,7 @@ INSERT INTO `clients` (`id`, `company_name`, `country`, `phone`, `email`, `type`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `egresos`
+-- Table structure for table `egresos`
 --
 
 CREATE TABLE IF NOT EXISTS `egresos` (
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `egresos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `egresos`
+-- Dumping data for table `egresos`
 --
 
 INSERT INTO `egresos` (`id`, `concepto`, `monto`, `egr_date`) VALUES
@@ -94,7 +94,7 @@ INSERT INTO `egresos` (`id`, `concepto`, `monto`, `egr_date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `ingresos`
+-- Table structure for table `ingresos`
 --
 
 CREATE TABLE IF NOT EXISTS `ingresos` (
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `ingresos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `ingresos`
+-- Dumping data for table `ingresos`
 --
 
 INSERT INTO `ingresos` (`id`, `concepto`, `monto`, `ing_date`) VALUES
@@ -117,7 +117,7 @@ INSERT INTO `ingresos` (`id`, `concepto`, `monto`, `ing_date`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `login_tokens`
+-- Table structure for table `login_tokens`
 --
 
 CREATE TABLE IF NOT EXISTS `login_tokens` (
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `login_tokens` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `personals`
+-- Table structure for table `personals`
 --
 
 CREATE TABLE IF NOT EXISTS `personals` (
@@ -156,20 +156,20 @@ CREATE TABLE IF NOT EXISTS `personals` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `personals`
+-- Dumping data for table `personals`
 --
 
 INSERT INTO `personals` (`id`, `name`, `ci`, `cargo_id`, `bio`, `job`, `photo`, `account_number`, `account_type`, `bank`, `observations`, `phone`, `email_personal`, `email_company`, `rif`, `active`) VALUES
 (2, 'Alirio Aranguren', 'V-17148680', 4, '', '', '', '1234567890', 'Arrecha', 'Arrecho', 'Holis', '', '', '', '', 0),
 (3, 'Cristiano Ronaldo', 'E-299019774', 4, 'Guevo pelao', 'Guevo pelao', 'img1468869634J12.jpg', '2147483647', 'Impagable', 'Venezuela', 'hola', '123098123123', 'ronaldo@madrid.com', 'ronaldo@madrid.com', '12312421214', 1),
-(5, 'Hola', '124321412', 0, '', '', '', '2147483647', 'una ahi', 'sofitasa', 'un tipo ahi', '', '', '', '', 0),
-(6, 'Rivaldo', '123123', 0, '', '', '', '2147483647', 'Impagable', 'Brasileiro', 'Wao', '', '', '', '', 0),
+(5, 'Hola', '124321412', 3, 'dfhkajhsdkjf', 'Un carguito ahi', '', '2147483647', 'una ahi', 'sofitasa', 'un tipo ahi', '', '', '', '', 0),
+(6, 'Rivaldo', '123123', 3, 'kfdkjhd', 'ddkjhdj', '', '2147483647', 'Impagable', 'Brasileiro', 'Wao', '', '', '', '', 0),
 (7, 'Juan Arango', '13213123', 4, 'Un tipo serio', 'Goleador', 'img14688675689P7.png', '123354356546', 'Impagable', 'Bank of America', 'Hay que jalarle bola para que no se vaya con Farias', '123123123', 'el-mas-pipi@hotmail.com', 'arangol@3dlinkweb.com', '123123123', 1);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `personals_projects`
+-- Table structure for table `personals_projects`
 --
 
 CREATE TABLE IF NOT EXISTS `personals_projects` (
@@ -179,21 +179,19 @@ CREATE TABLE IF NOT EXISTS `personals_projects` (
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `personals_projects`
+-- Dumping data for table `personals_projects`
 --
 
 INSERT INTO `personals_projects` (`id`, `personal_id`, `project_id`) VALUES
 (1, 3, 3),
 (3, 6, 3),
 (4, 2, 4),
-(5, 3, 4),
-(6, 5, 4),
-(7, 6, 4);
+(5, 3, 4);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `projects`
+-- Table structure for table `projects`
 --
 
 CREATE TABLE IF NOT EXISTS `projects` (
@@ -212,18 +210,18 @@ CREATE TABLE IF NOT EXISTS `projects` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `projects`
+-- Dumping data for table `projects`
 --
 
 INSERT INTO `projects` (`id`, `name`, `type`, `description`, `init_date`, `end_date`, `asana_url`, `price`, `status`, `personal_id`, `client_id`, `currency`) VALUES
 (2, 'Orgia 2016', 'Desarrollo', 'Buscando a las putas', '2016-06-30', '2016-07-04', 'https://app.asana.com/0/67192036044956/67192036044956', 20000, 'En DiseÃ±o', 2, 2, '0'),
 (3, 'Colombiana', 'Todos los servicios', 'wola', '2016-07-20', '2016-07-29', 'asana.com', 100000000000, 'Aprobado', 2, 4, 'EUR (â‚¬)'),
-(4, 'Prueba', 'Desarrollo y DiseÃ±o', 'Pruebita', '2016-07-29', '2016-08-06', 'asana.com', 10000000, 'En Desarrollo', 3, 2, 'USD ($)');
+(4, 'Prueba', 'Desarrollo y DiseÃ±o', 'Pruebita', '2016-07-29', '2016-12-30', 'asana.com', 10000000, 'En Desarrollo', 2, 2, 'USD ($)');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `quotes`
+-- Table structure for table `quotes`
 --
 
 CREATE TABLE IF NOT EXISTS `quotes` (
@@ -233,7 +231,7 @@ CREATE TABLE IF NOT EXISTS `quotes` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `quotes`
+-- Dumping data for table `quotes`
 --
 
 INSERT INTO `quotes` (`id`, `text`, `author`) VALUES
@@ -245,7 +243,7 @@ INSERT INTO `quotes` (`id`, `text`, `author`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `team`
+-- Table structure for table `team`
 --
 
 CREATE TABLE IF NOT EXISTS `team` (
@@ -257,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `team` (
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `team`
+-- Dumping data for table `team`
 --
 
 INSERT INTO `team` (`id`, `name`, `job`, `bio`, `photo`) VALUES
@@ -272,7 +270,7 @@ INSERT INTO `team` (`id`, `name`, `job`, `bio`, `photo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -292,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `user_group_id`, `username`, `password`, `salt`, `email`, `first_name`, `last_name`, `email_verified`, `active`, `ip_address`, `created`, `modified`) VALUES
@@ -301,7 +299,7 @@ INSERT INTO `users` (`id`, `user_group_id`, `username`, `password`, `salt`, `ema
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `user_groups`
+-- Table structure for table `user_groups`
 --
 
 CREATE TABLE IF NOT EXISTS `user_groups` (
@@ -314,7 +312,7 @@ CREATE TABLE IF NOT EXISTS `user_groups` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `user_groups`
+-- Dumping data for table `user_groups`
 --
 
 INSERT INTO `user_groups` (`id`, `name`, `alias_name`, `allowRegistration`, `created`, `modified`) VALUES
@@ -325,7 +323,7 @@ INSERT INTO `user_groups` (`id`, `name`, `alias_name`, `allowRegistration`, `cre
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `user_group_permissions`
+-- Table structure for table `user_group_permissions`
 --
 
 CREATE TABLE IF NOT EXISTS `user_group_permissions` (
@@ -337,7 +335,7 @@ CREATE TABLE IF NOT EXISTS `user_group_permissions` (
 ) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `user_group_permissions`
+-- Dumping data for table `user_group_permissions`
 --
 
 INSERT INTO `user_group_permissions` (`id`, `user_group_id`, `controller`, `action`, `allowed`) VALUES
@@ -426,7 +424,7 @@ INSERT INTO `user_group_permissions` (`id`, `user_group_id`, `controller`, `acti
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `work`
+-- Table structure for table `work`
 --
 
 CREATE TABLE IF NOT EXISTS `work` (
@@ -442,7 +440,7 @@ CREATE TABLE IF NOT EXISTS `work` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `work`
+-- Dumping data for table `work`
 --
 
 INSERT INTO `work` (`id`, `name`, `description`, `url`, `type`, `img1`, `img2`, `img3`, `img4`) VALUES
@@ -452,164 +450,164 @@ INSERT INTO `work` (`id`, `name`, `description`, `url`, `type`, `img1`, `img2`, 
 (6, 'asghjgh', 'rfhfghfghf', NULL, 'Development', 'img1466197802BXG.png', 'img1466197802BXG.png', 'img1466197802BXG.png', 'img1466197802BXG.png');
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `cargos`
+-- Indexes for table `cargos`
 --
 ALTER TABLE `cargos`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `clients`
+-- Indexes for table `clients`
 --
 ALTER TABLE `clients`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `egresos`
+-- Indexes for table `egresos`
 --
 ALTER TABLE `egresos`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `ingresos`
+-- Indexes for table `ingresos`
 --
 ALTER TABLE `ingresos`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `login_tokens`
+-- Indexes for table `login_tokens`
 --
 ALTER TABLE `login_tokens`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `personals`
+-- Indexes for table `personals`
 --
 ALTER TABLE `personals`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `personals_projects`
+-- Indexes for table `personals_projects`
 --
 ALTER TABLE `personals_projects`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `projects`
+-- Indexes for table `projects`
 --
 ALTER TABLE `projects`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `quotes`
+-- Indexes for table `quotes`
 --
 ALTER TABLE `quotes`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `team`
+-- Indexes for table `team`
 --
 ALTER TABLE `team`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
  ADD PRIMARY KEY (`id`), ADD KEY `user` (`username`), ADD KEY `mail` (`email`), ADD KEY `users_FKIndex1` (`user_group_id`);
 
 --
--- Indices de la tabla `user_groups`
+-- Indexes for table `user_groups`
 --
 ALTER TABLE `user_groups`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `user_group_permissions`
+-- Indexes for table `user_group_permissions`
 --
 ALTER TABLE `user_group_permissions`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `work`
+-- Indexes for table `work`
 --
 ALTER TABLE `work`
  ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `cargos`
+-- AUTO_INCREMENT for table `cargos`
 --
 ALTER TABLE `cargos`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT de la tabla `clients`
+-- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT de la tabla `egresos`
+-- AUTO_INCREMENT for table `egresos`
 --
 ALTER TABLE `egresos`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT de la tabla `ingresos`
+-- AUTO_INCREMENT for table `ingresos`
 --
 ALTER TABLE `ingresos`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT de la tabla `login_tokens`
+-- AUTO_INCREMENT for table `login_tokens`
 --
 ALTER TABLE `login_tokens`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `personals`
+-- AUTO_INCREMENT for table `personals`
 --
 ALTER TABLE `personals`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT de la tabla `personals_projects`
+-- AUTO_INCREMENT for table `personals_projects`
 --
 ALTER TABLE `personals_projects`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT de la tabla `projects`
+-- AUTO_INCREMENT for table `projects`
 --
 ALTER TABLE `projects`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT de la tabla `quotes`
+-- AUTO_INCREMENT for table `quotes`
 --
 ALTER TABLE `quotes`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT de la tabla `team`
+-- AUTO_INCREMENT for table `team`
 --
 ALTER TABLE `team`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT de la tabla `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT de la tabla `user_groups`
+-- AUTO_INCREMENT for table `user_groups`
 --
 ALTER TABLE `user_groups`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT de la tabla `user_group_permissions`
+-- AUTO_INCREMENT for table `user_group_permissions`
 --
 ALTER TABLE `user_group_permissions`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=82;
 --
--- AUTO_INCREMENT de la tabla `work`
+-- AUTO_INCREMENT for table `work`
 --
 ALTER TABLE `work`
 MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
