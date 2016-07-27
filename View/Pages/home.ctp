@@ -21,7 +21,7 @@
     <div id="meet_the_team" class="animated">
       <div id="nav_team" class="slider-nav">
         <?php foreach ($personals as $key => $value) { ?>
-              <div class="team-img" style="background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Personal']['photo']?>');">
+              <div class="team-img" style="height: 145px;background-position: center;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Personal']['photo']?>');">
                   <div class="mask"></div>
               </div>
         <?php } ?>
