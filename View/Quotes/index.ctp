@@ -35,8 +35,8 @@
 
                 <?php foreach ($quotes as $item): ?>
 									<tr>
-                    <td><?php echo h($item['Quote']['text']); ?>&nbsp;</td>
-					<td><?php echo h($item['Quote']['author']); ?>&nbsp;</td>
+                    <td> <?php echo h($item['Quote']['text']); ?>&nbsp;</td>
+					           <td><?php echo h($item['Quote']['author']); ?>&nbsp;</td>
 	                  <td>
 	                    <div style="display: block; width: 80px; margin: 0 auto;">
                         <?php if($this->UserAuth->getGroupId() == 1){ ?>

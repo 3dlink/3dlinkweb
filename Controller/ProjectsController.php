@@ -87,15 +87,32 @@ class ProjectsController extends AppController {
     	}
 
     	$sumatotaldelsalariodemierdade3dlink = '0';
+    	$el_lider = '0';
+    	$salario_lider = '0';
+    	$cont = '0';
+
 
 		foreach ($project['Personal'] as $persona) {
 			if(is_array($persona)){
-				$salario = $this->Cargo->findById($persona['cargo_id']);
-				// array_push($devs,array('Nombre'=>$persona['name'], 'Salario' =>$salario['Cargo']['salary'] * $interval));
-				$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario['Cargo']['salary'] * $interval;
+
+				if($persona['id']!=$project['Project']['personal_id']){
+					$salario = $this->Cargo->findById($persona['cargo_id']);
+					$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario['Cargo']['salary'] * $interval;	
+				}else{
+					$cont = $cont + '1';
+					$salario = $this->Cargo->findById($persona['cargo_id']);
+					$salario_lider = $salario['Cargo']['salary'] * $interval;
+					$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink;
+				}
 			}
 		}
-		// $this->set('devs', $devs);
+
+		if($cont == '0'){
+			$el_lider = $this->Personal->findById($project['Personal']['id']);
+			$salario_lider = $el_lider['Cargo']['salary'] * $interval;
+		}
+
+		$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario_lider;
 		$this->set('sumatotaldelsalariodemierdade3dlink', $sumatotaldelsalariodemierdade3dlink);
 
 		///////////////////////////Seccion del PDF///////////////////////////////////////
