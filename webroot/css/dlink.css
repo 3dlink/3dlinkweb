@@ -276,8 +276,8 @@ body{
   float:left;
   width:100%;
   position:relative;
-  padding-left: 22%;
-  padding-right: 25%;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 
 .about-text-back{
@@ -868,6 +868,9 @@ body{
   #meet_the_team{
     opacity: 0;
     height: 0;
+        width: 100%;
+    max-width: 780px;
+    margin: 0 auto;
   }
 
   .meet_active{

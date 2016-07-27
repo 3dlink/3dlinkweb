@@ -32,6 +32,7 @@
                   <th>CI</th>
                   <th>Cargo</th>
                   <th>Trabajo en Home 3DLink</th>
+                  <th></th>
                 </th>
 
                 <?php foreach ($personals as $item): ?>
@@ -40,7 +41,6 @@
 						<td><?php echo h($item['Personal']['ci']); ?>&nbsp;</td>
 						<td><?php echo h($item['Cargo']['name']); ?>&nbsp;</td>
             <td><?php echo h($item['Personal']['job']); ?>&nbsp;</td>
-            <td><?php echo h($item['Personal']['bio']); ?>&nbsp;</td>
 		                <td>
 		                    <div style="display: block; width: 80px; margin: 0 auto;">
 	                        <?php if($this->UserAuth->getGroupId() == 1){ ?>
