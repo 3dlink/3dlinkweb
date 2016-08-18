@@ -54,18 +54,94 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 		<script type="text/javascript">
 		var WEBROOT = '<?php $this->webroot; ?>';
-
 		$(function () {
-    
-	    	$('.navbar-toggler').on('click', function(event) {
+			$('.navbar-menu2').css('height', $(window).height() );
+
+	    $('.navbar-toggler').on('click', function(event) {
 				event.preventDefault();
-				$(this).closest('.navbar-minimal').toggleClass('open');
+				$(this).closest('.navbar').toggleClass('open');
 			})
+
+
+			$('.menu-options-mobile a').on('click', function(){
+				$('.myMenuMobile .navbar-toggler').click();
+			})
+
+			$('.myMenuMobile .navbar-toggler').on('click', function(event) {
+				event.preventDefault();
+				$('.navbar-menu2').toggleClass('open2');
+				$(this).closest('.navbar2').toggleClass('open2');
+
+
+
+
+				if( $('.navbar2').hasClass('open2') ){
+					$( ".navbar-menu2" ).animate({
+						height: "show"
+					}, 2000);
+				}
+				else{
+					$( ".navbar-menu2" ).animate({
+						height: "toggle"
+					}, 2000);
+				}
+
+			})
+
+
+			$(window).resize(function(){
+				if( $(window).width() > 770 ){
+					$('.navbar-menu2').css('display', 'none');
+					if($('.navbar-menu2').hasClass('open2')){
+						$('.myMenuMobile .navbar-toggler').click();
+					}
+				}
+				else{
+					if($('.navbar-menu').hasClass('open')){
+						$('.myMenuWeb .navbar-toggler').click();
+					}
+					$('.navbar-menu').css('display', 'none');
+				}
+				$('.navbar-menu2').css('height', $(window).height() );
+			})
+
+
 		});
 		</script>
-		<div id="content">
+		<div id="content" style="position:relative;">
 
-			<nav class="navbar navbar-fixed-left navbar-minimal animate2" role="navigation">
+			<div class="navbar-menu2">
+					<div style="text-align: center;">
+						<img class="menuMobileImg" src="img/Logo-Home.png">
+					</div>
+					<div class="menu-options-mobile">
+							<a onclick="$('body').scrollTo('#aboutus',2000);"  class="animate2">
+								<span class="desc animate2"> About Us </span>
+							</a>
+							<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
+
+							<a onclick="$('body').scrollTo('#o-work',2000);" class="animate2">
+								<span class="desc animate2"> Our Work </span>
+							</a>
+							<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
+
+							<a onclick="$('body').scrollTo('#w-offer',2000);"  class="animate2">
+								<span class="desc animate2"> What We Offer </span>
+							</a>
+							<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
+
+							<a onclick="$('body').scrollTo('#contactus',2000);" class="animate2">
+								<span class="desc animate2"> Contact Us </span>
+							</a>
+					</div>
+			</div>
+			<nav class="myMenuMobile navbar2 navbar-fixed-right" role="navigation">
+					<div class="navbar-toggler ">
+						<span class="menu-icon"></span>
+					</div>
+			</nav>
+
+			<nav class="myMenuWeb navbar navbar-fixed-left" role="navigation">
 					<div class="navbar-toggler animate2">
 						<span class="menu-icon"></span>
 					</div>
@@ -73,25 +149,24 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<li>
 							<a onclick="$('body').scrollTo('#aboutus',2000);"  class="animate2">
 								<span class="desc animate2"> About Us </span>
-								<span class="glyphicon glyphicon-user"></span>
 							</a>
 						</li>
+						<div class="liner-menu"></div>
 						<li>
 							<a onclick="$('body').scrollTo('#o-work',2000);" class="animate2">
 								<span class="desc animate2"> Our Work </span>
-								<span class="glyphicon glyphicon-phone"></span>
 							</a>
 						</li>
+						<div class="liner-menu"></div>
 						<li>
 							<a onclick="$('body').scrollTo('#w-offer',2000);"  class="animate2">
 								<span class="desc animate2"> What We Offer </span>
-								<span class="glyphicon glyphicon-info-sign"></span>
 							</a>
 						</li>
+						<div class="liner-menu"></div>
 						<li>
 							<a onclick="$('body').scrollTo('#contactus',2000);" class="animate2">
 								<span class="desc animate2"> Contact Us </span>
-								<span class="glyphicon glyphicon-comment"></span>
 							</a>
 						</li>
 					</ul>
@@ -102,7 +177,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
-		
+
 
 	<?php echo $this->element('sql_dump'); ?>
 </body>
