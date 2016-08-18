@@ -28914,3 +28914,211 @@ Request URL: /3dlinkweb/js/jquery.mask.min.js
 Stack Trace:
 #0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-07-28 00:19:41 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:19:41 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:19:42 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:19:48 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:19:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:19:49 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:19:59 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:19:59 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:20:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:20:04 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:20:08 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:20:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:20:09 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:20:10 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/multiple-select.png
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:22:51 Error: Fatal Error (4): syntax error, unexpected '$personal' (T_VARIABLE) in [C:\xampp\htdocs\3d\3dlinkweb\Controller\ProjectsController.php, line 314]
+2016-07-28 00:22:51 Error: [FatalErrorException] syntax error, unexpected '$personal' (T_VARIABLE)
+Request URL: /3d/3dlinkweb/projects/edit/4
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 314)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 314, Array)
+#2 C:\xampp\htdocs\3d\3dlinkweb\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 314, Array)
+#3 C:\xampp\htdocs\3d\3dlinkweb\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-07-28 00:23:17 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:23:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:23:18 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:23:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/multiple-select.png
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:24:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:24:12 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:24:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/multiple-select.png
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-07-28 00:24:17 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3d/3dlinkweb/css/multiple-select.png
+Stack Trace:
+#0 C:\xampp\htdocs\3d\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
