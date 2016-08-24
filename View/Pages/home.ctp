@@ -17,7 +17,7 @@
     <div class="resp-label" style="text-align: center;margin-top: 40px;">
       <button id="mtt">MEET THE TEAM</button>
     </div>
-    
+
     <div id="meet_the_team" class="animated">
       <div id="nav_team" class="slider-nav">
         <?php foreach ($personals as $key => $value) { ?>
@@ -36,7 +36,7 @@
               </div>
           </div>
         <?php } ?>
-      </div> 
+      </div>
     </div>
 
 </section>
@@ -53,14 +53,14 @@
         <div class="development-sel">DEVELOPMENT</div>
         <div class="design-sel">DESIGN</div>
         <div class="vert-separator"></div>
-        <div class="clear"></div>    
+        <div class="clear"></div>
     </div>
 
     <div id="design_cont" class="carousel-container3 animated">
       <div class="product-carousel">
 
         <div class="design_slider">
-        <?php foreach ($works as $key => $value) { 
+        <?php foreach ($works as $key => $value) {
               if($value['Work']['type']=='Design'){ ?>
           <div class="item">
             <p class="sel-title"><strong><?php echo $value['Work']['name']?> -</strong><?php echo $value['Work']['description']?></p>
@@ -74,9 +74,9 @@
             <div class="img-square" style="float:right;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img4']?>');">
             </div>
           </div>
-        <?php } 
+        <?php }
       } ?>
-      </div> 
+      </div>
       </div>
     </div>
 
@@ -84,7 +84,7 @@
       <div class="product-carousel">
 
         <div class="develop_slider">
-        <?php foreach ($works as $key => $value) { 
+        <?php foreach ($works as $key => $value) {
               if($value['Work']['type']=='Development'){ ?>
           <div class="item">
             <p class="sel-title"><strong><a href="<?php echo $value['Work']['url']?>" target="_blank"><?php echo $value['Work']['name']?></a></p></strong>
@@ -98,12 +98,12 @@
             <div class="img-square" style="float:right;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img4']?>');">
             </div>
           </div>
-        <?php } 
+        <?php }
       } ?>
-      </div> 
+      </div>
       </div>
     </div>
-    
+
 </section>
 
 <section id="w-offer" class="separator2">
@@ -134,7 +134,7 @@
                           </div>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
             <div class="col-md-4 left tab-fix">
                 <p class="services-square">E-commerce</p>
@@ -264,13 +264,13 @@
         </div>
         <div class="clear"></div>
     </div>
-    
+
 
     <div class="carousel-container2">
 
         <div class="insp-quotes-carousel">
             <div id="quotes-carousel" class="owl-carousel">
-                <?php 
+                <?php
                     foreach ($quotes as $quote) {
                 ?>
                 <div class="item">
@@ -278,10 +278,10 @@
                         <p class="insp-quote"><?php echo $quote['Quote']['text']; ?></p>
                         <hr class="quote-separator"></hr>
                         <p class="insp-author"><strong><?php echo $quote['Quote']['author']; ?></strong></p>
-                    </div>    
+                    </div>
                 </div>
-                
-                <?php  
+
+                <?php
                     }
                 ?>
 
@@ -326,7 +326,7 @@
         </form>
     </div>
 </section>
-
+<div class="clear"> </div>
 <section class="footer">
     <div class="social-net" style="float:left;">
         <div class="right resp-opt">
@@ -422,7 +422,7 @@
     }
   }
   });
-  
+
 
 // $('#design').owlCarousel({
 //    loop:false,
@@ -435,7 +435,7 @@
 //    ],
 //    nav:true
 //  });
-  
+
 $('#development').owlCarousel({
    loop:false,
    center: true,
@@ -459,7 +459,7 @@ $(document).ready(function(){
       setTimeout(function(){ $('#meet_the_team').removeClass('meet_active'); }, 800);
     }else{
       $('body').scrollTo('#mtt',1000);
-      $('#mtt').addClass('letter_mtt');      
+      $('#mtt').addClass('letter_mtt');
       $('#meet_the_team').addClass('meet_active');
       $('#meet_the_team').addClass('slideInDown');
       $('#meet_the_team').removeClass('bounceOutUp');
@@ -471,8 +471,8 @@ $('.development-sel').click(function(){
   $('.development-sel').addClass('letter_active');
   $('.design-sel').removeClass('letter_active');
   $('#development_cont').addClass('meet_active');
-  $('#development_cont').addClass('slideInDown'); 
-  $('#design_cont').removeClass('meet_active'); 
+  $('#development_cont').addClass('slideInDown');
+  $('#design_cont').removeClass('meet_active');
 });
 $('.design-sel').click(function(){
   $('body').scrollTo('.work-selector',1000);
@@ -480,7 +480,7 @@ $('.design-sel').click(function(){
   $('.development-sel').removeClass('letter_active');
   $('#design_cont').addClass('meet_active');
   $('#design_cont').addClass('slideInDown');
-  $('#development_cont').removeClass('meet_active');   
+  $('#development_cont').removeClass('meet_active');
 });
 
 

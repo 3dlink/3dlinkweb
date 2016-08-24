@@ -56,6 +56,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		var WEBROOT = '<?php $this->webroot; ?>';
 		$(function () {
 			$('.navbar-menu2').css('height', $(window).height() );
+			// min-height: 500px;
 
 	    $('.navbar-toggler').on('click', function(event) {
 				event.preventDefault();
@@ -72,15 +73,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				$('.navbar-menu2').toggleClass('open2');
 				$(this).closest('.navbar2').toggleClass('open2');
 
-
-
-
 				if( $('.navbar2').hasClass('open2') ){
+					$('section').css('display', 'none');
 					$( ".navbar-menu2" ).animate({
 						height: "show"
 					}, 2000);
 				}
 				else{
+					$('section').css('display', 'block');
 					$( ".navbar-menu2" ).animate({
 						height: "toggle"
 					}, 2000);
@@ -88,13 +88,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 			})
 
+			if( $(window).width() <= 770 ){
+				if( $(window).width() > $(window).height() ){
+					$('.navbar-menu2').css('min-height', '550px' );
+				}
+			}
 
 			$(window).resize(function(){
 				if( $(window).width() > 770 ){
-					$('.navbar-menu2').css('display', 'none');
 					if($('.navbar-menu2').hasClass('open2')){
 						$('.myMenuMobile .navbar-toggler').click();
 					}
+					$('.navbar-menu2').css('display', 'none');
+					$('.myMenuWeb ul').css('display', 'block')
 				}
 				else{
 					if($('.navbar-menu').hasClass('open')){
@@ -109,13 +115,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		});
 		</script>
 		<div id="content" style="position:relative;">
-
 			<div class="navbar-menu2">
 					<div style="text-align: center;">
 						<img class="menuMobileImg" src="img/Logo-Home.png">
 					</div>
 					<div class="menu-options-mobile">
-							<a onclick="$('body').scrollTo('#aboutus',2000);"  class="animate2">
+							<a onclick="$('body').scrollTo('#aboutus',2000);" class="animate2">
 								<span class="desc animate2"> About Us </span>
 							</a>
 							<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
@@ -140,6 +145,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						<span class="menu-icon"></span>
 					</div>
 			</nav>
+
+
+
 
 			<nav class="myMenuWeb navbar navbar-fixed-left" role="navigation">
 					<div class="navbar-toggler animate2">
