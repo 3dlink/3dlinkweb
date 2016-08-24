@@ -34,6 +34,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->css('slick');
 		echo $this->Html->css('animate');
 		echo $this->Html->css('multiple-select');
+		
+		
+		/* Daniel */
+		echo $this->Html->css('payment');
+		/* Daniel */
 
 		echo $this->Html->script('jquery-2.2.0.min');
 		echo $this->Html->script('owl.carousel.min');
