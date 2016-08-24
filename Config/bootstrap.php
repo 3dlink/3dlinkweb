@@ -111,3 +111,6 @@ CakeLog::config('error', array(
 CakePlugin::loadAll(array(
     'Usermgmt' => array('routes' => true, 'bootstrap' => true),
 ));
+
+// load paypal plugin
+CakePlugin::load('Paypal');
