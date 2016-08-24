@@ -336,10 +336,12 @@ body{
 }
 
 .footer{
-    float: left;
+    bottom: -65px;
+    /*float: left;*/
     width: 100%;
     height: 70px;
-    position: relative;
+    /*position: relative;*/
+    position: absolute;
     padding-left: 70px;
     padding-right: 10px;
     background-color: #121317;
@@ -933,8 +935,8 @@ body{
   }
   .navbar-fixed-left {
     position: fixed;
-    top: 15%;
-    left: 10%;
+    top: 10%;
+    left: 5%;
     border-radius: 0px;
   }
 
@@ -955,7 +957,10 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center center;
-    -webkit-transition: width 1s, height 1s, -webkit-transform 1s; /* Safari */
+    -moz-transition: width 1s, height 1s, -webkit-transform 1s;
+    -o-transition: width 1s, height 1s, -webkit-transform 1s;
+    -ms-transition: width 1s, height 1s, -webkit-transform 1s;
+    -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
     transition: width 1s, height 1s, transform 1s;
   }
 
@@ -976,6 +981,9 @@ body{
     background-image: url("../img/Close.png");
     background-size: 80% 80%;
     -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
     transform: rotate(180deg);
   }
 
@@ -996,7 +1004,7 @@ body{
 
   .menu-options-mobile{
     width: 70%;
-    height: 100%;
+    /*height: 100%;*/
     margin: 0 auto;
     text-align: center;
     margin-top: 5%;
@@ -1007,20 +1015,21 @@ body{
 
   .menu-options-mobile a:hover{
     color: #00deec;
-    font-size: 14px;
+    font-size: 20px;
     text-decoration: none;
     font-weight: bold;
   }
 
   .menu-options-mobile a{
+    font-style: italic;
     color: white;
-    font-size: 14px;
+    font-size: 20px;
     cursor: pointer;
   }
 
   .menuMobileImg{
-    width: 15%;
-    margin-top: 5%;
+    width: 20%;
+    margin-top: 2%;
   }
 
 
@@ -1030,16 +1039,31 @@ body{
     width: 0px;
     height: 0px;
     -webkit-transition: height  1s ease, width 1s ease 1s;
+    -o-transition: height  1s ease, width 1s ease 1s;
+    -moz-transition: height  1s ease, width 1s ease 1s;
+    -ms-transition: height  1s ease, width 1s ease 1s;
+    transition: height  1s ease, width 1s ease 1s;
+
   }
 
   .navbar.open > .navbar-menu{
     width: 150px;
     height: 280px;
     -webkit-transition: width 1s ease, height 1s ease 1s;
+    -o-transition: width 1s ease, height 1s ease 1s;
+    -moz-transition: width 1s ease, height 1s ease 1s;
+    -ms-transition: width 1s ease, height 1s ease 1s;
+    transition: width 1s ease, height 1s ease 1s;
+
   }
 
   .navbar.open > .navbar-menu > li, .navbar.open > .navbar-menu > div{
     -webkit-transition: all 1s ease 2s;
+    -ms-transition: all 1s ease 2s;
+    -o-transition: all 1s ease 2s;
+    -moz-transition: all 1s ease 2s;
+    transition: all 1s ease 2s;
+
     visibility: visible;
   }
 
@@ -1053,6 +1077,9 @@ body{
     background-image: url("../img/Close.png");
     background-size: 80% 80%;
     -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
   }
 
@@ -1089,10 +1116,10 @@ body{
 
 
   .navbar-menu2{
-    position:fixed;
+    /*position:fixed;*/
     top:0px;
     left:0px;
-    z-index:100 !important;
+    /*z-index:100 !important;*/
     width:100%;
     background-color: #16181e;
   }
@@ -1367,8 +1394,10 @@ body{
     width: 25px;
   }
   .contact-meth {
-    width: 35%;
-    margin-left: -30px;
+    width: 25%;
+    margin-left: 20px;
+    /*width: 35%;*/
+    /*margin-left: -30px;*/
   }
 }
 
