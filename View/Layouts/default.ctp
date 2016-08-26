@@ -62,16 +62,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 </head>
 <body>
 		<script type="text/javascript">
+		$( "body" ).scrollTop( 0 );
 		$("body").css("overflow", "hidden");
 		$(window).load(function(){
-		  $("body").css("overflow", "scroll");
+		  $("body").css("overflow-y", "scroll");
 		  $('#loading').css('display', 'none');
 		})
 		var WEBROOT = '<?php $this->webroot; ?>';
 		$(function () {
 			$('.navbar-menu2').css('height', $(window).height() );
-			// min-height: 500px;
-
 	    $('.navbar-toggler').on('click', function(event) {
 				event.preventDefault();
 				$(this).closest('.navbar').toggleClass('open');
@@ -128,10 +127,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		});
 		</script>
+		<div id="loading" style="position: absolute; z-index:1005 !important; display:block; width:100%; background-color:black;">
+			<img style="width:100%; margin-top:-20px; margin-left:-20px;" src="img/Loading-page-3d-link.gif"/>
+		</div>
 		<div id="content" style="position:relative;">
-			<div id="loading" style="position: absolute; z-index:1005 !important; display:block; width:100%; background-image:url('img/Loading-FONDO.png'); background-size:cover;">
-			  <img style="width:100%;" src="img/Loading-page-3d-link.gif"/>
-			</div>
 			<div class="navbar-menu2">
 					<div style="text-align: center;">
 						<img class="menuMobileImg" src="img/Logo-Home.png">
