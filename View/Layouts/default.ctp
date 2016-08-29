@@ -127,9 +127,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 		});
 		</script>
-		<div id="loading" style="position: absolute; z-index:1005 !important; display:block; width:100%; background-color:black;">
-			<img style="width:100%; margin-top:-20px; margin-left:-20px;" src="img/Loading-page-3d-link.gif"/>
-		</div>
 		<div id="content" style="position:relative;">
 			<div class="navbar-menu2">
 					<div style="text-align: center;">

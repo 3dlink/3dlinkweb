@@ -87,6 +87,10 @@ Cache::config('default', array('engine' => 'File'));
  *
  * ));
  */
+
+ // load paypal plugin
+ CakePlugin::load('Paypal');
+
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
@@ -111,6 +115,3 @@ CakeLog::config('error', array(
 CakePlugin::loadAll(array(
     'Usermgmt' => array('routes' => true, 'bootstrap' => true),
 ));
-
-// load paypal plugin
-CakePlugin::load('Paypal');

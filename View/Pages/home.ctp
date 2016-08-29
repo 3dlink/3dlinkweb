@@ -1,3 +1,7 @@
+<div id="loading" style="position: absolute; z-index:1005 !important; display:block; width:100%; background-color:black;">
+  <img style="width:100%; margin-top:-20px; margin-left:-20px;" src="img/Loading-page-3d-link.gif"/>
+</div>
+
 <section class="combanner" class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $this->webroot;?>img/3dlink-banner.png">
         <div class="home-text-back">
             <img class="logo-home-img" src="<?php echo $this->webroot;?>img/Logo-Home.png">

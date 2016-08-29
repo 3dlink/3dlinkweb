@@ -24,21 +24,20 @@
 					<div class="form-group">
 						<label>RIF</label>
 						<?php echo $this->Form->input('rif',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'J-000000000','required'=>true, 'error' => true)); ?>
-						<?php echo $this->Session->flash('rif'); ?>
 					</div>
 				</div>
 
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Monto</label>
-						<?php echo $this->Form->input('monto',array('div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','required'=>true, 'min'=>'0', 'error' => true)); ?>
+						<?php echo $this->Form->input('monto',array('div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','required'=>true, 'min'=>'1', 'error' => true)); ?>
 					</div>
 				</div>
 
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Método de Pago</label><br/>
-						<?php echo $this->Form->radio('metodo_pago', array('paypal' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-paypal.png">', 'mercadopago' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-mercadopago.png">', '123pago' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-123pago.png">') , array('div'=>false,'label'=>false,'class'=>'','required'=>true, 'legend' => false, 'separator' =>'<br/>', 'style' => 'margin-right: 1%; margin-left:2%;', 'error' => true)); ?>
+						<?php echo $this->Form->radio('metodo_pago', array('paypal' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-paypal.png">', 'mercadopago' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-mercadopago.png">', '123pago' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-123pago.png">') , array('div'=>false,'label'=>false, 'value'=>'paypal','class'=>'','required'=>true, 'legend' => false, 'style' => 'margin-right: 1%; margin-left:2%;', 'error' => true)); ?>
 					</div>
 				</div>
 
@@ -60,7 +59,6 @@
 					<div class="form-group">
 						<label>Correo</label>
 						<?php echo $this->Form->input('correo',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'hello@example.com','required'=>true, 'error' => true)); ?>
-						<?php echo $this->Session->flash('correo'); ?>
 					</div>
 				</div>
 
@@ -68,11 +66,8 @@
 					<div class="form-group">
 						<label>Teléfono</label>
 						<?php echo $this->Form->input('telefono',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'0000-0000000','required'=>true, 'error' => true)); ?>
-						<?php echo $this->Session->flash('telefono'); ?>
 					</div>
 				</div>
-
-				
 
 				<div class="margenesVerticales" style="text-align:right;margin-top:30px;float:right;">
 					<button type="submit" class="btn btn-primary">
@@ -81,7 +76,7 @@
 				</div>
 			</div>
 		</fieldset>
-		<?php echo $this->Form->end(); ?>  
+		<?php echo $this->Form->end(); ?>
 	</article>
 </section>
 
@@ -99,3 +94,76 @@
 
 	</section>
 </footer>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#PaymentIndexForm').submit(function (e){
+			var error = '<div class="error_message">';
+			var isValid = true;
+
+			$('.error_message').remove();
+
+			if (!$('#PaymentNombreEmpresa').val() != '') {
+				$('#PaymentNombreEmpresa').after(error+'Debe llenar este campo'+'</div>');
+				isValid = false;
+			}
+
+			if ($('#PaymentRif').val()!= '') {
+				var pat = /^[VvjJ][-]\d{9}$/;
+				if (!pat.test($('#PaymentRif').val())) {
+					$('#PaymentRif').after(error+'Debe colocar un rif con el formato @-000000000'+'</div>');
+					isValid = false;
+				}
+			}else{
+				$('#PaymentRif').after(error+'Debe llenar este campo'+'</div>');
+				isValid = false;
+			}
+
+				if ( $('#PaymentMonto').val() != '') {
+					if (parseInt($('#PaymentMonto').val()) <= 0) {
+						$('#PaymentMonto').after(error+'El monto debe ser mayor que 0'+'</div>');
+						isValid = false;
+					}
+				}else{
+					$('#PaymentMonto').after(error+'Debe llenar este campo con un monto válido'+'</div>');
+					isValid = false;
+				}
+
+			if (!$('#PaymentDescripcion').val() != '') {
+				$('#PaymentDescripcion').after(error+'Debe llenar este campo'+'</div>');
+				isValid = false;
+			}
+
+			if (!$('#PaymentResponsable').val() != '') {
+				$('#PaymentResponsable').after(error+'Debe llenar este campo'+'</div>');
+				isValid = false;
+			}
+
+			if ($('#PaymentCorreo').val()!= '') {
+				var pat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+				if (!pat.test($('#PaymentCorreo').val())) {
+					$('#PaymentCorreo').after(error+'Debe colocar un correo válido'+'</div>');
+					isValid = false;
+				}
+			}else{
+				$('#PaymentCorreo').after(error+'Debe llenar este campo'+'</div>');
+				isValid = false;
+			}
+
+			if ($('#PaymentTelefono').val()!= '') {
+				var pat = /^\d{4}[-]\d{7}$/;
+				if (!pat.test($('#PaymentTelefono').val())) {
+					$('#PaymentTelefono').after(error+'El teléfono debe contener un código de área de 4 dígitos seguido de un guión (-) y 7 dígitos'+'</div>');
+					isValid = false;
+				}
+			}else{
+				$('#PaymentTelefono').after(error+'Debe llenar este campo'+'</div>');
+				isValid = false;
+			}
+
+			if (!isValid){
+				e.preventDefault();
+			}
+	});
+});
+</script>

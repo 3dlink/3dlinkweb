@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 App::uses('Paypal', 'Paypal.Lib');
 
@@ -9,11 +9,12 @@ class PaymentsController extends AppController {
 	}
 
 	public function pay(){
+
+		$this->autoRender = false;
 		if ($this->request->is('post')) {
 
 			$this->Payment->set($this->request->data);
 
-			if($this->Payment->validates()){
 				$this->Payment->save($this->request->data);
 				$newId = $this->Payment->id;
 
@@ -26,14 +27,6 @@ class PaymentsController extends AppController {
 				} elseif ($this->request->data['Payment']['metodo_pago'] == 'mercadopago') {
 				# code...
 				}
-			} else {
-				$errors = $this->Payment->validationErrors;
-				
-				foreach ($errors as $error => $value) {
-					$this->Session->setFlash($value[0],'default', array('class' => 'error_message'), $error);
-				}
-				return $this->redirect(array('action' => 'index'));
-			}
 		}
 	}
 
@@ -82,7 +75,7 @@ class PaymentsController extends AppController {
 		$payerId = $_GET['PayerID'];
 
 		try {
-			$this->Paypal->doExpressCheckoutPayment($order, $token, $payerId);  
+			$this->Paypal->doExpressCheckoutPayment($order, $token, $payerId);
 		} catch (PaypalRedirectException $e) {
 			$this->redirect($e->getMessage());
 			die();
