@@ -36,3 +36,8 @@
 2016-08-26 13:26:02 Debug: permission: actionUrl-payments/pay
 2016-08-26 15:58:06 Debug: permission: actionUrl-payments/pay
 2016-08-26 17:52:49 Debug: permission: actionUrl-payments/pay
+2016-08-29 13:45:18 Debug: permission: actionUrl-payments/pay
+2016-08-29 16:50:32 Debug: permission: actionUrl-payments/confirm_mercadopago
+2016-08-29 16:50:46 Debug: permission: actionUrl-user_group_permissions/index
+2016-08-30 09:05:52 Debug: permission: actionUrl-payments/success
+2016-08-30 10:54:11 Debug: permission: actionUrl-payments/carrito
