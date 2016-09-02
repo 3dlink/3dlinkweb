@@ -168,23 +168,55 @@ class PaymentsController extends AppController {
 		return $this->redirect($url);
 	}
 
-	// function notification(){
-	// 	$mp = new MP ("7383633796764492", "arR2X20hLztNs6oH6Tq4qwdkllPE3HA2");
+	function notification(){
+		$this->autoRender = false;
+		$mp = new MP("7383633796764492", "arR2X20hLztNs6oH6Tq4qwdkllPE3HA2");
 
-	// 	$contenido = "id: ".$_GET['id']."\ntopic: ".$_GET['topic'];
+		if (!isset($_GET["id"], $_GET["topic"]) || !ctype_digit($_GET["id"])) {
+			http_response_code(400);
+			return;
+		}
 
-	// 	$Email = new CakeEmail();
-	// 	$Email->config('_temp')
-	// 	->to('o0serras0o@gmail.com')
-	// 	// ->bcc('info@3dlinkweb.com')
-	// 	->subject('notification')
-	// 	->from('random@algo.com')
-	// 	->template('default')
-	// 	->emailFormat('html')
-	// 	->send($contenido);
+		$topic = $_GET["topic"];
+		$merchant_order_info = null;
 
-	// 	return true;
-	// }
+		switch ($topic) {
+			case 'payment':
+			$payment_info = $mp->get("/collections/notifications/".$_GET["id"]);
+			$merchant_order_info = $mp->get("/merchant_orders/".$payment_info["response"]["collection"]["merchant_order_id"]);
+			break;
+			case 'merchant_order':
+			$merchant_order_info = $mp->get("/merchant_orders/".$_GET["id"]);
+			break;
+			default:
+			$merchant_order_info = null;
+		}
+
+		if($merchant_order_info == null) {
+			echo "Error obteniendo la información de la orden";
+			die();
+		}else{
+			if ($merchant_order_info['status'] == 'open') {
+				$estado = 2;
+				$subject = "Pago pendiente!";
+			} elseif ($merchant_order_info['status'] == 'closed') {
+				$estado = 1;
+				$subject = "Pago éxitoso!";
+			} else {
+				$estado = 3;
+				$subject = "Pago rechazado!";
+			}
+
+			$order = $this->Payment->findByToken($merchant_order_info['preference_id']);
+
+			$this->Payment->read(null, $order['Payment']['id']);
+			$this->Payment->set('estado', $estado);
+			$this->Payment->save();
+		}
+
+		$message = $this->__mensaje($this->Payment->id);
+		$this->__enviar_correo("info@3dlinkweb.com", $this->Payment->correo, $subject, $message);
+	}
 
 	function __mensaje($id){
 
