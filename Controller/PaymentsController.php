@@ -150,21 +150,30 @@ class PaymentsController extends AppController {
 
 				$url ="pending";
 				$subject = "Pago pendiente!";
-			} else{
+			} elseif ($estado == 3){
 				$this->Payment->set('estado', 3);
 				$this->Payment->set('token', $_GET['preference_id']);
 				$this->Payment->save();
 
 				$url ="failure";
 				$subject = "Pago rechazado!";
+			} else {
+				$this->Payment->set('estado', 4);
+				$this->Payment->set('token', $_GET['preference_id']);
+				$this->Payment->save();
+
+				$url ="";
+				$subject = null;
 			}
 		}
 
-		$payed = $this->Payment->findById($this->Session->read('id'));
+		if ($subject != null) {
+			$payed = $this->Payment->findById($this->Session->read('id'));
 
-		$message = $this->__mensaje($this->Session->read('id'));
+			$message = $this->__mensaje($this->Session->read('id'));
 
-		$this->__enviar_correo("cesarherguetal@gmail.com", $payed["Payment"]["correo"], $subject, $message);
+			$this->__enviar_correo("cesarherguetal@gmail.com", $payed["Payment"]["correo"], $subject, $message);
+		}
 
 		return $this->redirect($url);
 	}
@@ -244,7 +253,7 @@ class PaymentsController extends AppController {
 		$Email = new CakeEmail();
 		$Email->config('_temp')
 		->to($to)
-		// ->bcc('info@3dlinkweb.com')
+		->bcc('info@3dlinkweb.com')
 		->subject($subject)
 		->from($from)
 		->template('default')

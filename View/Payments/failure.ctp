@@ -11,6 +11,10 @@
 		<div class="success_message" style="background-color: #f2dede; color: #a94442;">
 			<span>Su pago no ha sido realizado, en breves momentos recibirá un correo con la información.</span>
 		</div>
+
+		<div class="back-btn">
+			<button class="btn btn-primary">Volver</button>
+		</div>
 	</div>
 </div>
 
@@ -30,10 +34,10 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	$(".success_container").height(window.innerHeight - $("header").height() - 70 );
+	$(".success_container").height(window.innerHeight - $("header").height() - 90 );
 
 	$(window).resize(function(){
-		$(".success_container").height(window.innerHeight - $("header").height() - 70 );
+		$(".success_container").height(window.innerHeight - $("header").height() - 90 );
 	});
 })
 

@@ -11,6 +11,10 @@
 		<div class="success_message">
 			<span>Su pago ha sido realizado exitosamente, en breves momentos recibirá un correo con la información.<br> ¡Gracias por confiar en nosotros!</span>
 		</div>
+
+		<div class="back-btn">
+			<a href="<?php echo $this->webroot; ?>"><button class="btn btn-primary">Volver</button></a>
+		</div>
 	</div>
 </div>
 
@@ -30,10 +34,10 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	$(".success_container").height(window.innerHeight - $("header").height() - 70);
+	$(".success_container").height(window.innerHeight - $(".paymentHeader").height() - 90);
 
 	$(window).resize(function(){
-		$(".success_container").height(window.innerHeight - $("header").height() - 70 );
+		$(".success_container").height(window.innerHeight - $(".paymentHeader").height() - 90 );
 	});
 })
 

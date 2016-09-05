@@ -15,7 +15,7 @@ body{
 
 .paymentHeader{
 	background-color: #121317;
-	padding: 1% 0;
+	padding: 10px 0;
 }
 
 .paymentForm{
@@ -121,4 +121,16 @@ legend{
 	display: table;
 	text-align: center;
 	width: 100%;
+}
+
+.back-btn{
+	margin-top: 15px;
+	width: 100%;
+	padding: 0 45%;
+}
+
+.back-btn button{
+	margin-top: 20px;
+	width: 100%;
+	cursor: pointer;
 }

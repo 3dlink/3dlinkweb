@@ -11,6 +11,10 @@
 		<div class="success_message" style="background-color:#121317; color:#fff;">
 			<span>Su pago ésta siendo procesado, en breves momentos recibirá un correo con la información.</span>
 		</div>
+
+		<div class="back-btn">
+			<a href="<?php echo $this->webroot; ?>"><button class="btn btn-primary">Volver</button></a>
+		</div>
 	</div>
 </div>
 
@@ -30,10 +34,10 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	$(".success_container").height(window.innerHeight - $("header").height() - 70 );
+	$(".success_container").height(window.innerHeight - $("header").height() - 90 );
 
 	$(window).resize(function(){
-		$(".success_container").height(window.innerHeight - $("header").height() - 70 );
+		$(".success_container").height(window.innerHeight - $("header").height() - 90 );
 	});
 })
 

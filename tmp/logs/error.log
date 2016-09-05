@@ -5671,3 +5671,769 @@ Request URL: /js/jquery.mask.min.js
 Stack Trace:
 #0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-09-05 23:32:56 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469584243IAO.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:56 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469582461SPU.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:57 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199814SP1.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:57 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14691998813Y0.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:57 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199010ALN.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:58 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199896NJE.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637149OK7.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14686363741DG.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637819ZIY.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468638712PHT.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640566R4Z.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640220VQC.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864103423R.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:32:59 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468641475GZI.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:33:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643176GTF.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:33:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864396529P.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:33:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643590NZZ.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 23:33:00 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468644156F4G.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 17:51:15 Error: [SocketException] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+
+Request URL: /payments/confirm_mercadopago/3?collection_id=null&collection_status=null&preference_id=226843419-24775158-4ae3-4bcb-8b02-9b0ac046a603&external_reference=null&payment_type=null&merchant_order_id=384259292
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\SmtpTransport.php(154): CakeSocket->connect()
+#1 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\SmtpTransport.php(95): SmtpTransport->_connect()
+#2 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\CakeEmail.php(1158): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\htdocs\3dlinkweb\Controller\PaymentsController.php(254): CakeEmail->send('Ha ocurrido un ...')
+#4 C:\xampp\htdocs\3dlinkweb\Controller\PaymentsController.php(169): PaymentsController->__enviar_correo('cesarherguetal@...', 'hello@example.c...', 'Pago rechazado!', 'Ha ocurrido un ...')
+#5 [internal function]: PaymentsController->confirm_mercadopago('3')
+#6 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 17:51:16 Error: Fatal Error (1): Call to a member function from() on string in [C:\xampp\htdocs\3dlinkweb\Controller\PaymentsController.php, line 251]
+2016-09-05 17:51:16 Error: [FatalErrorException] Call to a member function from() on string
+Request URL: /payments/confirm_mercadopago/img/Logo-Home.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 251)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 251, Array)
+#2 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 251, Array)
+#3 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-09-05 17:56:57 Error: [SocketException] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+
+Request URL: /payments/confirm_mercadopago/3?collection_id=null&collection_status=null&preference_id=226843419-d42b7fb5-6c56-4a3b-b60b-158d80d5a67b&external_reference=null&payment_type=null&merchant_order_id=384264633
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\SmtpTransport.php(154): CakeSocket->connect()
+#1 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\SmtpTransport.php(95): SmtpTransport->_connect()
+#2 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\CakeEmail.php(1158): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\htdocs\3dlinkweb\Controller\PaymentsController.php(261): CakeEmail->send('Ha ocurrido un ...')
+#4 C:\xampp\htdocs\3dlinkweb\Controller\PaymentsController.php(175): PaymentsController->__enviar_correo('cesarherguetal@...', 'hello@example.c...', 'Pago rechazado!', 'Ha ocurrido un ...')
+#5 [internal function]: PaymentsController->confirm_mercadopago('3')
+#6 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 17:57:29 Error: [SocketException] Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder.
+
+Request URL: /payments/confirm_mercadopago/3?collection_id=null&collection_status=null&preference_id=226843419-d42b7fb5-6c56-4a3b-b60b-158d80d5a67b&external_reference=null&payment_type=null&merchant_order_id=null
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\SmtpTransport.php(154): CakeSocket->connect()
+#1 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\SmtpTransport.php(95): SmtpTransport->_connect()
+#2 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Network\Email\CakeEmail.php(1158): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\htdocs\3dlinkweb\Controller\PaymentsController.php(261): CakeEmail->send('Ha ocurrido un ...')
+#4 C:\xampp\htdocs\3dlinkweb\Controller\PaymentsController.php(175): PaymentsController->__enviar_correo('cesarherguetal@...', 'hello@example.c...', 'Pago rechazado!', 'Ha ocurrido un ...')
+#5 [internal function]: PaymentsController->confirm_mercadopago('3')
+#6 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-06 00:27:19 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:27:19 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:27:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:27:25 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:27:25 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:27:47 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /css/main.css
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:27:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /js/jquery.mask.min.js
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199896NJE.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199010ALN.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199814SP1.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14691998813Y0.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469582461SPU.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469584243IAO.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14686363741DG.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:37 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637149OK7.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637819ZIY.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468638712PHT.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640566R4Z.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640220VQC.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864103423R.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468641475GZI.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643176GTF.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643590NZZ.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468644156F4G.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:38 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864396529P.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469582461SPU.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199814SP1.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637149OK7.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199010ALN.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14686363741DG.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637819ZIY.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14691998813Y0.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199896NJE.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469584243IAO.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:51 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468638712PHT.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640566R4Z.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640220VQC.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864103423R.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468641475GZI.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643176GTF.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864396529P.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643590NZZ.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:35:52 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468644156F4G.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:22 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199896NJE.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:22 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199814SP1.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:22 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469584243IAO.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:22 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14691998813Y0.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:22 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469199010ALN.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:22 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1469582461SPU.png
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img14686363741DG.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637819ZIY.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468637149OK7.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468638712PHT.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640566R4Z.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468640220VQC.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864103423R.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468641475GZI.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643176GTF.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img146864396529P.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468643590NZZ.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-06 00:36:23 Error: [MissingControllerException] Controller class FilesController could not be found.
+Exception Attributes: array (
+  'class' => 'FilesController',
+  'plugin' => NULL,
+)
+Request URL: /files/img1468644156F4G.PNG
+Stack Trace:
+#0 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

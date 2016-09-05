@@ -37,7 +37,7 @@
 				<div class="col-md-6">
 					<div class="form-group">
 						<label>Método de Pago</label><br/>
-						<?php echo $this->Form->radio('metodo_pago', array('paypal' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-paypal.png">', 'mercadopago' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-mercadopago.png">', '123pago' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-123pago.png">') , array('div'=>false,'label'=>false, 'value'=>'paypal','class'=>'','required'=>true, 'legend' => false, 'style' => 'margin-right: 1%; margin-left:2%;', 'error' => true)); ?>
+						<?php echo $this->Form->radio('metodo_pago', array('paypal' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-paypal.png">', 'mercadopago' => '<img class="logo-pago" src="'.$this->webroot.'img/logo-mercadopago.png">') , array('div'=>false,'label'=>false, 'value'=>'paypal','class'=>'','required'=>true, 'legend' => false, 'style' => 'margin-right: 1%; margin-left:2%;', 'error' => true)); ?>
 					</div>
 				</div>
 
