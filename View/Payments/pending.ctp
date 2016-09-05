@@ -6,11 +6,13 @@
 	</section>
 </header>
 
-<section class="container success_container">
-	<div class="success_message" style="background-color:#121317; color:#fff;">
-		<span>Su pago ésta siendo procesado, en breves momentos recibirá un correo con la información.</span>
+<div class="container success_container">
+	<div style = "width:100%; display:table-cell; vertical-align: middle;">
+		<div class="success_message" style="background-color:#121317; color:#fff;">
+			<span>Su pago ésta siendo procesado, en breves momentos recibirá un correo con la información.</span>
+		</div>
 	</div>
-</section>
+</div>
 
 <footer class="clearfix">
 		<section class="footer">
@@ -28,10 +30,10 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	$(".success_container").height(window.innerHeight - $("header").height() - 97 );
+	$(".success_container").height(window.innerHeight - $("header").height() - 70 );
 
 	$(window).resize(function(){
-		$(".success_container").height(window.innerHeight - $("header").height() - 97 );
+		$(".success_container").height(window.innerHeight - $("header").height() - 70 );
 	});
 })
 

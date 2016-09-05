@@ -459,7 +459,7 @@ class MPRestClient {
 
         curl_setopt($connect, CURLOPT_USERAGENT, "MercadoPago PHP SDK v" . MP::version);
         curl_setopt($connect, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($connect, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($connect, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($connect, CURLOPT_CAINFO, $GLOBALS["LIB_LOCATION"] . "/cacert.pem.txt");
         curl_setopt($connect, CURLOPT_CUSTOMREQUEST, $request["method"]);
         curl_setopt($connect, CURLOPT_HTTPHEADER, $headers);

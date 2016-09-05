@@ -100,8 +100,6 @@ legend{
 }
 
 .success_message {
-	position: absolute;
-	top: 58%;
 	width: 80%;
 
 	overflow: hidden; 
@@ -115,8 +113,12 @@ legend{
 	background-color: #dff0d8;
 	border-color: #d6e9c6;
 	cursor: pointer;
+
+	margin-left: 10%;
 }
 
 .success_container{
+	display: table;
 	text-align: center;
+	width: 100%;
 }

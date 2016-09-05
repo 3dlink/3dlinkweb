@@ -6,11 +6,13 @@
 	</section>
 </header>
 
-<section class="container success_container">
-	<div class="success_message">
-		<span>Su pago ha sido realizado éxitosamente, en breves momentos recibirá un correo con la información.<br> Gracias por confiar en nosotros!</span>
+<div class="container success_container">
+	<div style = "width:100%; display:table-cell; vertical-align: middle;">
+		<div class="success_message">
+			<span>Su pago ha sido realizado exitosamente, en breves momentos recibirá un correo con la información.<br> ¡Gracias por confiar en nosotros!</span>
+		</div>
 	</div>
-</section>
+</div>
 
 <footer class="clearfix">
 		<section class="footer">
@@ -28,10 +30,10 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	$(".success_container").height(window.innerHeight - $("header").height() - 97 );
+	$(".success_container").height(window.innerHeight - $("header").height() - 70);
 
 	$(window).resize(function(){
-		$(".success_container").height(window.innerHeight - $("header").height() - 97 );
+		$(".success_container").height(window.innerHeight - $("header").height() - 70 );
 	});
 })
 
