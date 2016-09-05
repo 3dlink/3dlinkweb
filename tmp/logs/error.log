@@ -5270,3 +5270,305 @@ Stack Trace:
 #1 C:\xampp\htdocs\3dlinkweb\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
 #2 C:\xampp\htdocs\3dlinkweb\webroot\index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2016-09-05 20:32:43 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:32:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:32:52 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:32:52 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:32:55 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:32:55 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:01 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:02 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:06 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:06 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:11 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:11 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:14 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:14 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:36 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/css/main.css
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 20:33:37 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /3dlinkweb/js/jquery.mask.min.js
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-09-05 14:36:14 Error: [MercadoPagoException] error setting certificate verify locations:
+  CAfile: /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library\cacert.pem.txt
+  CApath: none
+Request URL: /3dlinkweb/payments/pay
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(67): MPRestClient::post(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(210): MP->get_access_token()
+#3 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(128): MP->create_preference(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(30): PaymentsController->with_mercadopago(Array)
+#5 [internal function]: PaymentsController->pay()
+#6 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 14:36:14 Error: [MissingActionException] Action PaymentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'PaymentsController',
+  'action' => 'img',
+)
+Request URL: /3dlinkweb/payments/img/Logo-Home.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-05 14:37:01 Error: [MercadoPagoException] error setting certificate verify locations:
+  CAfile: /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/librarycacert.pem.txt
+  CApath: none
+Request URL: /3dlinkweb/payments/pay
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(67): MPRestClient::post(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(210): MP->get_access_token()
+#3 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(128): MP->create_preference(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(30): PaymentsController->with_mercadopago(Array)
+#5 [internal function]: PaymentsController->pay()
+#6 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 14:37:01 Error: [MissingActionException] Action PaymentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'PaymentsController',
+  'action' => 'img',
+)
+Request URL: /3dlinkweb/payments/img/Logo-Home.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-05 14:37:14 Error: [MercadoPagoException] error setting certificate verify locations:
+  CAfile: /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/librarylibrary/cacert.pem.txt
+  CApath: none
+Request URL: /3dlinkweb/payments/pay
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(67): MPRestClient::post(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(210): MP->get_access_token()
+#3 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(128): MP->create_preference(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(30): PaymentsController->with_mercadopago(Array)
+#5 [internal function]: PaymentsController->pay()
+#6 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 14:37:14 Error: [MissingActionException] Action PaymentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'PaymentsController',
+  'action' => 'img',
+)
+Request URL: /3dlinkweb/payments/img/Logo-Home.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-05 14:37:22 Error: [MercadoPagoException] error setting certificate verify locations:
+  CAfile: /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/library/cacert.pem.txt
+  CApath: none
+Request URL: /3dlinkweb/payments/pay
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(67): MPRestClient::post(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(210): MP->get_access_token()
+#3 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(128): MP->create_preference(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(30): PaymentsController->with_mercadopago(Array)
+#5 [internal function]: PaymentsController->pay()
+#6 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 14:37:23 Error: [MissingActionException] Action PaymentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'PaymentsController',
+  'action' => 'img',
+)
+Request URL: /3dlinkweb/payments/img/Logo-Home.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-05 14:37:29 Error: [MercadoPagoException] SSL certificate problem: unable to get local issuer certificate
+Request URL: /3dlinkweb/payments/pay
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(67): MPRestClient::post(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(210): MP->get_access_token()
+#3 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(128): MP->create_preference(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(30): PaymentsController->with_mercadopago(Array)
+#5 [internal function]: PaymentsController->pay()
+#6 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 14:37:30 Error: [MissingActionException] Action PaymentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'PaymentsController',
+  'action' => 'img',
+)
+Request URL: /3dlinkweb/payments/img/Logo-Home.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-09-05 14:38:24 Error: [MercadoPagoException] SSL certificate problem: unable to get local issuer certificate
+Request URL: /3dlinkweb/payments/pay
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(557): MPRestClient::exec(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(67): MPRestClient::post(Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/library/mercadopago.php(210): MP->get_access_token()
+#3 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(128): MP->create_preference(Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/Controller/PaymentsController.php(30): PaymentsController->with_mercadopago(Array)
+#5 [internal function]: PaymentsController->pay()
+#6 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PaymentsController), Array)
+#7 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-09-05 14:38:24 Error: [MissingActionException] Action PaymentsController::img() could not be found.
+Exception Attributes: array (
+  'controller' => 'PaymentsController',
+  'action' => 'img',
+)
+Request URL: /3dlinkweb/payments/img/Logo-Home.png
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/cakephp/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PaymentsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/3dlinkweb/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

@@ -1,5 +1,6 @@
 <?php
-require_once('..\mercadopago.php');
+require_once("library/mercadopago.php");
+
 
 App::uses('Paypal', 'Paypal.Lib', 'CakeEmail', 'Network/Email');
 
@@ -91,12 +92,12 @@ class PaymentsController extends AppController {
 		$this->Payment->set('token', $token);
 		$this->Payment->set('estado', 1);
 		$this->Payment->save();
-		
+
 		$payed = $this->Payment->findById($this->Session->read('id'));
 
 		$message = $this->__mensaje($this->Session->read('id'));
 
-		$this->__enviar_correo("info@3dlinkweb.com", $payed["Payment"]["correo"],"Pago éxitoso!", $message);
+		$this->__enviar_correo("cesarherguetal@gmail.com", $payed["Payment"]["correo"],"Pago éxitoso!", $message);
 
 		return $this->redirect('success');
 	}
@@ -115,8 +116,8 @@ class PaymentsController extends AppController {
 			);
 
 		$preference_data["back_urls"] = array(
-			"success"=> $_SERVER['HTTP_HOST'].$this->webroot.'payments/confirm_mercadopago/1', 
-			"pending"=>$_SERVER['HTTP_HOST'].$this->webroot.'payments/confirm_mercadopago/2', 
+			"success"=> $_SERVER['HTTP_HOST'].$this->webroot.'payments/confirm_mercadopago/1',
+			"pending"=>$_SERVER['HTTP_HOST'].$this->webroot.'payments/confirm_mercadopago/2',
 			"failure"=> $_SERVER['HTTP_HOST'].$this->webroot.'payments/confirm_mercadopago/3'
 			);
 
@@ -133,7 +134,7 @@ class PaymentsController extends AppController {
 		$this->autoRender = false;
 
 		$this->Payment->read(null, $this->Session->read('id'));
-		
+
 		if ($estado != null) {
 			if ($estado == 1) {
 				$this->Payment->set('estado', 1);
@@ -163,7 +164,7 @@ class PaymentsController extends AppController {
 
 		$message = $this->__mensaje($this->Session->read('id'));
 
-		$this->__enviar_correo("info@3dlinkweb.com", $payed["Payment"]["correo"], $subject, $message);
+		$this->__enviar_correo("cesarherguetal@gmail.com", $payed["Payment"]["correo"], $subject, $message);
 
 		return $this->redirect($url);
 	}
@@ -215,7 +216,7 @@ class PaymentsController extends AppController {
 		}
 
 		$message = $this->__mensaje($this->Payment->id);
-		$this->__enviar_correo("info@3dlinkweb.com", $this->Payment->correo, $subject, $message);
+		$this->__enviar_correo("cesarherguetal@gmail.com", $this->Payment->correo, $subject, $message);
 	}
 
 	function __mensaje($id){
@@ -242,7 +243,7 @@ class PaymentsController extends AppController {
 
 		$Email = new CakeEmail();
 		$Email->config('_temp')
-		->to($to) 
+		->to($to)
 		// ->bcc('info@3dlinkweb.com')
 		->subject($subject)
 		->from($from)
