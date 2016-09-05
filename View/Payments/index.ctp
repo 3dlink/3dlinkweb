@@ -111,7 +111,7 @@
 			if ($('#PaymentRif').val()!= '') {
 				var pat = /^[VvjJ][-]\d{9}$/;
 				if (!pat.test($('#PaymentRif').val())) {
-					$('#PaymentRif').after(error+'Debe colocar un rif con el formato @-000000000'+'</div>');
+					$('#PaymentRif').after(error+'Debe colocar un rif con el formato J-000000000'+'</div>');
 					isValid = false;
 				}
 			}else{
@@ -122,6 +122,11 @@
 				if ( $('#PaymentMonto').val() != '') {
 					if (parseInt($('#PaymentMonto').val()) <= 0) {
 						$('#PaymentMonto').after(error+'El monto debe ser mayor que 0'+'</div>');
+						isValid = false;
+					}
+
+					if (parseInt($('#PaymentMonto').val()) > 999999) {
+						$('#PaymentMonto').after(error+'El monto debe ser menor que 999999'+'</div>');
 						isValid = false;
 					}
 				}else{
