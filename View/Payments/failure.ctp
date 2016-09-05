@@ -13,7 +13,7 @@
 		</div>
 
 		<div class="back-btn">
-			<button class="btn btn-primary">Volver</button>
+			<a href="<?php echo $this->webroot; ?>"><button class="btn btn-primary">Volver</button></a>
 		</div>
 	</div>
 </div>
