@@ -114,13 +114,15 @@ legend{
 	border-color: #d6e9c6;
 	cursor: pointer;
 
-	margin-left: 10%;
+	margin: 0 10%;
 }
 
 .success_container{
 	display: table;
 	text-align: center;
-	width: 100%;
+	width: 80%;
+
+	margin: 0 auto;
 }
 
 .back-btn{
@@ -133,4 +135,33 @@ legend{
 	margin-top: 20px;
 	width: 100%;
 	cursor: pointer;
+}
+
+@media(max-width: 625px){
+	.success_container{
+		width: 400px;
+	}
+
+	.back-btn{
+		padding: 0 38%;
+	}
+}
+
+@media (max-width: 420px){
+	body{
+		font-size: 15px;
+	}
+
+	.success_container{
+		width: 250px;
+	}
+
+	.copyright{
+		font-size: 12px;
+	}
+
+}
+
+a:focus{
+	outline: none;
 }

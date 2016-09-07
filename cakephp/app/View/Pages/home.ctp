@@ -1,228 +1,581 @@
+<div id="loading" style="position: absolute; z-index:1005 !important; display:block; width:100%; background-color:black;">
+  <img style="width:100%; margin-top:-20px; margin-left:-20px;" src="img/Loading-page-3d-link.gif"/>
+</div>
+
+<section class="combanner" class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $this->webroot;?>img/3dlink-banner.png">
+        <div class="home-text-back">
+            <img class="logo-home-img" src="<?php echo $this->webroot;?>img/Logo-Home.png">
+        </div>
+</section>
+
+<section id="aboutus" class="about-us">
+    <div class="about-text-back">
+        <img class="back-about-img" src="<?php echo $this->webroot;?>img/About-Us.png">
+    </div>
+    <div class="about-descrip">
+        <p>
+          <?php echo __("The 3D Link team is made up of young professionals, each and every one complementing an effective team for the development of technologies. We are keeping our minds open for challenges in order to generate new ideas in this digital era with its growing potentiality. All members have formed their skills at prestigious universities with recognitions throughout their studies and research projects.") ?>
+        </p>
+    </div>
+
+    <div class="resp-label" style="text-align: center;margin-top: 40px;">
+      <button id="mtt"><?php echo __("MEET THE TEAM") ?></button>
+    </div>
+
+    <div id="meet_the_team" class="animated">
+      <div id="nav_team" class="slider-nav">
+        <?php foreach ($personals as $key => $value) { ?>
+              <div class="team-img" style="height: 145px;background-position: center;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Personal']['photo']?>');">
+                  <div class="mask"></div>
+              </div>
+        <?php } ?>
+      </div>
+      <div class="slider-for">
+        <?php foreach ($personals as $key => $value) { ?>
+          <div id="bio_<?php echo ($key+1); ?>" class="bio">
+              <div class="biography">
+                  <p><strong><?php echo $value['Personal']['name']?></strong><br><i><?php echo $value['Personal']['job']?></i></p>
+                  <img style="display: initial;" src="<?php echo $this->webroot;?>img/bluebar.png">
+                  <p><?php 
+                    if ($this->session->read('Config.language') == 'eng'){
+                      echo $value['Personal']['bio'];
+                    } else {
+                      echo $value['Personal']['bio_esp'];
+                    }
+                  ?></p>
+              </div>
+          </div>
+        <?php } ?>
+      </div>
+    </div>
+
+</section>
+
+<section id="o-work" class="separator1">
+    <div class="img-separator"></div>
+</section>
+
+<section class="our-work">
+    <div class="ourwork-text-back">
+        <img src="<?php echo $this->webroot;?>img/Our-Work.png">
+    </div>
+    <div class="work-selector">
+        <div class="development-sel"><?php echo __("DEVELOPMENT") ?></div>
+        <div class="design-sel"><?php echo __("DESIGN") ?></div>
+        <div class="vert-separator"></div>
+        <div class="clear"></div>
+    </div>
+
+    <div id="design_cont" class="carousel-container3 animated">
+      <div class="product-carousel">
+
+        <div class="design_slider">
+        <?php foreach ($works as $key => $value) {
+              if($value['Work']['type']=='Design'){ ?>
+          <div class="item">
+            <p class="sel-title"><strong><?php echo $value['Work']['name']?> -</strong><?php echo $value['Work']['description']?></p>
+            <hr class="bluebar"></hr>
+            <div class="img-square" style="background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img1']?>');">
+            </div>
+            <div class="img-square" style="float:right;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img2']?>');">
+            </div>
+            <div class="img-square" style="background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img3']?>');">
+            </div>
+            <div class="img-square" style="float:right;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img4']?>');">
+            </div>
+          </div>
+        <?php }
+      } ?>
+      </div>
+      </div>
+    </div>
+
+    <div id="development_cont" class="carousel-container3 animated">
+      <div class="product-carousel">
+
+        <div class="develop_slider">
+        <?php foreach ($works as $key => $value) {
+              if($value['Work']['type']=='Development'){ ?>
+          <div class="item">
+            <p class="sel-title"><strong><a href="<?php echo $value['Work']['url']?>" target="_blank"><?php echo $value['Work']['name']?></a></p></strong>
+            <hr class="bluebar"></hr>
+            <div class="img-square" style="background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img1']?>');">
+            </div>
+            <div class="img-square" style="float:right;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img2']?>');">
+            </div>
+            <div class="img-square" style="background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img3']?>');">
+            </div>
+            <div class="img-square" style="float:right;background-image:url('<?php echo $this->webroot;?>files/<?php echo $value['Work']['img4']?>');">
+            </div>
+          </div>
+        <?php }
+      } ?>
+      </div>
+      </div>
+    </div>
+
+</section>
+
+<section id="w-offer" class="separator2">
+
+</section>
+
+<section class="offer">
+    <div class="offer-text-back">
+        <img src="<?php echo $this->webroot;?>img/Offer.png">
+    </div>
+    <div class="clear"></div>
+
+    <div class="offer-table">
+        <div class="clear"></div>
+        <div class="offer-title"><?php echo __("DEVELOPMENT") ?></div>
+        <div class="row-fluid show-grid resp-pad">
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("Web & Mobile development") ?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="dev1 box front">
+                        </div>
+                        <div class="box back dev1">
+                          <div class="mask_flip">
+                            <p><?php echo __("We aim to build sites that stay true to our clients’ needs and visions, focusing on how the sites can not only benefit but also help develop our customers’ businesses. We use a range of programming languages and development frameworks.") ?></p>
+                            <hr class="flip_linea"></hr>
+
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("E-commerce") ?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="dev2 box front">
+                        </div>
+                        <div class="box back dev2">
+                          <div class="mask_flip"><?php echo __("It is the modern business system on line, where it opens the possibility for creating a business and making payments through the App. Fortunately in 3D Link we are experienced to meet various challenges of electronic commerce.") ?>
+                            <hr class="flip_linea"></hr>
+
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("Hosting") ?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="dev3 box front">
+                        </div>
+                        <div class="box back dev3">
+                          <div class="mask_flip"> <?php echo __("We offer the hosting service and server management with specific characteristics depending on the project requirements. As a support and additional service from 3D link depending on customers’ requirements and needs.") ?>
+                            <hr class="flip_linea"></hr>
+
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="offer-title"><?php echo __("DESIGN") ?></div>
+        <div class="row-fluid show-grid resp-pad">
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("Branding")?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="des1 box front">
+                        </div>
+                        <div class="box back des1">
+                          <div class="mask_flip"><?php echo __("If you’re starting a brand, or have one, but you just want to give it a fresh and clean makeover, 3D Link has the best design team to bring your ideas to life.") ?>
+                            <hr class="flip_linea"></hr>
+
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("Web design") ?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="des2 box front">
+                        </div>
+                        <div class="box back des2">
+                          <div class="mask_flip"><?php echo __("Nowadays, the web design is almost as important as the brand itself, we offer you a memorable and unique design to give your clients the most comfortable experience.") ?>
+                            <hr class="flip_linea"></hr>
+
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("Packaging") ?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="des3 box front">
+                        </div>
+                        <div class="box back des3">
+                          <div class="mask_flip"><?php echo __("A great product like yours, needs a great packaging design, like ours. We will make your brand stand out of the rest with a powerful and vibrant design.") ?>
+                            <hr class="flip_linea"></hr>
+
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="offer-title">EXTRAS</div>
+        <div class="row-fluid show-grid resp-pad">
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square">SEO</p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="ext1 box front">
+                        </div>
+                        <div class="ext1 box back">
+                          <div class="mask_flip"><?php echo __("3D Link knows how to optimise the search engine rankings to improve the visibility of a website in organic results (results not paid for). This will attract more visits to your site and makes it more useful for your business.") ?>
+                            <hr class="flip_linea"></hr>
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("Social media") ?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="ext2 box front">
+                        </div>
+                        <div class="ext2 box back">
+                          <div class="mask_flip"><?php echo __("We integrate apps and social networks accounts. As a result, your connections can increase as you improve your popularity. Into the 3D Link we have an expert team who generates and post the content necessary with a guaranteed success.") ?>
+                            <hr class="flip_linea"></hr>
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 left tab-fix">
+                <p class="services-square"><?php echo __("Marketing") ?></p>
+                <div class="flip">
+                    <div class="flip_items">
+                        <div id="" class="ext3 box front">
+                        </div>
+                        <div class="ext3 box back">
+                          <div class="mask_flip"><?php echo __("We will set you up an account with your choice of email marketing providers and create and send out your marketing emails for you. Also, get better your experience and position your brand as expert in its field.") ?>
+                            <hr class="flip_linea"></hr>
+                          </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="carousel-container2">
+
+        <div class="insp-quotes-carousel">
+            <div id="quotes-carousel" class="owl-carousel">
+                <?php
+                    foreach ($quotes as $quote) {
+                ?>
+                <div class="item">
+                    <div class="quote-complete">
+                        <p class="insp-quote">
+                          <?php 
+                            if ($this->session->read('Config.language') == 'eng'){
+                              echo $quote['Quote']['text']; 
+                            } else {
+                              echo $quote['Quote']['text_esp'];
+                            }
+                          ?>
+                        </p>
+                        <hr class="quote-separator"></hr>
+                        <p class="insp-author"><strong><?php echo $quote['Quote']['author']; ?></strong></p>
+                    </div>
+                </div>
+
+                <?php
+                    }
+                ?>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contact-us">
+    <div id="contactus" class="contact-text-back">
+        <img src="<?php echo $this->webroot;?>img/Contact.png">
+    </div>
+    <div class="contact-punch">
+        <img src="<?php echo $this->webroot;?>img/punch-line.png">
+    </div>
+    <div class="formulario">
+        <div class="left rep-form">
+          <div class="form-group">
+            <input id="name" type="text" class="form-control" placeholder="<?php echo __("Name*")?>">
+          </div>
+          <div class="form-group">
+            <input id="email" type="email" name="email" class="form-control" placeholder="<?php echo __("Email*")?>">
+          </div>
+          <div class="form-group">
+            <input id="phone" type="phone" class="form-control" placeholder="<?php echo __("Phone Number")?>">
+          </div>
+          <button id="submit1" class="btn btn-default right"><?php echo __("SUBMIT")?></button>
+        </div>
+        <div class="left rep-form">
+            <textarea id="question" class="form-control text-comment" placeholder="<?php echo __("Write your questions here.*")?>" rows="10"></textarea>
+            <button id="submit2" class="btn btn-default right" style="margin: 20px 0 50px; float: left; width: 100%;
+            ">SUBMIT</button>
+        </div>
+        <form role="form" class="contact-meth left">
+            <img  class="imageicons" src="<?php echo $this->webroot;?>img/mail-ico.png"><p class="contact-icons" style="margin-top: 9px;">info@3dlinkweb.com</p>
+            <div class="clear"></div>
+            <img  class="imageicons" src="<?php echo $this->webroot;?>img/phone-ico.png"><p class="contact-icons" style=" margin-top: 26px;">+58 (0) 212 232-5991</p>
+            <div class="clear"></div>
+            <img  class="imageicons" src="<?php echo $this->webroot;?>img/map-ico.png" style="margin-top: 18px;"><p class="contact-icons resp-text-la" style="text-align:justify;margin-top: 17px;">Avenida Francisco de Miranda, C.C. Lido, Torre D, piso 4, Oficina 41-D. Caracas-Venezuela. 1060. </p>
+        </form>
+    </div>
+</section>
+<div class="clear"> </div>
+<section class="footer">
+    <div class="social-net" style="float:left;">
+        <div class="right resp-opt">
+            <img onclick="window.open('https://www.facebook.com/3dlinkVzla');" src="<?php echo $this->webroot;?>img/facebook-ico.png">
+            <img onclick="window.open('https://www.instagram.com/3dlinkvzla/');" src="<?php echo $this->webroot;?>img/instagram-ico.png" style="padding-left: 10px;">
+        </div>
+    </div>
+    <div class="copyright" style="float:left;">
+        <p class="right">All rights reserved, 3D Link. 2016</p>
+    </div>
+
+</section>
+
 <?php
-/**
- * @link          http://cakephp.org CakePHP(tm) Project
- * @package       app.View.Pages
- * @since         CakePHP(tm) v 0.10.0.1076
- */
-
-if (!Configure::read('debug')):
-	throw new NotFoundException();
-endif;
-
-App::uses('Debugger', 'Utility');
+  $uri = explode("?", $_SERVER['REQUEST_URI'])[0];
 ?>
-<h2><?php echo __d('cake_dev', 'Release Notes for CakePHP %s.', Configure::version()); ?></h2>
-<p>
-	<?php echo $this->Html->link(__d('cake_dev', 'Read the changelog'), 'http://cakephp.org/changelogs/' . Configure::version()); ?>
-</p>
-<?php
-if (Configure::read('debug') > 0):
-	Debugger::checkSecurityKeys();
-endif;
-?>
-<?php if (file_exists(WWW_ROOT . 'css' . DS . 'cake.generic.css')): ?>
-	<p id="url-rewriting-warning" style="background-color:#e32; color:#fff;">
-		<?php echo __d('cake_dev', 'URL rewriting is not properly configured on your server.'); ?>
-		1) <a target="_blank" href="http://book.cakephp.org/2.0/en/installation/url-rewriting.html" style="color:#fff;">Help me configure it</a>
-		2) <a target="_blank" href="http://book.cakephp.org/2.0/en/development/configuration.html#cakephp-core-configuration" style="color:#fff;">I don't / can't use URL rewriting</a>
-	</p>
-<?php endif; ?>
-<p>
-<?php
-if (version_compare(PHP_VERSION, '5.2.8', '>=')):
-	echo '<span class="notice success">';
-		echo __d('cake_dev', 'Your version of PHP is 5.2.8 or higher.');
-	echo '</span>';
-else:
-	echo '<span class="notice">';
-		echo __d('cake_dev', 'Your version of PHP is too low. You need PHP 5.2.8 or higher to use CakePHP.');
-	echo '</span>';
-endif;
-?>
-</p>
-<p>
-	<?php
-	if (is_writable(TMP)):
-		echo '<span class="notice success">';
-			echo __d('cake_dev', 'Your tmp directory is writable.');
-		echo '</span>';
-	else:
-		echo '<span class="notice">';
-			echo __d('cake_dev', 'Your tmp directory is NOT writable.');
-		echo '</span>';
-	endif;
-	?>
-</p>
-<p>
-	<?php
-	$settings = Cache::settings();
-	if (!empty($settings)):
-		echo '<span class="notice success">';
-			echo __d('cake_dev', 'The %s is being used for core caching. To change the config edit %s', '<em>' . $settings['engine'] . 'Engine</em>', 'APP/Config/core.php');
-		echo '</span>';
-	else:
-		echo '<span class="notice">';
-			echo __d('cake_dev', 'Your cache is NOT working. Please check the settings in %s', 'APP/Config/core.php');
-		echo '</span>';
-	endif;
-	?>
-</p>
-<p>
-	<?php
-	$filePresent = null;
-	if (file_exists(APP . 'Config' . DS . 'database.php')):
-		echo '<span class="notice success">';
-			echo __d('cake_dev', 'Your database configuration file is present.');
-			$filePresent = true;
-		echo '</span>';
-	else:
-		echo '<span class="notice">';
-			echo __d('cake_dev', 'Your database configuration file is NOT present.');
-			echo '<br/>';
-			echo __d('cake_dev', 'Rename %s to %s', 'APP/Config/database.php.default', 'APP/Config/database.php');
-		echo '</span>';
-	endif;
-	?>
-</p>
-<?php
-if (isset($filePresent)):
-	App::uses('ConnectionManager', 'Model');
-	try {
-		$connected = ConnectionManager::getDataSource('default');
-	} catch (Exception $connectionError) {
-		$connected = false;
-		$errorMsg = $connectionError->getMessage();
-		if (method_exists($connectionError, 'getAttributes')):
-			$attributes = $connectionError->getAttributes();
-			if (isset($errorMsg['message'])):
-				$errorMsg .= '<br />' . $attributes['message'];
-			endif;
-		endif;
-	}
-	?>
-	<p>
-		<?php
-			if ($connected && $connected->isConnected()):
-				echo '<span class="notice success">';
-					echo __d('cake_dev', 'CakePHP is able to connect to the database.');
-				echo '</span>';
-			else:
-				echo '<span class="notice">';
-					echo __d('cake_dev', 'CakePHP is NOT able to connect to the database.');
-					echo '<br /><br />';
-					echo $errorMsg;
-				echo '</span>';
-			endif;
-		?>
-	</p>
-<?php
-endif;
 
-App::uses('Validation', 'Utility');
-if (!Validation::alphaNumeric('cakephp')):
-	echo '<p><span class="notice">';
-		echo __d('cake_dev', 'PCRE has not been compiled with Unicode support.');
-		echo '<br/>';
-		echo __d('cake_dev', 'Recompile PCRE with Unicode support by adding <code>--enable-unicode-properties</code> when configuring');
-	echo '</span></p>';
-endif;
-?>
+    <div class="language">
+      <ul>
+        <li class="flag"><a href="<?php echo $uri .'?language=esp'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_Spain.png"></a></li>
+        <li class="flag"><a href="<?php echo $uri .'?language=eng'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_United_Kingdom.png"></a></li>
+      </ul>
+    </div>
 
-<p>
-	<?php
-	if (CakePlugin::loaded('DebugKit')):
-		echo '<span class="notice success">';
-			echo __d('cake_dev', 'DebugKit plugin is present');
-		echo '</span>';
-	else:
-		echo '<span class="notice">';
-			echo __d('cake_dev', 'DebugKit is not installed. It will help you inspect and debug different aspects of your application.');
-			echo '<br/>';
-			echo __d('cake_dev', 'You can install it from %s', $this->Html->link('GitHub', 'https://github.com/cakephp/debug_kit'));
-		echo '</span>';
-	endif;
-	?>
-</p>
+<script type="text/javascript">
 
-<h3><?php echo __d('cake_dev', 'Editing this Page'); ?></h3>
-<p>
-<?php
-echo __d('cake_dev', 'To change the content of this page, edit: %s.<br />
-To change its layout, edit: %s.<br />
-You can also add some CSS styles for your pages at: %s.',
-	'APP/View/Pages/home.ctp', 'APP/View/Layouts/default.ctp', 'APP/webroot/css');
-?>
-</p>
+    $('.design_slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow:"<img class='arrow-black-left' src='<?php echo $this->webroot; ?>img/flechaizq.png'>",
+      nextArrow:"<img class='arrow-black-right' src='<?php echo $this->webroot; ?>img/flechader.png'>"
+    });
 
-<h3><?php echo __d('cake_dev', 'Getting Started'); ?></h3>
-<p>
-	<?php
-	echo $this->Html->link(
-		sprintf('<strong>%s</strong> %s', __d('cake_dev', 'New'), __d('cake_dev', 'CakePHP 2.0 Docs')),
-		'http://book.cakephp.org/2.0/en/',
-		array('target' => '_blank', 'escape' => false)
-	);
-	?>
-</p>
-<p>
-	<?php
-	echo $this->Html->link(
-		__d('cake_dev', 'The 15 min Blog Tutorial'),
-		'http://book.cakephp.org/2.0/en/tutorials-and-examples/blog/blog.html',
-		array('target' => '_blank', 'escape' => false)
-	);
-	?>
-</p>
+    $('.develop_slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow:"<img class='arrow-black-left' src='<?php echo $this->webroot; ?>img/flechaizq.png'>",
+      nextArrow:"<img class='arrow-black-right' src='<?php echo $this->webroot; ?>img/flechader.png'>"
+    });
 
-<h3><?php echo __d('cake_dev', 'Official Plugins'); ?></h3>
-<p>
-<ul>
-	<li>
-		<?php echo $this->Html->link('DebugKit', 'https://github.com/cakephp/debug_kit') ?>:
-		<?php echo __d('cake_dev', 'provides a debugging toolbar and enhanced debugging tools for CakePHP applications.'); ?>
-	</li>
-	<li>
-		<?php echo $this->Html->link('Localized', 'https://github.com/cakephp/localized') ?>:
-		<?php echo __d('cake_dev', 'contains various localized validation classes and translations for specific countries'); ?>
-	</li>
-</ul>
-</p>
 
-<h3><?php echo __d('cake_dev', 'More about CakePHP'); ?></h3>
-<p>
-<?php echo __d('cake_dev', 'CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.'); ?>
-</p>
-<p>
-<?php echo __d('cake_dev', 'Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.'); ?>
-</p>
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 5,
+      arrows: false,
+      slidesToScroll: 1,
+      asNavFor: '.slider-for',
+      centerMode: true,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        ]
+    });
 
-<ul>
-	<li><a href="http://cakephp.org">CakePHP</a>
-	<ul><li><?php echo __d('cake_dev', 'The Rapid Development Framework'); ?></li></ul></li>
-	<li><a href="http://book.cakephp.org"><?php echo __d('cake_dev', 'CakePHP Documentation'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Your Rapid Development Cookbook'); ?></li></ul></li>
-	<li><a href="http://api.cakephp.org"><?php echo __d('cake_dev', 'CakePHP API'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Quick API Reference'); ?></li></ul></li>
-	<li><a href="http://bakery.cakephp.org"><?php echo __d('cake_dev', 'The Bakery'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Everything CakePHP'); ?></li></ul></li>
-	<li><a href="http://plugins.cakephp.org"><?php echo __d('cake_dev', 'CakePHP Plugins'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'A comprehensive list of all CakePHP plugins created by the community'); ?></li></ul></li>
-	<li><a href="http://community.cakephp.org"><?php echo __d('cake_dev', 'CakePHP Community Center'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Everything related to the CakePHP community in one place'); ?></li></ul></li>
-	<li><a href="https://groups.google.com/group/cake-php"><?php echo __d('cake_dev', 'CakePHP Google Group'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Community mailing list'); ?></li></ul></li>
-	<li><a href="irc://irc.freenode.net/cakephp">irc.freenode.net #cakephp</a>
-	<ul><li><?php echo __d('cake_dev', 'Live chat about CakePHP'); ?></li></ul></li>
-	<li><a href="https://github.com/cakephp/"><?php echo __d('cake_dev', 'CakePHP Code'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Find the CakePHP code on GitHub and contribute to the framework'); ?></li></ul></li>
-	<li><a href="https://github.com/cakephp/cakephp/issues"><?php echo __d('cake_dev', 'CakePHP Issues'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'CakePHP Issues'); ?></li></ul></li>
-	<li><a href="https://github.com/cakephp/cakephp/wiki#roadmaps"><?php echo __d('cake_dev', 'CakePHP Roadmaps'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'CakePHP Roadmaps'); ?></li></ul></li>
-	<li><a href="http://training.cakephp.org"><?php echo __d('cake_dev', 'Training'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Join a live session and get skilled with the framework'); ?></li></ul></li>
-	<li><a href="http://cakefest.org"><?php echo __d('cake_dev', 'CakeFest'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Don\'t miss our annual CakePHP conference'); ?></li></ul></li>
-	<li><a href="http://cakefoundation.org"><?php echo __d('cake_dev', 'Cake Software Foundation'); ?> </a>
-	<ul><li><?php echo __d('cake_dev', 'Promoting development related to CakePHP'); ?></li></ul></li>
-</ul>
+  $('#quotes-carousel').owlCarousel({
+   center: true,
+  items:1,
+  nav:false,
+  loop:true,
+  margin:10,
+  autoplay:true,
+  autoplayTimeout:6000,
+  autoplayHoverPause:true,
+  merge:true,
+  responsive:{
+    600:{
+      items:1
+    }
+  }
+  });
+
+
+// $('#design').owlCarousel({
+//    loop:false,
+//    center: true,
+//    items:1,
+//    URLhashListener:true,
+//    navText: [
+//     "<img class='arrow-black' src='<?php echo $this->webroot; ?>img/flechaizq.png'>",
+//     "<img class='arrow-black' src='<?php echo $this->webroot; ?>img/flechader.png'>"
+//    ],
+//    nav:true
+//  });
+
+$('#development').owlCarousel({
+   loop:false,
+   center: true,
+   items:1,
+   URLhashListener:true,
+   navText: [
+    "<img class='arrow-black' src='<?php echo $this->webroot; ?>img/flechaizq.png'>",
+    "<img class='arrow-black' src='<?php echo $this->webroot; ?>img/flechader.png'>"
+   ],
+   nav:true
+ });
+
+$(document).ready(function(){
+  $('.combanner').css('height',$(window).height());
+
+  $('#mtt').click(function(event) {
+    if($('#meet_the_team').hasClass('meet_active')){
+      $('#mtt').removeClass('letter_mtt');
+      $('#meet_the_team').removeClass('slideInDown');
+      $('#meet_the_team').addClass('bounceOutUp');
+      setTimeout(function(){ $('#meet_the_team').removeClass('meet_active'); }, 800);
+    }else{
+      $('body').scrollTo('#mtt',1000);
+      $('#mtt').addClass('letter_mtt');
+      $('#meet_the_team').addClass('meet_active');
+      $('#meet_the_team').addClass('slideInDown');
+      $('#meet_the_team').removeClass('bounceOutUp');
+    }
+  });
+
+$('.development-sel').click(function(){
+  $('body').scrollTo('.work-selector',1000);
+  $('.development-sel').addClass('letter_active');
+  $('.design-sel').removeClass('letter_active');
+  $('#development_cont').addClass('meet_active');
+  $('#development_cont').addClass('slideInDown');
+  $('#design_cont').removeClass('meet_active');
+});
+$('.design-sel').click(function(){
+  $('body').scrollTo('.work-selector',1000);
+  $('.design-sel').addClass('letter_active');
+  $('.development-sel').removeClass('letter_active');
+  $('#design_cont').addClass('meet_active');
+  $('#design_cont').addClass('slideInDown');
+  $('#development_cont').removeClass('meet_active');
+});
+
+
+});
+
+$('#submit1').click(function(){
+
+    if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
+      alert('Please write your name, email and your question.');
+    }
+    else{
+        $('#submit1').html("Wait...");
+        $('#submit1').prop('disabled', true);
+        var data = {
+        name : $('#name').val(),
+        email : $('#email').val(),
+        phone : $('#phone').val(),
+        question : $('#question').val(),
+      };
+
+      $.post(WEBROOT+'start/sendMail',{data:data},function(data){
+        if(data == 1){
+            alert('Thanks for your contact, we will contact you soon.');
+            $('#submit1').html("SUBMIT");
+            $('#name').val('');
+            $('#email').val('');
+            $('#phone').val('');
+            $('#question').val('');
+            $('#submit1').prop('disabled', false);
+        }
+      },'json');
+    }
+
+
+});
+
+$('#submit2').click(function(){
+
+    if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
+      alert('Please write your name, email and your question.');
+    }
+    else{
+        $('#submit2').html("Wait...");
+        $('#submit2').prop('disabled', true);
+        var data = {
+        name : $('#name').val(),
+        email : $('#email').val(),
+        phone : $('#phone').val(),
+        question : $('#question').val(),
+      };
+
+      $.post(WEBROOT+'start/sendMail',{data:data},function(data){
+        if(data == 1){
+            alert('Thanks for your contact, we will contact you soon.');
+            $('#submit2').html("SUBMIT");
+            $('#name').val('');
+            $('#email').val('');
+            $('#phone').val('');
+            $('#question').val('');
+            $('#submit2').prop('disabled', false);
+        }
+      },'json');
+    }
+
+
+});
+
+
+</script>

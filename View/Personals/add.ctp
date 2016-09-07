@@ -91,6 +91,13 @@
 
 				<div class="col-md-12">
 			        <div class="form-group">
+			          <label>Biography</label>
+			          <?php echo $this->Form->input('bio_esp',array('type'=> 'textarea', 'div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','placeholder'=>'Biography spanish', 'required'=>true)); ?>
+			        </div>
+				</div>
+
+				<div class="col-md-12">
+			        <div class="form-group">
 			          <label>Observaciones</label>
 			          <?php echo $this->Form->input('observations',array('type'=> 'textarea', 'div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','placeholder'=>'Agregue sus Observaciones')); ?>
 			        </div>

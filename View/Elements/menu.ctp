@@ -78,13 +78,6 @@
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#">Team</a>
-                  <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'teams/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'teams'; ?>">Todos</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown-submenu">
                   <a tabindex="-1" href="#">Quotes</a>
                   <ul class="dropdown-menu submenu">
                     <li><a href="<?php echo $this->webroot.'quotes/add'; ?>">Nuevo</a></li>

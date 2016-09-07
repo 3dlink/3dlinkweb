@@ -14,7 +14,7 @@ class PDF extends FPDF{
 // Cabecera de página
 	function Header(){
 	    // Logo
-	    $this->Image('img/Logo-Home.png',10,8,33);
+	    $this->Image('img/HeaderReporte.PNG',0,8,200);
 	    $this->SetFillColor(0,0,0);
 
 	    // Arial bold 15
@@ -22,9 +22,12 @@ class PDF extends FPDF{
 	    // Movernos a la derecha
 	    $this->Cell(60);
 	    // Título
-	    $this->Cell(80,10,'3DLink - Detalle del Proyecto',1,0,'C');
+	    $this->Cell(80,10,'',0,0,'C');
 	    // Salto de línea
 	    $this->Ln(20);
+	}
+	function Footer(){
+	    $this->Image('img/footerReporte.PNG',0,265,200);
 	}
 
 }
@@ -35,7 +38,7 @@ class ProjectsController extends AppController {
 
 
 	public $uses = array('Project','Cargo','Personal');
-
+	
 
 /**
  * Components
@@ -77,11 +80,11 @@ class ProjectsController extends AppController {
 
 		$date_ini = date_create($project['Project']['init_date']);
     	$date_end = date_create($project['Project']['end_date']);
-
-
+    	
+    
     	$interval = date_diff($date_ini, $date_end);
     	$interval = $interval->m;
-
+    	
     	if($interval == '0'){
     		$interval = '1';
     	}
@@ -97,7 +100,7 @@ class ProjectsController extends AppController {
 
 				if($persona['id']!=$project['Project']['personal_id']){
 					$salario = $this->Cargo->findById($persona['cargo_id']);
-					$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario['Cargo']['salary'] * $interval;
+					$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario['Cargo']['salary'] * $interval;	
 				}else{
 					$cont = $cont + '1';
 					$salario = $this->Cargo->findById($persona['cargo_id']);
@@ -140,10 +143,6 @@ class ProjectsController extends AppController {
 			}
 		}
 		$programadores = $this->Personal->find('list');
-		foreach ($programadores as $key => $value) {
-			$personal = $this->Personal->findById($key);
-			$programadores[$key] = $value.' - '.$personal['Cargo']['name'];
-		}
 		$cargo_id = $this->Cargo->findByName('Lider de Proyecto');
 		$lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>$cargo_id['Cargo']['id'])));
 		$personals = $this->Project->Personal->find('list');
@@ -152,10 +151,10 @@ class ProjectsController extends AppController {
 
 	}
 
-
+	
 
 	public function imprimir($id=0){
-
+		
 		$project = $this->Project->findById($id);
 
 		$devs = array();
@@ -218,7 +217,7 @@ class ProjectsController extends AppController {
 
 		}
 		$pdf->Ln();
-
+		
 		$pdf->SetFont('Arial','B',16);
 		$pdf->Cell(90,5,utf8_decode('Precio: '),0,0);
 		$pdf->SetFont('Arial','',16);
@@ -259,7 +258,7 @@ class ProjectsController extends AppController {
 		$pdf->SetFont('Arial','',16);
 		$pdf->Cell(0,5,utf8_decode($project['Project']['asana_url']),0,1);
 		$pdf->Ln();
-
+		
 		$pdf->SetFont('Arial','B',16);
 		$pdf->Cell(90,5,utf8_decode('Status: '),0,0);
 		$pdf->SetFont('Arial','',16);
@@ -313,10 +312,6 @@ class ProjectsController extends AppController {
 		// $this->set(compact('personals', 'clients','lideres'));
 
 		$programadores = $this->Personal->find('list');
-		foreach ($programadores as $key => $value) {
-			$personal = $this->Personal->findById($key);
-			$programadores[$key] = $value.' - '.$personal['Cargo']['name'];
-		}
 		$cargo_id = $this->Cargo->findByName('Lider de Proyecto');
 		$lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>$cargo_id['Cargo']['id'])));
 		$personals = $this->Project->Personal->find('list');

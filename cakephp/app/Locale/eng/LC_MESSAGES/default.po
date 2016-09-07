@@ -1,0 +1,307 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-09-07 13:53-0400\n"
+"PO-Revision-Date: 2016-09-07 13:54-0400\n"
+"Language-Team: EMAIL@ADDRESS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.9\n"
+"Last-Translator: \n"
+"Language: en\n"
+
+#: View/Errors/error400.ctp:19 View/Errors/error500.ctp:19
+msgid "Error"
+msgstr ""
+
+#: View/Errors/error400.ctp:21
+msgid "The requested address %s was not found on this server."
+msgstr "The requested address %s was not found on this server."
+
+#: View/Errors/error500.ctp:20
+msgid "An Internal Error Has Occurred."
+msgstr "An Internal Error Has Occurred."
+
+#: View/Layouts/default.ctp:17 View/Layouts/error.ctp:17
+msgid "CakePHP: the rapid development php framework"
+msgstr "CakePHP: the rapid development php framework"
+
+#: View/Layouts/default.ctp:18
+msgid "CakePHP %s"
+msgstr "CakePHP %s"
+
+#: webroot/test.php:93
+msgid "Debug setting does not allow access to this url."
+msgstr "Debug setting does not allow access to this url."
+
+#: View/Pages/home.ctp:17
+msgid ""
+"The 3D Link team is made up of young professionals, each and every one "
+"complementing an effective team for the development of technologies. We are "
+"keeping our minds open for challenges in order to generate new ideas in this "
+"digital era with its growing potentiality. All members have formed their "
+"skills at prestigious universities with recognitions throughout their studies "
+"and research projects."
+msgstr ""
+"The 3D Link team is made up of young professionals, each and every one "
+"complementing an effective team for the development of technologies. We are "
+"keeping our minds open for challenges in order to generate new ideas in this "
+"digital era with its growing potentiality. All members have formed their "
+"skills at prestigious universities with recognitions throughout their studies "
+"and research projects."
+
+#: View/Pages/home.ctp:22
+msgid "MEET THE TEAM"
+msgstr "MEET THE TEAM"
+
+#: View/Pages/home.ctp:63;131
+msgid "DEVELOPMENT"
+msgstr "DEVELOPMENT"
+
+#: View/Pages/home.ctp:64;181
+msgid "DESIGN"
+msgstr "DESIGN"
+
+#: View/Pages/home.ctp:134
+msgid "Web & Mobile development"
+msgstr "Web & Mobile development"
+
+#: View/Pages/home.ctp:141
+msgid ""
+"We aim to build sites that stay true to our clients’ needs and visions, "
+"focusing on how the sites can not only benefit but also help develop our "
+"customers’ businesses. We use a range of programming languages and "
+"development frameworks."
+msgstr ""
+"We aim to build sites that stay true to our clients’ needs and visions, "
+"focusing on how the sites can not only benefit but also help develop our "
+"customers’ businesses. We use a range of programming languages and "
+"development frameworks."
+
+#: View/Pages/home.ctp:150
+msgid "E-commerce"
+msgstr "E-commerce"
+
+#: View/Pages/home.ctp:156
+msgid ""
+"It is the modern business system on line, where it opens the possibility for "
+"creating a business and making payments through the App. Fortunately in 3D "
+"Link we are experienced to meet various challenges of electronic commerce."
+msgstr ""
+"It is the modern business system on line, where it opens the possibility for "
+"creating a business and making payments through the App. Fortunately in 3D "
+"Link we are experienced to meet various challenges of electronic commerce."
+
+#: View/Pages/home.ctp:165
+msgid "Hosting"
+msgstr "Hosting"
+
+#: View/Pages/home.ctp:171
+msgid ""
+"We offer the hosting service and server management with specific "
+"characteristics depending on the project requirements. As a support and "
+"additional service from 3D link depending on customers’ requirements and "
+"needs."
+msgstr ""
+"We offer the hosting service and server management with specific "
+"characteristics depending on the project requirements. As a support and "
+"additional service from 3D link depending on customers’ requirements and "
+"needs."
+
+#: View/Pages/home.ctp:184
+msgid "Branding"
+msgstr "Branding"
+
+#: View/Pages/home.ctp:190
+msgid ""
+"If you’re starting a brand, or have one, but you just want to give it a fresh "
+"and clean makeover, 3D Link has the best design team to bring your ideas to "
+"life."
+msgstr ""
+"If you’re starting a brand, or have one, but you just want to give it a fresh "
+"and clean makeover, 3D Link has the best design team to bring your ideas to "
+"life."
+
+#: View/Pages/home.ctp:199
+msgid "Web design"
+msgstr "Web design"
+
+#: View/Pages/home.ctp:205
+msgid ""
+"Nowadays, the web design is almost as important as the brand itself, we offer "
+"you a memorable and unique design to give your clients the most comfortable "
+"experience."
+msgstr ""
+"Nowadays, the web design is almost as important as the brand itself, we offer "
+"you a memorable and unique design to give your clients the most comfortable "
+"experience."
+
+#: View/Pages/home.ctp:214
+msgid "Packaging"
+msgstr "Packaging"
+
+#: View/Pages/home.ctp:220
+msgid ""
+"A great product like yours, needs a great packaging design, like ours. We "
+"will make your brand stand out of the rest with a powerful and vibrant design."
+msgstr ""
+"A great product like yours, needs a great packaging design, like ours. We "
+"will make your brand stand out of the rest with a powerful and vibrant design."
+
+#: View/Pages/home.ctp:239
+msgid ""
+"3D Link knows how to optimise the search engine rankings to improve the "
+"visibility of a website in organic results (results not paid for). This will "
+"attract more visits to your site and makes it more useful for your business."
+msgstr ""
+"3D Link knows how to optimise the search engine rankings to improve the "
+"visibility of a website in organic results (results not paid for). This will "
+"attract more visits to your site and makes it more useful for your business."
+
+#: View/Pages/home.ctp:247
+msgid "Social media"
+msgstr "Social media"
+
+#: View/Pages/home.ctp:253
+msgid ""
+"We integrate apps and social networks accounts. As a result, your connections "
+"can increase as you improve your popularity. Into the 3D Link we have an "
+"expert team who generates and post the content necessary with a guaranteed "
+"success."
+msgstr ""
+"We integrate apps and social networks accounts. As a result, your connections "
+"can increase as you improve your popularity. Into the 3D Link we have an "
+"expert team who generates and post the content necessary with a guaranteed "
+"success."
+
+#: View/Pages/home.ctp:261
+msgid "Marketing"
+msgstr "Marketing"
+
+#: View/Pages/home.ctp:267
+msgid ""
+"We will set you up an account with your choice of email marketing providers "
+"and create and send out your marketing emails for you. Also, get better your "
+"experience and position your brand as expert in its field."
+msgstr ""
+"We will set you up an account with your choice of email marketing providers "
+"and create and send out your marketing emails for you. Also, get better your "
+"experience and position your brand as expert in its field."
+
+#: View/Pages/home.ctp:323
+msgid "Name*"
+msgstr "Name*"
+
+#: View/Pages/home.ctp:326
+msgid "Email*"
+msgstr "Email*"
+
+#: View/Pages/home.ctp:329 View/Payments/index.ctp:67
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: View/Pages/home.ctp:331
+msgid "SUBMIT"
+msgstr "SUBMIT"
+
+#: View/Pages/home.ctp:334
+msgid "Write your questions here.*"
+msgstr "Write your questions here.*"
+
+#: View/Payments/failure.ctp:12
+msgid ""
+"Your payment has not been made ​​, in a few moments you will receive an email "
+"with the information."
+msgstr ""
+"Your payment has not been made ​​, in a few moments you will receive an email "
+"with the information."
+
+#: View/Payments/failure.ctp:16 View/Payments/pending.ctp:16
+#: View/Payments/success.ctp:16
+msgid "Back"
+msgstr "Back"
+
+#: View/Payments/index.ctp:13
+msgid "Payment"
+msgstr "Payment"
+
+#: View/Payments/index.ctp:18
+msgid "Company"
+msgstr "Company"
+
+#: View/Payments/index.ctp:25
+msgid "RIF"
+msgstr "RIF"
+
+#: View/Payments/index.ctp:32
+msgid "Amount"
+msgstr "Amount"
+
+#: View/Payments/index.ctp:39
+msgid "Payment Method"
+msgstr "Payment Method"
+
+#: View/Payments/index.ctp:46
+msgid "Work / Description"
+msgstr "Work / Description"
+
+#: View/Payments/index.ctp:53
+msgid "Responsible for the payment"
+msgstr "Responsible for the payment"
+
+#: View/Payments/index.ctp:60
+msgid "Email"
+msgstr "Email"
+
+#: View/Payments/index.ctp:74
+msgid "Pay"
+msgstr "Pay"
+
+#: View/Payments/index.ctp:107;118;133;138;143;154;165
+msgid "You must fill in this field"
+msgstr "You must fill in this field"
+
+#: View/Payments/index.ctp:114
+msgid "RIF must be formatted J-000000000"
+msgstr "RIF must be formatted J-000000000"
+
+#: View/Payments/index.ctp:124
+msgid "The amount must be greater than 0"
+msgstr "The amount must be greater than 0"
+
+#: View/Payments/index.ctp:129
+msgid "The amount must be less than 999999"
+msgstr "The amount must be less than 999999"
+
+#: View/Payments/index.ctp:150
+msgid "You must place a valid email"
+msgstr "You must place a valid email"
+
+#: View/Payments/index.ctp:161
+msgid ""
+"The phone must contain an area code of 4 digits followed by a hyphen (-) and "
+"7 digits"
+msgstr ""
+"The phone must contain an area code of 4 digits followed by a hyphen (-) and "
+"7 digits"
+
+#: View/Payments/pending.ctp:12
+msgid ""
+"Your payment is being processed , in a few moments receive an email with "
+"information."
+msgstr ""
+"Your payment is being processed , in a few moments receive an email with "
+"information."
+
+#: View/Payments/success.ctp:12
+msgid ""
+"Your payment has been successfully made ​​, in a few moments you will receive "
+"an email with the information. <br> Thank you for trusting us !"
+msgstr ""
+"Your payment has been successfully made ​​, in a few moments you will receive "
+"an email with the information. <br> Thank you for trusting us !"

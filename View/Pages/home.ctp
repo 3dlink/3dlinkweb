@@ -14,12 +14,12 @@
     </div>
     <div class="about-descrip">
         <p>
-          The 3D Link team is made up of young professionals, each and every one complementing an effective team for the development of technologies. We are keeping our minds open for challenges in order to generate new ideas in this digital era with its growing potentiality. All members have formed their skills at prestigious universities with recognitions throughout their studies and research projects.
+          <?php echo __("The 3D Link team is made up of young professionals, each and every one complementing an effective team for the development of technologies. We are keeping our minds open for challenges in order to generate new ideas in this digital era with its growing potentiality. All members have formed their skills at prestigious universities with recognitions throughout their studies and research projects.") ?>
         </p>
     </div>
 
     <div class="resp-label" style="text-align: center;margin-top: 40px;">
-      <button id="mtt">MEET THE TEAM</button>
+      <button id="mtt"><?php echo __("MEET THE TEAM") ?></button>
     </div>
 
     <div id="meet_the_team" class="animated">
@@ -36,7 +36,13 @@
               <div class="biography">
                   <p><strong><?php echo $value['Personal']['name']?></strong><br><i><?php echo $value['Personal']['job']?></i></p>
                   <img style="display: initial;" src="<?php echo $this->webroot;?>img/bluebar.png">
-                  <p><?php echo $value['Personal']['bio']?></p>
+                  <p><?php 
+                    if ($this->session->read('Config.language') == 'eng'){
+                      echo $value['Personal']['bio'];
+                    } else {
+                      echo $value['Personal']['bio_esp'];
+                    }
+                  ?></p>
               </div>
           </div>
         <?php } ?>
@@ -54,8 +60,8 @@
         <img src="<?php echo $this->webroot;?>img/Our-Work.png">
     </div>
     <div class="work-selector">
-        <div class="development-sel">DEVELOPMENT</div>
-        <div class="design-sel">DESIGN</div>
+        <div class="development-sel"><?php echo __("DEVELOPMENT") ?></div>
+        <div class="design-sel"><?php echo __("DESIGN") ?></div>
         <div class="vert-separator"></div>
         <div class="clear"></div>
     </div>
@@ -122,17 +128,17 @@
 
     <div class="offer-table">
         <div class="clear"></div>
-        <div class="offer-title">DEVELOPMENT</div>
+        <div class="offer-title"><?php echo __("DEVELOPMENT") ?></div>
         <div class="row-fluid show-grid resp-pad">
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">Web & Mobile development</p>
+                <p class="services-square"><?php echo __("Web & Mobile development") ?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="dev1 box front">
                         </div>
                         <div class="box back dev1">
                           <div class="mask_flip">
-                            <p>We aim to build sites that stay true to our clients’ needs and visions, focusing on how the sites can not only benefit but also help develop our customers’ businesses. We use a range of programming languages and development frameworks.</p>
+                            <p><?php echo __("We aim to build sites that stay true to our clients’ needs and visions, focusing on how the sites can not only benefit but also help develop our customers’ businesses. We use a range of programming languages and development frameworks.") ?></p>
                             <hr class="flip_linea"></hr>
 
                           </div>
@@ -141,13 +147,13 @@
                 </div>
             </div>
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">E-commerce</p>
+                <p class="services-square"><?php echo __("E-commerce") ?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="dev2 box front">
                         </div>
                         <div class="box back dev2">
-                          <div class="mask_flip">It is the modern business system on line, where it opens the possibility for creating a business and making payments through the App. Fortunately in 3D Link we are experienced to meet various challenges of electronic commerce.
+                          <div class="mask_flip"><?php echo __("It is the modern business system on line, where it opens the possibility for creating a business and making payments through the App. Fortunately in 3D Link we are experienced to meet various challenges of electronic commerce.") ?>
                             <hr class="flip_linea"></hr>
 
                           </div>
@@ -156,13 +162,13 @@
                 </div>
             </div>
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">Hosting</p>
+                <p class="services-square"><?php echo __("Hosting") ?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="dev3 box front">
                         </div>
                         <div class="box back dev3">
-                          <div class="mask_flip">We offer the hosting service and server management with specific characteristics depending on the project requirements. As a support and additional service from 3D link depending on customers’ requirements and needs.
+                          <div class="mask_flip"> <?php echo __("We offer the hosting service and server management with specific characteristics depending on the project requirements. As a support and additional service from 3D link depending on customers’ requirements and needs.") ?>
                             <hr class="flip_linea"></hr>
 
                           </div>
@@ -172,16 +178,16 @@
             </div>
         </div>
         <div class="clear"></div>
-        <div class="offer-title">DESIGN</div>
+        <div class="offer-title"><?php echo __("DESIGN") ?></div>
         <div class="row-fluid show-grid resp-pad">
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">Branding</p>
+                <p class="services-square"><?php echo __("Branding")?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="des1 box front">
                         </div>
                         <div class="box back des1">
-                          <div class="mask_flip">If you’re starting a brand, or have one, but you just want to give it a fresh and clean makeover, 3D Link has the best design team to bring your ideas to life.
+                          <div class="mask_flip"><?php echo __("If you’re starting a brand, or have one, but you just want to give it a fresh and clean makeover, 3D Link has the best design team to bring your ideas to life.") ?>
                             <hr class="flip_linea"></hr>
 
                           </div>
@@ -190,13 +196,13 @@
                 </div>
             </div>
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">Web design</p>
+                <p class="services-square"><?php echo __("Web design") ?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="des2 box front">
                         </div>
                         <div class="box back des2">
-                          <div class="mask_flip">Nowadays, the web design is almost as important as the brand itself, we offer you a memorable and unique design to give your clients the most comfortable experience.
+                          <div class="mask_flip"><?php echo __("Nowadays, the web design is almost as important as the brand itself, we offer you a memorable and unique design to give your clients the most comfortable experience.") ?>
                             <hr class="flip_linea"></hr>
 
                           </div>
@@ -205,13 +211,13 @@
                 </div>
             </div>
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">Packaging</p>
+                <p class="services-square"><?php echo __("Packaging") ?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="des3 box front">
                         </div>
                         <div class="box back des3">
-                          <div class="mask_flip">A great product like yours, needs a great packaging design, like ours. We will make your brand stand out of the rest with a powerful and vibrant design.
+                          <div class="mask_flip"><?php echo __("A great product like yours, needs a great packaging design, like ours. We will make your brand stand out of the rest with a powerful and vibrant design.") ?>
                             <hr class="flip_linea"></hr>
 
                           </div>
@@ -230,7 +236,7 @@
                         <div id="" class="ext1 box front">
                         </div>
                         <div class="ext1 box back">
-                          <div class="mask_flip">3D Link knows how to optimise the search engine rankings to improve the visibility of a website in organic results (results not paid for). This will attract more visits to your site and makes it more useful for your business.
+                          <div class="mask_flip"><?php echo __("3D Link knows how to optimise the search engine rankings to improve the visibility of a website in organic results (results not paid for). This will attract more visits to your site and makes it more useful for your business.") ?>
                             <hr class="flip_linea"></hr>
                           </div>
                           </div>
@@ -238,13 +244,13 @@
                 </div>
             </div>
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">Social media</p>
+                <p class="services-square"><?php echo __("Social media") ?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="ext2 box front">
                         </div>
                         <div class="ext2 box back">
-                          <div class="mask_flip">We integrate apps and social networks accounts. As a result, your connections can increase as you improve your popularity. Into the 3D Link we have an expert team who generates and post the content necessary with a guaranteed success.
+                          <div class="mask_flip"><?php echo __("We integrate apps and social networks accounts. As a result, your connections can increase as you improve your popularity. Into the 3D Link we have an expert team who generates and post the content necessary with a guaranteed success.") ?>
                             <hr class="flip_linea"></hr>
                           </div>
                           </div>
@@ -252,13 +258,13 @@
                 </div>
             </div>
             <div class="col-md-4 left tab-fix">
-                <p class="services-square">Marketing</p>
+                <p class="services-square"><?php echo __("Marketing") ?></p>
                 <div class="flip">
                     <div class="flip_items">
                         <div id="" class="ext3 box front">
                         </div>
                         <div class="ext3 box back">
-                          <div class="mask_flip">We will set you up an account with your choice of email marketing providers and create and send out your marketing emails for you. Also, get better your experience and position your brand as expert in its field.
+                          <div class="mask_flip"><?php echo __("We will set you up an account with your choice of email marketing providers and create and send out your marketing emails for you. Also, get better your experience and position your brand as expert in its field.") ?>
                             <hr class="flip_linea"></hr>
                           </div>
                           </div>
@@ -279,7 +285,15 @@
                 ?>
                 <div class="item">
                     <div class="quote-complete">
-                        <p class="insp-quote"><?php echo $quote['Quote']['text']; ?></p>
+                        <p class="insp-quote">
+                          <?php 
+                            if ($this->session->read('Config.language') == 'eng'){
+                              echo $quote['Quote']['text']; 
+                            } else {
+                              echo $quote['Quote']['text_esp'];
+                            }
+                          ?>
+                        </p>
                         <hr class="quote-separator"></hr>
                         <p class="insp-author"><strong><?php echo $quote['Quote']['author']; ?></strong></p>
                     </div>
@@ -306,18 +320,18 @@
     <div class="formulario">
         <div class="left rep-form">
           <div class="form-group">
-            <input id="name" type="text" class="form-control" placeholder="Name*">
+            <input id="name" type="text" class="form-control" placeholder="<?php echo __("Name*")?>">
           </div>
           <div class="form-group">
-            <input id="email" type="email" name="email" class="form-control" placeholder="Email*">
+            <input id="email" type="email" name="email" class="form-control" placeholder="<?php echo __("Email*")?>">
           </div>
           <div class="form-group">
-            <input id="phone" type="phone" class="form-control" placeholder="Phone Number">
+            <input id="phone" type="phone" class="form-control" placeholder="<?php echo __("Phone Number")?>">
           </div>
-          <button id="submit1" class="btn btn-default right">SUBMIT</button>
+          <button id="submit1" class="btn btn-default right"><?php echo __("SUBMIT")?></button>
         </div>
         <div class="left rep-form">
-            <textarea id="question" class="form-control text-comment" placeholder="Write your questions here.*" rows="10"></textarea>
+            <textarea id="question" class="form-control text-comment" placeholder="<?php echo __("Write your questions here.*")?>" rows="10"></textarea>
             <button id="submit2" class="btn btn-default right" style="margin: 20px 0 50px; float: left; width: 100%;
             ">SUBMIT</button>
         </div>
@@ -343,6 +357,17 @@
     </div>
 
 </section>
+
+<?php
+  $uri = explode("?", $_SERVER['REQUEST_URI'])[0];
+?>
+
+    <div class="language">
+      <ul>
+        <li class="flag"><a href="<?php echo $uri .'?language=esp'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_Spain.png"></a></li>
+        <li class="flag"><a href="<?php echo $uri .'?language=eng'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_United_Kingdom.png"></a></li>
+      </ul>
+    </div>
 
 <script type="text/javascript">
 

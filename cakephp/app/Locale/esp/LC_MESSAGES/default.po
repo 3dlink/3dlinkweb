@@ -1,0 +1,272 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-09-07 13:50-0400\n"
+"PO-Revision-Date: 2016-09-07 13:53-0400\n"
+"Language-Team: EMAIL@ADDRESS\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.9\n"
+"Last-Translator: \n"
+"Language: es\n"
+
+#: View/Errors/error400.ctp:19 View/Errors/error500.ctp:19
+msgid "Error"
+msgstr ""
+
+#: View/Errors/error400.ctp:21
+msgid "The requested address %s was not found on this server."
+msgstr ""
+
+#: View/Errors/error500.ctp:20
+msgid "An Internal Error Has Occurred."
+msgstr ""
+
+#: View/Layouts/default.ctp:17 View/Layouts/error.ctp:17
+msgid "CakePHP: the rapid development php framework"
+msgstr ""
+
+#: View/Layouts/default.ctp:18
+msgid "CakePHP %s"
+msgstr ""
+
+#: webroot/test.php:93
+msgid "Debug setting does not allow access to this url."
+msgstr ""
+
+#: View/Pages/home.ctp:17
+msgid ""
+"The 3D Link team is made up of young professionals, each and every one "
+"complementing an effective team for the development of technologies. We are "
+"keeping our minds open for challenges in order to generate new ideas in this "
+"digital era with its growing potentiality. All members have formed their "
+"skills at prestigious universities with recognitions throughout their studies "
+"and research projects."
+msgstr ""
+
+#: View/Pages/home.ctp:22
+msgid "MEET THE TEAM"
+msgstr ""
+
+#: View/Pages/home.ctp:63;131
+msgid "DEVELOPMENT"
+msgstr ""
+
+#: View/Pages/home.ctp:64;181
+msgid "DESIGN"
+msgstr ""
+
+#: View/Pages/home.ctp:134
+msgid "Web & Mobile development"
+msgstr ""
+
+#: View/Pages/home.ctp:141
+msgid ""
+"We aim to build sites that stay true to our clients’ needs and visions, "
+"focusing on how the sites can not only benefit but also help develop our "
+"customers’ businesses. We use a range of programming languages and "
+"development frameworks."
+msgstr ""
+
+#: View/Pages/home.ctp:150
+msgid "E-commerce"
+msgstr ""
+
+#: View/Pages/home.ctp:156
+msgid ""
+"It is the modern business system on line, where it opens the possibility for "
+"creating a business and making payments through the App. Fortunately in 3D "
+"Link we are experienced to meet various challenges of electronic commerce."
+msgstr ""
+
+#: View/Pages/home.ctp:165
+msgid "Hosting"
+msgstr ""
+
+#: View/Pages/home.ctp:171
+msgid ""
+"We offer the hosting service and server management with specific "
+"characteristics depending on the project requirements. As a support and "
+"additional service from 3D link depending on customers’ requirements and "
+"needs."
+msgstr ""
+
+#: View/Pages/home.ctp:184
+msgid "Branding"
+msgstr ""
+
+#: View/Pages/home.ctp:190
+msgid ""
+"If you’re starting a brand, or have one, but you just want to give it a fresh "
+"and clean makeover, 3D Link has the best design team to bring your ideas to "
+"life."
+msgstr ""
+
+#: View/Pages/home.ctp:199
+msgid "Web design"
+msgstr ""
+
+#: View/Pages/home.ctp:205
+msgid ""
+"Nowadays, the web design is almost as important as the brand itself, we offer "
+"you a memorable and unique design to give your clients the most comfortable "
+"experience."
+msgstr ""
+
+#: View/Pages/home.ctp:214
+msgid "Packaging"
+msgstr ""
+
+#: View/Pages/home.ctp:220
+msgid ""
+"A great product like yours, needs a great packaging design, like ours. We "
+"will make your brand stand out of the rest with a powerful and vibrant design."
+msgstr ""
+
+#: View/Pages/home.ctp:239
+msgid ""
+"3D Link knows how to optimise the search engine rankings to improve the "
+"visibility of a website in organic results (results not paid for). This will "
+"attract more visits to your site and makes it more useful for your business."
+msgstr ""
+
+#: View/Pages/home.ctp:247
+msgid "Social media"
+msgstr ""
+
+#: View/Pages/home.ctp:253
+msgid ""
+"We integrate apps and social networks accounts. As a result, your connections "
+"can increase as you improve your popularity. Into the 3D Link we have an "
+"expert team who generates and post the content necessary with a guaranteed "
+"success."
+msgstr ""
+
+#: View/Pages/home.ctp:261
+msgid "Marketing"
+msgstr ""
+
+#: View/Pages/home.ctp:267
+msgid ""
+"We will set you up an account with your choice of email marketing providers "
+"and create and send out your marketing emails for you. Also, get better your "
+"experience and position your brand as expert in its field."
+msgstr ""
+
+#: View/Pages/home.ctp:323
+msgid "Name*"
+msgstr "Nombre*"
+
+#: View/Pages/home.ctp:326
+msgid "Email*"
+msgstr "Correo*"
+
+#: View/Pages/home.ctp:329 View/Payments/index.ctp:67
+msgid "Phone Number"
+msgstr "Número telefónico"
+
+#: View/Pages/home.ctp:331
+msgid "SUBMIT"
+msgstr "ENVIAR"
+
+#: View/Pages/home.ctp:334
+msgid "Write your questions here.*"
+msgstr "Escriba aquí sus preguntas.*"
+
+#: View/Payments/failure.ctp:12
+msgid ""
+"Your payment has not been made ​​, in a few moments you will receive an email "
+"with the information."
+msgstr ""
+"Su pago no ha sido realizado, en breves momentos recibirá un correo con la "
+"información."
+
+#: View/Payments/failure.ctp:16 View/Payments/pending.ctp:16
+#: View/Payments/success.ctp:16
+msgid "Back"
+msgstr "Volver"
+
+#: View/Payments/index.ctp:13
+msgid "Payment"
+msgstr "Pago"
+
+#: View/Payments/index.ctp:18
+msgid "Company"
+msgstr "Empresa"
+
+#: View/Payments/index.ctp:25
+msgid "RIF"
+msgstr "RIF"
+
+#: View/Payments/index.ctp:32
+msgid "Amount"
+msgstr "Monto"
+
+#: View/Payments/index.ctp:39
+msgid "Payment Method"
+msgstr "Método de pago"
+
+#: View/Payments/index.ctp:46
+msgid "Work / Description"
+msgstr "Trabajo / Descripcion"
+
+#: View/Payments/index.ctp:53
+msgid "Responsible for the payment"
+msgstr "Responsable del pago"
+
+#: View/Payments/index.ctp:60
+msgid "Email"
+msgstr "Correo"
+
+#: View/Payments/index.ctp:74
+msgid "Pay"
+msgstr "Pagar"
+
+#: View/Payments/index.ctp:107;118;133;138;143;154;165
+msgid "You must fill in this field"
+msgstr "Debe llenar esta campo"
+
+#: View/Payments/index.ctp:114
+msgid "RIF must be formatted J-000000000"
+msgstr "El RIF debe tener el formato J-000000000"
+
+#: View/Payments/index.ctp:124
+msgid "The amount must be greater than 0"
+msgstr "El monto debe ser mayor que 0"
+
+#: View/Payments/index.ctp:129
+msgid "The amount must be less than 999999"
+msgstr "El monto debe ser menor que 999999"
+
+#: View/Payments/index.ctp:150
+msgid "You must place a valid email"
+msgstr "Debe colocar un correo válido "
+
+#: View/Payments/index.ctp:161
+msgid ""
+"The phone must contain an area code of 4 digits followed by a hyphen (-) and "
+"7 digits"
+msgstr ""
+"El teléfono debe contener un código de área de 4 dígitos seguido de un guion "
+"(-) y 7 dígitos"
+
+#: View/Payments/pending.ctp:12
+msgid ""
+"Your payment is being processed , in a few moments receive an email with "
+"information."
+msgstr ""
+"Su pago esta siendo procesado, en breves momentos recibirá un correo con la "
+"información."
+
+#: View/Payments/success.ctp:12
+msgid ""
+"Your payment has been successfully made ​​, in a few moments you will receive "
+"an email with the information. <br> Thank you for trusting us !"
+msgstr ""
+"Su pago ha sido realizado exitosamente, en breves momentos recibirá un correo "
+"con la información. <br> ¡Gracias por confiar en nosotros!"

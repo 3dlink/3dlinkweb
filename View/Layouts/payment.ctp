@@ -57,6 +57,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.8, user-scalable=no">
 </head>
 <body>
+
+<?php
+	$uri = explode("?", $_SERVER['REQUEST_URI'])[0];
+?>
+
 		<div id="content" style="position:relative;">
 
 			<?php echo $this->Session->flash(); ?>
@@ -64,6 +69,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 
+		<div class="language">
+			<ul>
+				<li class="flag"><a href="<?php echo $uri .'?language=esp'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_Spain.png"></a></li>
+				<li class="flag"><a href="<?php echo $uri .'?language=eng'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_United_Kingdom.png"></a></li>
+			</ul>
+		</div>
 
 	<?php echo $this->element('sql_dump'); ?>
 </body>
