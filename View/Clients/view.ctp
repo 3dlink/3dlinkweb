@@ -57,7 +57,8 @@
 			      </div>
       		</div>
       		<div class="margenesVerticales" style="text-align:right;">
-	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'clients';" title="regresar" value = "Atr&aacute;s" style="width: 79px;"> 	  
+	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'clients';" title="regresar" value = "Atr&aacute;s" style="width: 79px;">
+                  <input type = "button" class="btn btn-primary" onclick="window.open(WEBROOT+'clients/imprimir/<?php echo $client['Client']['id']; ?>', '_blank')" title="Click para imprimir" value = "Imprimir" style="width: 79px;">  
 				  </div>
       	</div>    
 </div>          

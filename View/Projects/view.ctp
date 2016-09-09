@@ -135,7 +135,7 @@
                     // $pdf->Cell(40,10,'¡Hola, Mundo!');
                     // $pdf->Output();
                   ?>
-                  <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'projects/imprimir/<?php echo $project['Project']['id']; ?>';" title="Click para imprimir" value = "Imprimir" style="width: 79px;"> 	  
+                  <input type = "button" class="btn btn-primary" onclick="window.open(WEBROOT+'projects/imprimir/<?php echo $project['Project']['id']; ?>','_blank')" title="Click para imprimir" value = "Imprimir" style="width: 79px;"> 	  
 				</div>
       	</div>    
 </div>          

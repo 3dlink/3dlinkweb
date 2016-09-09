@@ -1840,7 +1840,18 @@ body{
     position: absolute;
     z-index: 1000 !important;
     right: 5%;
-    top: 1%;
+    top: 1%; 
+    color: #00deec;
+    font-size: 12px;
+  }
+
+  .language a{
+    color: #00deec;
+  }
+
+  .language a:hover{
+    font-weight: bold;
+    text-decoration: none;
   }
 
   .language ul{
@@ -1851,9 +1862,5 @@ body{
   }
 
   .language li{
-    margin-left: 5px;
-  }
-
-  .flag img{
-    width: 20px;
+    margin: 0 8px;
   }

@@ -364,8 +364,9 @@
 
     <div class="language">
       <ul>
-        <li class="flag"><a href="<?php echo $uri .'?language=esp'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_Spain.png"></a></li>
-        <li class="flag"><a href="<?php echo $uri .'?language=eng'; ?>"><img src="<?php echo $this->webroot;?>img/Flag_of_United_Kingdom.png"></a></li>
+        <li class="flag"><a href="<?php echo $uri .'?language=esp'; ?>">ESP</a></li>
+        |
+        <li class="flag"><a href="<?php echo $uri .'?language=eng'; ?>">ENG</a></li>
       </ul>
     </div>
 

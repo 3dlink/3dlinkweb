@@ -143,7 +143,9 @@
               </table>
             </div> 
       		<div class="margenesVerticales" style="text-align:right;">
-	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'personals';" title="regresar" value = "Atr&aacute;s" style="width: 79px;"> 	  
+	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'personals';" title="regresar" value = "Atr&aacute;s" style="width: 79px;"> 
+
+                  <input type = "button" class="btn btn-primary" onclick="window.open(WEBROOT+'personals/imprimir/<?php echo $personal['Personal']['id']; ?>','_blank')" title="Click para imprimir" value = "Imprimir" style="width: 79px;">	  
 				  </div>
       	</div>    
 </div>        
