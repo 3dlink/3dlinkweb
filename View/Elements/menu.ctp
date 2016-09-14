@@ -74,6 +74,8 @@
                   <a tabindex="-1" href="#">Works</a>
                   <ul class="dropdown-menu submenu">
                     <li><a href="<?php echo $this->webroot.'works/add'; ?>">Nuevo</a></li>
+                    <li><a href="<?php echo $this->webroot.'works'; ?>/type/design">Design</a></li>
+                    <li><a href="<?php echo $this->webroot.'works'; ?>/type/development">Development</a></li>
                     <li><a href="<?php echo $this->webroot.'works'; ?>">Todos</a></li>
                   </ul>
                 </li>
@@ -144,7 +146,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
               <?php if($this->UserAuth->getUserId()): ?>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo $this->webroot; ?>">Ir a la página</a></li>
+                  <li><a href="<?php echo $this->webroot; ?>" target="_blank">Ir a la página</a></li>
                   <li><a href="<?php echo $this->webroot; ?>changePassword">Cambiar Contraseña</a></li>
                   <li><a href="<?php echo $this->webroot.'logout'; ?>">Cerrar Sesión</a></li>
                 </ul>

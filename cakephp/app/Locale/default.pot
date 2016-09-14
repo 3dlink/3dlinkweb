@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-09-07 13:53-0400\n"
+"POT-Creation-Date: 2016-09-13 20:33+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -13,9 +13,9 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"X-Generator: Poedit 1.8.9\n"
 
-#: View/Errors/error400.ctp:19 View/Errors/error500.ctp:19
+#: View/Errors/error400.ctp:19
+#: View/Errors/error500.ctp:19
 msgid "Error"
 msgstr ""
 
@@ -27,7 +27,8 @@ msgstr ""
 msgid "An Internal Error Has Occurred."
 msgstr ""
 
-#: View/Layouts/default.ctp:17 View/Layouts/error.ctp:17
+#: View/Layouts/default.ctp:17
+#: View/Layouts/error.ctp:17
 msgid "CakePHP: the rapid development php framework"
 msgstr ""
 
@@ -131,7 +132,8 @@ msgstr ""
 msgid "Email*"
 msgstr ""
 
-#: View/Pages/home.ctp:329 View/Payments/index.ctp:67
+#: View/Pages/home.ctp:329
+#: View/Payments/index.ctp:67
 msgid "Phone Number"
 msgstr ""
 
@@ -143,11 +145,16 @@ msgstr ""
 msgid "Write your questions here.*"
 msgstr ""
 
+#: View/Pages/home.ctp:356
+msgid "All rights reserved, 3D Link. 2016"
+msgstr ""
+
 #: View/Payments/failure.ctp:12
 msgid "Your payment has not been made ​​, in a few moments you will receive an email with the information."
 msgstr ""
 
-#: View/Payments/failure.ctp:16 View/Payments/pending.ctp:16
+#: View/Payments/failure.ctp:16
+#: View/Payments/pending.ctp:16
 #: View/Payments/success.ctp:16
 msgid "Back"
 msgstr ""
@@ -219,3 +226,4 @@ msgstr ""
 #: View/Payments/success.ctp:12
 msgid "Your payment has been successfully made ​​, in a few moments you will receive an email with the information. <br> Thank you for trusting us !"
 msgstr ""
+

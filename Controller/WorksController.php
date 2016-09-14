@@ -26,6 +26,42 @@ class WorksController extends AppController {
 		$this->set('works', $this->Paginator->paginate());
 	}
 
+	public function type($cond = null){
+		$this->layout="admin";
+		$this->Work->recursive = 0;
+
+		if ($cond == 'design') {
+			$this->Paginator->settings = array
+			(	'conditions' => array('Work.type =' => 'Design'),
+				'order' => array('Work.orden' => 'asc')
+				);
+		} elseif ($cond == 'development') {
+			$this->Paginator->settings = array
+			(	'conditions' => array('Work.type =' => 'Development'),
+				'order' => array('Work.orden' => 'asc')
+				);
+		}
+
+		$works =  $this->Paginator->paginate();
+		$qty = count($works);
+		$this->set('works', $works);
+		$this->set('qty', $qty);
+		$this->set('type', $cond);
+	}
+
+	public function order($type){
+
+		$qty = count($this->request->data)/2;
+
+		for ($i=1; $i <= $qty; $i++) { 
+			$this->Work->read(null, $this->request->data['id'.$i]);
+			$this->Work->set('orden', $this->request->data['order'.$i]);
+			$this->Work->save();
+		}
+
+		$this->redirect('/works/type/'.$type);
+	}
+
 /**
  * view method
  *
@@ -49,7 +85,15 @@ class WorksController extends AppController {
 	public function add() {
 		$this->layout="admin";
 		if ($this->request->is('post')) {
+
+			$type = $this->request->data['Work']['type'];
+			$orden = $this->Work->query("SELECT MAX(orden) as orden FROM work WHERE type = '".$type."';")[0][0]['orden'];
+
+			$orden++;
+
 			$this->Work->create();
+			$this->Work->set('orden', $orden);
+
 			if ($this->Work->save($this->request->data)) {
 				$this->Session->setFlash(__('The work has been saved.'));
 				return $this->redirect(array('action' => 'index'));

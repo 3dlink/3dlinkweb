@@ -353,7 +353,7 @@
         </div>
     </div>
     <div class="copyright" style="float:left;">
-        <p class="right">All rights reserved, 3D Link. 2016</p>
+        <p class="right"><?php echo __("All rights reserved, 3D Link. 2016") ?></p>
     </div>
 
 </section>

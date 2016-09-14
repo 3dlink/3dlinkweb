@@ -170,7 +170,6 @@ class PersonalsController extends AppController {
 		$pdf->SetFont('Arial','B',16);
 		$pdf->Ln();
 		$pdf->Ln();
-		$pdf->Ln();
 		$pdf->Cell(0,10,'Fecha: '.date("d") . "/" . date("m") . "/" . date("Y"),0,1);
 		$pdf->Ln();
 
@@ -247,15 +246,14 @@ class PersonalsController extends AppController {
 		$pdf->MultiCell(0,5,utf8_decode($personal['Personal']['bio']),0,1);
 		$pdf->Ln();
 
+		$pdf->AddPage();
+		$pdf->Ln();$pdf->Ln();
+
 		$pdf->SetFont('Arial','B',16);
 		$pdf->Cell(90,5,utf8_decode('Observaciones: '),0,0);
 		$pdf->SetFont('Arial','',16);
 		$pdf->MultiCell(0,5,utf8_decode($personal['Personal']['observations']),0,1);
-		$pdf->Ln();
-
-		$pdf->AddPage();
-
-		$pdf->Ln();$pdf->Ln();$pdf->Ln();
+		$pdf->Ln();		
 
 		$pdf->SetFont('Arial','B',16);
 		$pdf->Cell(0,10,utf8_decode('Proyectos: '),0,0);
@@ -277,76 +275,6 @@ class PersonalsController extends AppController {
 			$pdf->MultiCell(0,5,utf8_decode($project['status']),0,1);
 			$pdf->Ln();
 		}
-
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Programadores Asignados: '),0,0);
-		// $pdf->Ln();$pdf->Ln();
-		// $pdf->SetFont('Arial','',16);
-		// foreach ($devs as $item) {
-
-		// 	$pdf->Cell(20,8,utf8_decode($item['Nombre'].' - Salario: '.$item['Salario']),0,1);
-
-		// }
-		// $pdf->Ln();
-		
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Precio: '),0,0);
-		// $pdf->SetFont('Arial','',16);
-		// $pdf->Cell(0,5,utf8_decode($project['Project']['price']),0,1);
-		// $pdf->Ln();
-
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Moneda: '),0,0);
-		// $pdf->SetFont('Arial','',16);
-		// $pdf->Cell(0,5,utf8_decode($project['Project']['currency']),0,1);
-		// $pdf->Ln();
-
-		// $date_ini = date_create($project['Project']['init_date']);
-  //   	$date_end = date_create($project['Project']['end_date']);
-  //   	$interval = date_diff($date_ini, $date_end);
-  //   	$interval = $interval->m;
-  //   	if($interval == '0'){
-  //   		$interval = '1';
-  //   	}
-  //   	$sumatotaldelsalariodemierdade3dlink = '0';
-
-		// foreach ($project['Personal'] as $persona) {
-		// 	if(is_array($persona)){
-		// 		$salario = $this->Cargo->findById($persona['cargo_id']);
-		// 		array_push($devs,array('Nombre'=>$persona['name'], 'Salario' =>$salario['Cargo']['salary'] * $interval));
-		// 		$sumatotaldelsalariodemierdade3dlink = $sumatotaldelsalariodemierdade3dlink + $salario['Cargo']['salary'] * $interval;
-		// 	}
-		// }
-
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Costo de Recursos: '),0,0);
-		// $pdf->SetFont('Arial','',16);
-		// $pdf->Cell(0,5,utf8_decode($sumatotaldelsalariodemierdade3dlink),0,1);
-		// $pdf->Ln();
-
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Asana URL: '),0,0);
-		// $pdf->SetFont('Arial','',16);
-		// $pdf->Cell(0,5,utf8_decode($project['Project']['asana_url']),0,1);
-		// $pdf->Ln();
-		
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Status: '),0,0);
-		// $pdf->SetFont('Arial','',16);
-		// $pdf->Cell(0,5,utf8_decode($project['Project']['status']),0,1);
-		// $pdf->Ln();
-
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Tipo: '),0,0);
-		// $pdf->SetFont('Arial','',16);
-		// $pdf->Cell(0,5,utf8_decode($project['Project']['type']),0,1);
-		// $pdf->Ln();
-
-		// $pdf->SetFont('Arial','B',16);
-		// $pdf->Cell(90,5,utf8_decode('Descripcion: '),0,0);
-		// $pdf->SetFont('Arial','',16);
-		// $pdf->Cell(0,5,utf8_decode($project['Project']['description']),0,1);
-		// $pdf->Ln();
 
 		$pdf->Output();
 

@@ -178,7 +178,6 @@ class ProjectsController extends AppController {
 		$pdf->SetFont('Arial','B',16);
 		$pdf->Ln();
 		$pdf->Ln();
-		$pdf->Ln();
 		$pdf->Cell(0,10,'Fecha: '.date("d") . "/" . date("m") . "/" . date("Y"),0,1);
 		$pdf->Ln();
 

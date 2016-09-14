@@ -65,7 +65,7 @@ class PagesController extends AppController {
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->set('personals',$this->Personal->find('all',array('conditions'=> array('Personal.active'=>'1'))));
-		$this->set('works',$this->Work->find('all'));
+		$this->set('works',$this->Work->find('all', array('order' => array('Work.orden' => 'asc'))));
 		$this->set('quotes',$this->Quote->find('all'));
 
 		try {
