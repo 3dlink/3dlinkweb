@@ -519,10 +519,10 @@ $('.design-sel').click(function(){
 $('#submit1').click(function(){
 
     if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
-      alert('Please write your name, email and your question.');
+      alert("<?php echo __('Please write your name, email and your question.') ?>");
     }
     else{
-        $('#submit1').html("Wait...");
+        $('#submit1').html("<?php echo __("Wait...") ?>");
         $('#submit1').prop('disabled', true);
         var data = {
         name : $('#name').val(),
@@ -533,8 +533,8 @@ $('#submit1').click(function(){
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            alert('Thanks for your contact, we will contact you soon.');
-            $('#submit1').html("SUBMIT");
+            alert("<?php echo __('Thanks for your contact, we will contact you soon.')?>");
+            $('#submit1').html("<?php echo __("SUBMIT") ?>");
             $('#name').val('');
             $('#email').val('');
             $('#phone').val('');
@@ -550,10 +550,10 @@ $('#submit1').click(function(){
 $('#submit2').click(function(){
 
     if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
-      alert('Please write your name, email and your question.');
+      alert('<? php echo __("Please write your name, email and your question.") ?>');
     }
     else{
-        $('#submit2').html("Wait...");
+        $('#submit2').html("<?php echo __("Wait...") ?>");
         $('#submit2').prop('disabled', true);
         var data = {
         name : $('#name').val(),
@@ -564,8 +564,8 @@ $('#submit2').click(function(){
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            alert('Thanks for your contact, we will contact you soon.');
-            $('#submit2').html("SUBMIT");
+            alert('<?php echo __("Thanks for your contact, we will contact you soon.")?>');
+            $('#submit2').html("<?php echo __("SUBMIT") ?>");
             $('#name').val('');
             $('#email').val('');
             $('#phone').val('');

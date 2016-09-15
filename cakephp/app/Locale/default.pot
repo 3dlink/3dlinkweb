@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-09-13 20:33+0200\n"
+"POT-Creation-Date: 2016-09-15 19:26+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -137,7 +137,7 @@ msgstr ""
 msgid "Phone Number"
 msgstr ""
 
-#: View/Pages/home.ctp:331
+#: View/Pages/home.ctp:331;537;568
 msgid "SUBMIT"
 msgstr ""
 
@@ -147,6 +147,18 @@ msgstr ""
 
 #: View/Pages/home.ctp:356
 msgid "All rights reserved, 3D Link. 2016"
+msgstr ""
+
+#: View/Pages/home.ctp:522
+msgid "Please write your name, email and your question."
+msgstr ""
+
+#: View/Pages/home.ctp:525;556
+msgid "Wait..."
+msgstr ""
+
+#: View/Pages/home.ctp:536;567
+msgid "Thanks for your contact, we will contact you soon."
 msgstr ""
 
 #: View/Payments/failure.ctp:12
