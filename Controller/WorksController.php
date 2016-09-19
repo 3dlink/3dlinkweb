@@ -96,10 +96,19 @@ class WorksController extends AppController {
 
 			if ($this->Work->save($this->request->data)) {
 				$this->Session->setFlash(__('The work has been saved.'));
-				$this->_compress($this->request->data['Work']['img1']);
-				$this->_compress($this->request->data['Work']['img2']);
-				$this->_compress($this->request->data['Work']['img3']);
-				$this->_compress($this->request->data['Work']['img4']);
+
+				if (isset($this->request->data['Work']['img1']))
+					{$this->_compress($this->request->data['Work']['img1']);}
+
+				if (isset($this->request->data['Work']['img2']))
+					{$this->_compress($this->request->data['Work']['img2']);}
+
+				if (isset($this->request->data['Work']['img3']))
+					{$this->_compress($this->request->data['Work']['img3']);}
+
+				if (isset($this->request->data['Work']['img4']))
+					{$this->_compress($this->request->data['Work']['img4']);}
+
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The work could not be saved. Please, try again.'));
@@ -122,6 +131,24 @@ class WorksController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Work->save($this->request->data)) {
 				$this->Session->setFlash(__('The work has been saved.'));
+
+				if ($this->request->data['Work']['img1'] != $this->Work->data['Work']['img1']){
+					if (isset($this->request->data['Work']['img1']))
+						{$this->_compress($this->request->data['Work']['img1']);}
+				}
+				if ($this->request->data['Work']['img2'] != $this->Work->data['Work']['img2']){
+					if (isset($this->request->data['Work']['img2']))
+						{$this->_compress($this->request->data['Work']['img2']);}
+				}
+				if ($this->request->data['Work']['img3'] != $this->Work->data['Work']['img3']){
+					if (isset($this->request->data['Work']['img3']))
+						{$this->_compress($this->request->data['Work']['img3']);}
+				}
+				if ($this->request->data['Work']['img4'] != $this->Work->data['Work']['img4']){
+					if (isset($this->request->data['Work']['img4']))
+						{$this->_compress($this->request->data['Work']['img4']);}
+				}
+
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The work could not be saved. Please, try again.'));

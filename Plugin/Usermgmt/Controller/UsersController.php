@@ -134,12 +134,12 @@ class UsersController extends UserMgmtAppController {
 				}
 				// check for inactive account
 				if ($user['User']['id'] != 1 and $user['User']['active']==0) {
-						$this->Session->setFlash('Usuario inactivo.', 'default', array('class' => 'error_message'));
+						$this->Session->setFlash('Inactive user.', 'default', array('class' => 'error_message'));
 						return;
 				}
 				// check for verified account
 				if ($user['User']['id'] != 1 and $user['User']['email_verified']==0) {
-						$this->Session->setFlash('Usuario inactivo.', 'default', array('class' => 'error_message'));
+						$this->Session->setFlash('Inactive user.', 'default', array('class' => 'error_message'));
 						return;
 				}
 
@@ -235,7 +235,7 @@ class UsersController extends UserMgmtAppController {
 						$this->UserAuth->login($user);
 						$this->redirect('/');
 					} else {
-						$this->Session->setFlash('Por favor revise su correo y confirme su registro.', 'default', array('class' => 'success_message'));
+						$this->Session->setFlash('Please check your mail and confirm your registration', 'default', array('class' => 'success_message'));
 						$this->redirect('/');
 					}
 				}
@@ -292,7 +292,7 @@ class UsersController extends UserMgmtAppController {
 					$user['User']['password'] = $this->UserAuth->makePassword($this->request->data['User']['password'], $salt);
 					$this->User->save($user,false);
 					$this->LoginToken->deleteAll(array('LoginToken.user_id'=>$userId), false);
-					$this->Session->setFlash('Contraseña cambiada con éxito.', 'default', array('class' => 'success_message'));
+					$this->Session->setFlash('Password changed successfully.', 'default', array('class' => 'success_message'));
 					$this->redirect('/editUser/');
 				}
 			}
@@ -321,7 +321,7 @@ class UsersController extends UserMgmtAppController {
 				$this->request->data['User']['salt'] = $salt;
 				$this->request->data['User']['password'] = $this->UserAuth->makePassword($this->request->data['User']['password'], $salt);
 				$this->User->save($this->request->data,false);
-				$this->Session->setFlash('El usuario se agregó correctamente.', 'default', array('class' => 'success_message'));
+				$this->Session->setFlash('User successfully created.', 'default', array('class' => 'success_message'));
 				$this->redirect('/allUsers');
 			}
 		}
@@ -343,10 +343,10 @@ class UsersController extends UserMgmtAppController {
 					//debug($this->request->data);
 					if($this->User->save($this->request->data)){
 						$_SESSION["avatar"]=$this->request->data['User']['avatar'];
-						$this->Session->setFlash('El usuario se actualizó con éxito.', 'default', array('class' => 'success_message'));
+						$this->Session->setFlash('User successfully updated.', 'default', array('class' => 'success_message'));
 						$this->redirect('/');
 					}else{
-						$this->Session->setFlash('Error actualizando al usuario, por favor intente de nuevo.', 'default', array('class' => 'error_message'));
+						$this->Session->setFlash('Error updating user, please try again.', 'default', array('class' => 'error_message'));
 					}
 
 				}
@@ -379,7 +379,7 @@ class UsersController extends UserMgmtAppController {
 			if ($this->request -> isPost()) {
 				if ($this->User->delete($userId, false)) {
 					$this->LoginToken->deleteAll(array('LoginToken.user_id'=>$userId), false);
-					$this->Session->setFlash(__('Usuario se ha eliminado con éxito'));
+					$this->Session->setFlash(__('User successfully deleted.'));
 				}
 			}
 			$this->redirect('/allUsers');
@@ -413,9 +413,9 @@ class UsersController extends UserMgmtAppController {
 			$user['User']['active']=($active) ? 1 : 0;
 			$this->User->save($user,false);
 			if($active) {
-				$this->Session->setFlash('El usuario se activó con éxito.', 'default', array('class' => 'success_message'));
+				$this->Session->setFlash('User successfully activated.', 'default', array('class' => 'success_message'));
 			} else {
-				$this->Session->setFlash('El usuario se desactivó con éxito.', 'default', array('class' => 'success_message'));
+				$this->Session->setFlash('User successfully deactivated.', 'default', array('class' => 'success_message'));
 			}
 		}
 		$this->redirect('/allUsers');
@@ -433,7 +433,7 @@ class UsersController extends UserMgmtAppController {
 			$user['User']['id']=$userId;
 			$user['User']['email_verified']=1;
 			$this->User->save($user,false);
-			$this->Session->setFlash('Correo electrónico del usuario se verifico con éxito.', 'default', array('class' => 'success_message'));
+			$this->Session->setFlash('Email successfully verified.', 'default', array('class' => 'success_message'));
 		}
 		$this->redirect('/allUsers');
 	}
@@ -468,16 +468,16 @@ class UsersController extends UserMgmtAppController {
 						if (SEND_REGISTRATION_MAIL && EMAIL_VERIFICATION) {
 							$this->User->sendRegistrationMail($user);
 						}
-						$this->Session->setFlash('Gracias, tu cuenta ha sido activada.', 'default', array('class' => 'success_message'));
+						$this->Session->setFlash('Thank you, your account has been activated.', 'default', array('class' => 'success_message'));
 					}
 				} else {
-					$this->Session->setFlash('Gracias, tu cuenta ha sido activada.', 'default', array('class' => 'success_message'));
+					$this->Session->setFlash('Thank you, your account has been activated.', 'default', array('class' => 'success_message'));
 				}
 			} else {
-				$this->Session->setFlash('Lo sentimos algo salió mal , por favor haga clic en el enlace de nuevo.', 'default', array('class' => 'error_message'));
+				$this->Session->setFlash('Something went wrong, please click the link again.', 'default', array('class' => 'error_message'));
 			}
 		} else {
-			$this->Session->setFlash('Lo sentimos algo salió mal , por favor haga clic en el enlace de nuevo.', 'default', array('class' => 'error_message'));
+			$this->Session->setFlash('Something went wrong, please click the link again.', 'default', array('class' => 'error_message'));
 		}
 		$this->redirect('/login');
 	}
@@ -496,16 +496,16 @@ class UsersController extends UserMgmtAppController {
 				if (empty($user)) {
 					$user = $this->User->findByEmail($email);
 					if (empty($user)) {
-						$this->Session->setFlash('Nombre de usuario o Correo electrónico incorrecto.', 'default', array('class' => 'error_message'));
+						$this->Session->setFlash('Username or email incorrect.', 'default', array('class' => 'error_message'));
 						return;
 					}
 				}
 
 				$userId=$user['User']['id'];
-				$fromNameConfig = 'Bricks USA';
-				$from = array('info@bricksusa.com');
+				$fromNameConfig = '3Dlink Web';
+				$from = array('info@3dlinkweb.com');
 				$to = $user['User']['email'];
-				$subject = 'Bricks USA'.': Solicitud para restablecer la contraseña';
+				$subject = '3Dlink Web'.': Forgot password request';
 				$activate_key = $this->User->getActivationKey($user['User']['password']);
 				$link = Router::url("/activatePassword?ident=$userId&activate=$activate_key",true);
 				$content= "Bienvenido ".$user['User']['first_name'].", vamos a ayudarlo a iniciado sesión

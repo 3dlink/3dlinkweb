@@ -1457,7 +1457,7 @@ body{
     }
 
     .language{
-      top: 5px !important;
+      top: 40px !important;
     }
 
   }
@@ -1885,5 +1885,11 @@ body{
     }
     .contact-esp-img img{
       width: 100%;
+    }
+  }
+
+  @media (max-width: 670px){
+    .contact-esp-img{
+      top: -50px !important;
     }
   }

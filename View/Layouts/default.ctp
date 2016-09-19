@@ -125,22 +125,58 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			</div>
 			<div class="menu-options-mobile">
 				<a onclick="$('body').scrollTo('#aboutus',2000);" class="animate2">
-					<span class="desc animate2"> About Us </span>
+					<span class="desc animate2">
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("About Us");
+					        }
+					        else{
+					          	echo "Sobre Nosotros";
+					        }
+					    ?>
+					</span>
 				</a>
 				<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
 
 				<a onclick="$('body').scrollTo('#o-work',2000);" class="animate2">
-					<span class="desc animate2"> Our Work </span>
+					<span class="desc animate2"> 
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("Our Work");
+					        }
+					        else{
+					          	echo "Nuestro Trabajo";
+					        }
+					    ?>
+					</span>
 				</a>
 				<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
 
 				<a onclick="$('body').scrollTo('#w-offer',2000);"  class="animate2">
-					<span class="desc animate2"> What We Offer </span>
+					<span class="desc animate2"> 
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("What We Offer");
+					        }
+					        else{
+					          	echo "Lo Que Ofrecemos";
+					        }
+					    ?>
+					</span>
 				</a>
 				<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
 
 				<a onclick="$('body').scrollTo('#contactus',2000);" class="animate2">
-					<span class="desc animate2"> Contact Us </span>
+					<span class="desc animate2"> 
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("Contact Us");
+					        }
+					        elseif ($this->session->read('Config.language') == 'esp'){
+					        	echo "Contáctanos";
+					        }
+					    ?>
+					</span>
 				</a>
 			</div>
 		</div>
@@ -160,25 +196,61 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<ul class="navbar-menu animate2">
 				<li>
 					<a onclick="$('body').scrollTo('#aboutus',2000);"  class="animate2">
-						<span class="desc animate2"> About Us </span>
+						<span class="desc animate2">
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("About Us");
+					        }
+					        else{
+					          	echo "Sobre Nosotros";
+					        }
+					    ?>
+					</span>
 					</a>
 				</li>
 				<div class="liner-menu"></div>
 				<li>
 					<a onclick="$('body').scrollTo('#o-work',2000);" class="animate2">
-						<span class="desc animate2"> Our Work </span>
+						<span class="desc animate2"> 
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("Our Work");
+					        }
+					        else{
+					          	echo "Nuestro Trabajo";
+					        }
+					    ?>
+					</span>
 					</a>
 				</li>
 				<div class="liner-menu"></div>
 				<li>
 					<a onclick="$('body').scrollTo('#w-offer',2000);"  class="animate2">
-						<span class="desc animate2"> What We Offer </span>
+						<span class="desc animate2"> 
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("What We Offer");
+					        }
+					        else{
+					          	echo "Lo Que Ofrecemos";
+					        }
+					    ?>
+					</span>
 					</a>
 				</li>
 				<div class="liner-menu"></div>
 				<li>
 					<a onclick="$('body').scrollTo('#contactus',2000);" class="animate2">
-						<span class="desc animate2"> Contact Us </span>
+						<span class="desc animate2"> 
+						<?php 
+        					if ($this->session->read('Config.language') == 'eng'){
+          						echo __("Contact Us");
+					        }
+					        elseif ($this->session->read('Config.language') == 'esp'){
+					        	echo "Contáctanos";
+					        }
+					    ?>
+					</span>
 					</a>
 				</li>
 			</ul>

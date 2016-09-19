@@ -329,7 +329,7 @@
 </section>
 
 <section class="contact-us">
-    <div id="contactus" class="contact-text-back <?php if($this->session->read('Config.language') == 'esp') echo 'contact-esp-img'?>" <?php if($this->session->read('Config.language') == 'esp') echo "style='top: -12%'"?>>
+    <div id="contactus" class="contact-text-back <?php if($this->session->read('Config.language') == 'esp') echo 'contact-esp-img'?>" <?php if($this->session->read('Config.language') == 'esp') echo "style='top: -90px'"?>>
         <img src="<?php echo $this->webroot;?>img/<?php 
         if ($this->session->read('Config.language') == 'eng'){
           echo "Contact.png";

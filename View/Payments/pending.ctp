@@ -6,8 +6,9 @@
 	</section>
 </header>
 
-<div class="container success_container">
-	<div style = "width:100%; display:table-cell; vertical-align: middle;">
+<div class="container success_container" style ="position:relative;">
+	<div style ="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); width:100%;">
+
 		<div class="success_message" style="background-color:#121317; color:#fff;">
 			<span> <?php echo __("Your payment is being processed , in a few moments receive an email with information.") ?></span>
 		</div>

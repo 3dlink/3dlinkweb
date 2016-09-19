@@ -2,13 +2,13 @@
 	<div id="profile_content" class="change_pass">
 					<?php echo $this->Form->create('User', array('action' => 'changePassword')); ?>
     <div class="form-group">
-      <?php echo $this->Form->input("oldpassword" ,array("type"=>"password",'label' => 'Contraseña anterior','div' => false,'class'=>"form-control inp_edit",'error' => array('attributes' => array('wrap' => 'div','class' => 'error_message')) ))?>
+      <?php echo $this->Form->input("oldpassword" ,array("type"=>"password",'label' => 'Old password','div' => false,'class'=>"form-control inp_edit",'error' => array('attributes' => array('wrap' => 'div','class' => 'error_message')) ))?>
     </div>
 		<div class="form-group">
-      <?php echo $this->Form->input("password" ,array("type"=>"password",'label' => 'Contraseña nueva','div' => false,'class'=>"form-control inp_edit",'error' => array('attributes' => array('wrap' => 'div','class' => 'error_message')) ))?>
+      <?php echo $this->Form->input("password" ,array("type"=>"password",'label' => 'New password','div' => false,'class'=>"form-control inp_edit",'error' => array('attributes' => array('wrap' => 'div','class' => 'error_message')) ))?>
     </div>
     <div class="form-group">
-      <?php echo $this->Form->input("cpassword" ,array("type"=>"password",'label' => 'Repita contraseña nueva','div' => false,'class'=>"form-control inp_edit",'error' => array('attributes' => array('wrap' => 'div','class' => 'error_message')) ))?>
+      <?php echo $this->Form->input("cpassword" ,array("type"=>"password",'label' => 'Repeat new password','div' => false,'class'=>"form-control inp_edit",'error' => array('attributes' => array('wrap' => 'div','class' => 'error_message')) ))?>
     </div>
 		<div id="ry"><div class="ry_h"></div></div>
 		
@@ -16,7 +16,7 @@
 		<div class="bottom_flip flip">
       <div class="flip_items">
         <div class="box front"><button class="bricks_btn edit_btn" type="submit" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">GUARDAR</button></div>
-        <div class="box back"><button class="bricks_btn edit_btn" type="submit" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">GUARDAR</button>
+        <!--<div class="box back"><button class="bricks_btn edit_btn" type="submit" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">GUARDAR</button>-->
         </div>
       </div>
     </div>

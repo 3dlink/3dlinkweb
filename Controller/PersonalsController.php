@@ -80,7 +80,8 @@ class PersonalsController extends AppController {
 			$this->Personal->create();
 			if ($this->Personal->save($this->request->data)) {
 				$this->Session->setFlash(__('The personal has been saved.'));
-				$this->_compress($this->request->data['Personal']['photo']);
+				if (isset($this->request->data['Personal']['photo'])){
+					$this->_compress($this->request->data['Personal']['photo']);}
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The personal could not be saved. Please, try again.'));
@@ -105,6 +106,12 @@ class PersonalsController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Personal->save($this->request->data)) {
 				$this->Session->setFlash(__('The personal has been saved.'));
+
+				if ($this->request->data['Personal']['photo'] != $this->Personal->data['Personal']['photo']){
+					if (isset($this->request->data['Personal']['photo']))
+						{$this->_compress($this->request->data['Personal']['photo']);}
+				}
+
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The personal could not be saved. Please, try again.'));
