@@ -1,27 +1,27 @@
 <article class="card shadow-1">
 <?php echo $this->Form->create('Client'); echo $this->Form->input('id');?>
     <fieldset>
-      <legend>Add Cliente</legend>
+      <legend>Edit Client</legend>
       <div class="margenesHorizontales">
 
 				<div class="col-md-6">
 			        <div class="form-group">
-			          <label>Nombre del Cliente</label>
-			          <?php echo $this->Form->input('company_name',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Nombre del Cliente')); ?>
+			          <label>Client name</label>
+			          <?php echo $this->Form->input('company_name',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Client name')); ?>
 			        </div>
 	      		</div>
 
 	      		<div class="col-md-6">
 			        <div class="form-group">
-			          <label>Pais</label>
-			          <?php echo $this->Form->input('country',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Pais')); ?>
+			          <label>Country</label>
+			          <?php echo $this->Form->input('country',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Country')); ?>
 			        </div>
 	      		</div>
 
 	      		<div class="col-md-6">
 			        <div class="form-group">
-			          <label>Telefono</label>
-			          <?php echo $this->Form->input('phone',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Telefono')); ?>
+			          <label>Phone number</label>
+			          <?php echo $this->Form->input('phone',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Phone number')); ?>
 			        </div>
 	      		</div>
 
@@ -34,22 +34,22 @@
 
 	      		<div class="col-md-6">
 			        <div class="form-group">
-			          <label>Persona de contacto</label>
-			          <?php echo $this->Form->input('manager',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Persona de contacto')); ?>
+			          <label>Contact person</label>
+			          <?php echo $this->Form->input('manager',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Contact person')); ?>
 			        </div>
 	      		</div>
 
 	      		<div class="col-md-6">
 			        <div class="form-group">
-			          <label>Tipo</label>
-			          <?php echo $this->Form->input('type',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Tipo','options'=>array('0'=>'Seleccionar','Persona'=>'Persona','Empresa'=>'Empresa'), 'required'=>true)); ?>
+			          <label>Type</label>
+			          <?php echo $this->Form->input('type',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Type','options'=>array('0'=>'Select','Persona'=>'Person','Empresa'=>'Company'), 'required'=>true)); ?>
 			        </div>
 	      		</div>
 
 				<div class="col-md-12">
 			        <div class="form-group">
-			          <label>Observaciones</label>
-			          <?php echo $this->Form->input('observation',array('type'=> 'textarea', 'div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','placeholder'=>'Agregue sus Observaciones', 'required'=>true)); ?>
+			          <label>Observations</label>
+			          <?php echo $this->Form->input('observation',array('type'=> 'textarea', 'div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','placeholder'=>'Add your observations', 'required'=>true)); ?>
 			        </div>
 				</div>
 
@@ -57,9 +57,9 @@
 <!-- 	      <div id="content_imgs"></div> -->
 
         <div class="margenesVerticales" style="text-align:right;margin-top:30px;float:right;">
-          <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'Clients';" title="regresar" value = "Atr&aacute;s" style="width: 79px;">
+          <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'Clients';" title="regresar" value = "Back" style="width: 79px;">
           <button type="submit" class="btn btn-primary">
-            Guardar
+            Save
           </button>
         </div>
       </div>          

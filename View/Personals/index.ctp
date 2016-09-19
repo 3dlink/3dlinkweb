@@ -2,7 +2,7 @@
  <!--List  Open-->
       <article class="card shadow-1">
           <fieldset>
-            <legend>Personal</legend>
+            <legend>Staff</legend>
             <!--Search Open-->
             <div class="margenesHorizontales">
               <div class="col-md-6">
@@ -19,7 +19,7 @@
               </div>
               <div class="col-md-6">
                 <div class=" margenesVerticales" style="text-align: right;">
-                  <buttom onclick="window.location.href=WEBROOT+'personals/add';" class="btn btn-primary">Add personal</buttom>
+                  <buttom onclick="window.location.href=WEBROOT+'personals/add';" class="btn btn-primary">Add Staff</buttom>
                 </div>
               </div>
               <div style="clear:both;"></div>
@@ -28,10 +28,10 @@
             <div class="margenesHorizontales">
               <table class="table table-striped">
                 <tr>
-                  <th>Nombre</th>
+                  <th>Name</th>
                   <th>CI</th>
-                  <th>Cargo</th>
-                  <th>Trabajo en Home 3DLink</th>
+                  <th>Job</th>
+                  <th>Position at 3DLink Home</th>
                   <th></th>
                 </th>
 
@@ -69,7 +69,7 @@
           </fieldset>          
       </article>
 <p>
-<?php echo $this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, mostrando {:current} Personal de {:count} en total.')));?>
+<?php echo $this->Paginator->counter(array('format' => __('Page {:page} from {:pages}, showing {:current} Personal from {:count}.')));?>
 </p>
 <ul class="pagination">
 <?php

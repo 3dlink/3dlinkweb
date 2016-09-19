@@ -9,10 +9,16 @@
 </section>
 
 <section id="aboutus" class="about-us">
-    <div class="about-text-back">
-        <img class="back-about-img" src="<?php echo $this->webroot;?>img/About-Us.png">
+    <div class="about-text-back <?php if($this->session->read('Config.language') == 'esp') echo 'esp-img' ?>" <?php if($this->session->read('Config.language') == 'esp') echo "style='right: 20%;'"?>>
+        <img class="back-about-img" src="<?php echo $this->webroot;?>img/<?php 
+        if ($this->session->read('Config.language') == 'eng'){
+          echo "About-Us.png";
+        }
+        else{
+          echo 'About-Us-esp.png';
+        }?>">
     </div>
-    <div class="about-descrip">
+    <div class="about-descrip" <?php if($this->session->read('Config.language') == 'esp') echo "style='margin-top:380px;'"?>>
         <p>
           <?php echo __("The 3D Link team is made up of young professionals, each and every one complementing an effective team for the development of technologies. We are keeping our minds open for challenges in order to generate new ideas in this digital era with its growing potentiality. All members have formed their skills at prestigious universities with recognitions throughout their studies and research projects.") ?>
         </p>
@@ -56,8 +62,14 @@
 </section>
 
 <section class="our-work">
-    <div class="ourwork-text-back">
-        <img src="<?php echo $this->webroot;?>img/Our-Work.png">
+    <div class="ourwork-text-back <?php if($this->session->read('Config.language') == 'esp') echo 'esp-img' ?>" <?php if($this->session->read('Config.language') == 'esp') echo "style='top:-25px;left:150px; margin-right: 10px;'"?> >
+        <img src="<?php echo $this->webroot;?>img/<?php 
+        if ($this->session->read('Config.language') == 'eng'){
+          echo "Our-Work.png";
+        }
+        else{
+          echo 'Our-Work-esp.png" style="width:100%';
+        }?>">
     </div>
     <div class="work-selector">
         <div class="development-sel"><?php echo __("DEVELOPMENT") ?></div>
@@ -121,8 +133,14 @@
 </section>
 
 <section class="offer">
-    <div class="offer-text-back">
-        <img src="<?php echo $this->webroot;?>img/Offer.png">
+    <div class="offer-text-back <?php if($this->session->read('Config.language') == 'esp') echo 'esp-img' ?>" <?php if($this->session->read('Config.language') == 'esp') echo "style='top:-40px; right:320px; margin-left: 10px;'"?>>
+        <img src="<?php echo $this->webroot;?>img/<?php 
+        if ($this->session->read('Config.language') == 'eng'){
+          echo "Offer.png";
+        }
+        else{
+          echo 'Offer-esp.png" style="width:100%';
+        }?>">
     </div>
     <div class="clear"></div>
 
@@ -311,10 +329,16 @@
 </section>
 
 <section class="contact-us">
-    <div id="contactus" class="contact-text-back">
-        <img src="<?php echo $this->webroot;?>img/Contact.png">
+    <div id="contactus" class="contact-text-back <?php if($this->session->read('Config.language') == 'esp') echo 'contact-esp-img'?>" <?php if($this->session->read('Config.language') == 'esp') echo "style='top: -12%'"?>>
+        <img src="<?php echo $this->webroot;?>img/<?php 
+        if ($this->session->read('Config.language') == 'eng'){
+          echo "Contact.png";
+        }
+        else{
+          echo "Contact-esp.png";
+        }?>">
     </div>
-    <div class="contact-punch">
+    <div class="contact-punch" <?php if($this->session->read('Config.language') == 'esp') echo "style='display:none;'"?>>
         <img src="<?php echo $this->webroot;?>img/punch-line.png">
     </div>
     <div class="formulario">
@@ -519,10 +543,10 @@ $('.design-sel').click(function(){
 $('#submit1').click(function(){
 
     if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
-      alert('Please write your name, email and your question.');
+      alert("<?php echo __('Please write your name, email and your question.') ?>");
     }
     else{
-        $('#submit1').html("Wait...");
+        $('#submit1').html("<?php echo __("Wait...") ?>");
         $('#submit1').prop('disabled', true);
         var data = {
         name : $('#name').val(),
@@ -533,8 +557,8 @@ $('#submit1').click(function(){
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            alert('Thanks for your contact, we will contact you soon.');
-            $('#submit1').html("SUBMIT");
+            alert("<?php echo __('Thanks for your contact, we will contact you soon.')?>");
+            $('#submit1').html("<?php echo __("SUBMIT") ?>");
             $('#name').val('');
             $('#email').val('');
             $('#phone').val('');
@@ -550,10 +574,10 @@ $('#submit1').click(function(){
 $('#submit2').click(function(){
 
     if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
-      alert('Please write your name, email and your question.');
+      alert('<? php echo __("Please write your name, email and your question.") ?>');
     }
     else{
-        $('#submit2').html("Wait...");
+        $('#submit2').html("<?php echo __("Wait...") ?>");
         $('#submit2').prop('disabled', true);
         var data = {
         name : $('#name').val(),
@@ -564,8 +588,8 @@ $('#submit2').click(function(){
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            alert('Thanks for your contact, we will contact you soon.');
-            $('#submit2').html("SUBMIT");
+            alert('<?php echo __("Thanks for your contact, we will contact you soon.")?>');
+            $('#submit2').html("<?php echo __("SUBMIT") ?>");
             $('#name').val('');
             $('#email').val('');
             $('#phone').val('');

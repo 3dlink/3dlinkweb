@@ -1,19 +1,19 @@
 <article class="card shadow-1">
 <?php echo $this->Form->create('Cargo'); echo $this->Form->input('id');?>
     <fieldset>
-      <legend>Add Cargo</legend>
+      <legend>Edit Job</legend>
       <div class="margenesHorizontales">
 
 	      		<div class="col-md-6">
 			        <div class="form-group">
-			          <label>Cargo</label>
+			          <label>Job</label>
 			          <?php echo $this->Form->input('name',array('div'=>false,'label'=>false,'class'=>'form-control','placeholder'=>'Cargo','required'=>true)); ?>
 			        </div>
 	      		</div>
 
 				<div class="col-md-6">
 			        <div class="form-group">
-			          <label>Salario</label>
+			          <label>Salary</label>
 			          <?php echo $this->Form->input('salary',array('div'=>false,'required'=>true,'label'=>false,'class'=>'form-control','required'=>true, 'min'=>'0')); ?>
 			        </div>
 				</div>
@@ -21,9 +21,9 @@
 <!-- 	      <div id="content_imgs"></div> -->
 
         <div class="margenesVerticales" style="text-align:right;margin-top:30px;float:right;">
-          <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'Cargos';" title="regresar" value = "Atr&aacute;s" style="width: 79px;">
+          <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'Cargos';" title="regresar" value = "Back" style="width: 79px;">
           <button type="submit" class="btn btn-primary">
-            Guardar
+            Save
           </button>
         </div>
       </div>          

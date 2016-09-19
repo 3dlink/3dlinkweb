@@ -1,5 +1,13 @@
 <?php
 
+	require_once("library/tinify/lib/Tinify/Exception.php");
+	require_once("library/tinify/lib/Tinify/ResultMeta.php");
+	require_once("library/tinify/lib/Tinify/Result.php");
+	require_once("library/tinify/lib/Tinify/Source.php");
+	require_once("library/tinify/lib/Tinify/Client.php");
+	require_once("library/tinify/lib/Tinify.php");
+	
+
 	class AppController extends Controller 
 	{
 		var $helpers = array('Form', 'Html', 'Session', 'Js', 'Usermgmt.UserAuth');
@@ -26,6 +34,15 @@
 
 				$this->Session->write('Config.language', $_GET['language']);
 			}  
-		}  
+		}
+
+		function _compress($file){
+			\Tinify\setKey("PTXJLwagfKt6l-r-DTnMNPRycYPVJqrY");
+
+			$source = \Tinify\fromFile("files/".$file);
+			$source->toFile("files/".$file);
+
+			return true;
+		}
 	}
 ?>

@@ -14,7 +14,7 @@ class PDF_Project extends FPDF{
 // Cabecera de página
 	function Header(){
 	    // Logo
-	    $this->Image('img/HeaderReporte.PNG',0,8,200);
+	    $this->Image('img/HeaderReporte.PNG',-12,0,230);
 	    $this->SetFillColor(0,0,0);
 
 	    // Arial bold 15
@@ -27,8 +27,7 @@ class PDF_Project extends FPDF{
 	    $this->Ln(20);
 	}
 	function Footer(){
-		$this->SetY(-15);
-	    $this->Image('img/footerReporte.PNG',0,265,200);
+	    $this->Image('img/footerReporte.PNG',-8,265,235);
 	}
 
 }
@@ -149,7 +148,7 @@ class ProjectsController extends AppController {
 			$programadores[$key] = $value.' - '.$personal['Cargo']['name'];
 		}
 		$cargo_id = $this->Cargo->findByName('Lider de Proyecto');
-		$lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>$cargo_id['Cargo']['id'])));
+		$lideres = $this->Personal->find('list',array('conditions'=>array('cargo_id'=>4)));
 		$personals = $this->Project->Personal->find('list');
 		$clients = $this->Project->Client->find('list');
 		$this->set(compact('personals', 'clients','lideres','programadores'));

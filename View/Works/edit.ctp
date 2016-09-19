@@ -1,7 +1,7 @@
 <article class="card shadow-1">
 <?php echo $this->Form->create('Work'); echo $this->Form->input('id');?>
     <fieldset>
-      <legend>Edit Member</legend>
+      <legend>Edit Work</legend>
       <div class="margenesHorizontales">
 
 			  <div class="col-md-6">
@@ -85,7 +85,7 @@
 
 			<div class="col-md-12">
 		        <div class="form-group">
-		          <label>Imagenes actuales</label>
+		          <label>Current images</label>
 		          <div id="imagenes_content">
 		          	<div id="img_edit" class="img_edit">
 		          		<div class="col-md-6" style="text-align:center;width:260px;height:260px;background-image:url('<?php echo $this->webroot.'files/'.$this->data['Work']['img1']; ?>');background-size:cover;background-repeat:no-repeat;">
@@ -102,9 +102,9 @@
       		</div>
 
         <div class="margenesVerticales" style="text-align:right;margin-top:30px;float:right;">
-          <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'Teams';" title="regresar" value = "Atr&aacute;s" style="width: 79px;">
+          <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'Teams';" title="regresar" value = "Back" style="width: 79px;">
           <button type="submit" class="btn btn-primary">
-            Guardar
+            Save
           </button>
         </div>
       </div>          
@@ -114,25 +114,25 @@
 
 <script type="text/javascript">
 
-$("#img1").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
+$("#img1").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Drag here the file to be uploaded or <a  class="add-files">select it from your computer</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
 	success:function(data){
 		$('#content_img1').append('<input type="hidden" value='+data.xhr.response+' name="data[Work][img1]">');
   }
 });
 
-$("#img2").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
+$("#img2").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Drag here the file to be uploaded or <a  class="add-files">select it from your computer</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
 	success:function(data){
 		$('#content_img2').append('<input type="hidden" value='+data.xhr.response+' name="data[Work][img2]">');
   }
 });
 
-$("#img3").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
+$("#img3").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Drag here the file to be uploaded or <a  class="add-files">select it from your computer</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
 	success:function(data){
 		$('#content_img3').append('<input type="hidden" value='+data.xhr.response+' name="data[Work][img3]">');
   }
 });
 
-$("#img4").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
+$("#img4").dropzone({ url: WEBROOT+"start/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Drag here the file to be uploaded or <a  class="add-files">select it from your computer</a></p>',maxFiles: 1, acceptedFiles: "image/jpeg,image/png,image/gif",
 	success:function(data){
 		$('#content_img4').append('<input type="hidden" value='+data.xhr.response+' name="data[Work][img4]">');
   }

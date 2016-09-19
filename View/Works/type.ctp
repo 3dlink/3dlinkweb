@@ -22,7 +22,7 @@
                   <button class="btn btn-danger cancelBtn hidden" type="button">Cancel</button>
                   <button class="btn btn-success saveBtn hidden" type="button">Save</button>
                   <button class="btn btn-warning orderBtn" type="button">Edit Order</button>
-                  <buttom onclick="window.location.href=WEBROOT+'works/add';" class="btn btn-primary">Add Work</buttom>
+                  <button onclick="window.location.href=WEBROOT+'works/add';" class="btn btn-primary">Add Work</button>
                 </div>
               </div>
               <div style="clear:both;"></div>
@@ -34,6 +34,7 @@
                   <th>Name</th>
                   <th>Type</th>
                   <th>Order</th>
+                  <th></th>
                 </th>
 
                 <?php foreach ($works as $work): ?>

@@ -73,17 +73,17 @@
                 <li class="dropdown-submenu">
                   <a tabindex="-1" href="#">Works</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'works/add'; ?>">Nuevo</a></li>
+                    <li><a href="<?php echo $this->webroot.'works/add'; ?>">New</a></li>
                     <li><a href="<?php echo $this->webroot.'works'; ?>/type/design">Design</a></li>
                     <li><a href="<?php echo $this->webroot.'works'; ?>/type/development">Development</a></li>
-                    <li><a href="<?php echo $this->webroot.'works'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'works'; ?>">All</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
                   <a tabindex="-1" href="#">Quotes</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'quotes/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'quotes'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'quotes/add'; ?>">New</a></li>
+                    <li><a href="<?php echo $this->webroot.'quotes'; ?>">All</a></li>
                   </ul>
                 </li>
               </ul>
@@ -93,45 +93,45 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#">Cargos</a>
+                  <a tabindex="-1" href="#">Jobs</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'cargos/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'cargos'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'cargos/add'; ?>">New</a></li>
+                    <li><a href="<?php echo $this->webroot.'cargos'; ?>">All</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#">Personal</a>
+                  <a tabindex="-1" href="#">Staff</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'personals/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'personals'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'personals/add'; ?>">New</a></li>
+                    <li><a href="<?php echo $this->webroot.'personals'; ?>">All</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#">Clientes</a>
+                  <a tabindex="-1" href="#">Clients</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'clients/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'clients'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'clients/add'; ?>">New</a></li>
+                    <li><a href="<?php echo $this->webroot.'clients'; ?>">All</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#">Proyectos</a>
+                  <a tabindex="-1" href="#">Projects</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'projects/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'projects'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'projects/add'; ?>">New</a></li>
+                    <li><a href="<?php echo $this->webroot.'projects'; ?>">All</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#">Ingresos</a>
+                  <a tabindex="-1" href="#">Incomes</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'ingresos/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'ingresos'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'ingresos/add'; ?>">New</a></li>
+                    <li><a href="<?php echo $this->webroot.'ingresos'; ?>">All</a></li>
                   </ul>
                 </li>
                 <li class="dropdown-submenu">
-                  <a tabindex="-1" href="#">Egresos</a>
+                  <a tabindex="-1" href="#">Expenses</a>
                   <ul class="dropdown-menu submenu">
-                    <li><a href="<?php echo $this->webroot.'egresos/add'; ?>">Nuevo</a></li>
-                    <li><a href="<?php echo $this->webroot.'egresos'; ?>">Todos</a></li>
+                    <li><a href="<?php echo $this->webroot.'egresos/add'; ?>">New</a></li>
+                    <li><a href="<?php echo $this->webroot.'egresos'; ?>">All</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
@@ -143,12 +143,12 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Options <span class="caret"></span></a>
               <?php if($this->UserAuth->getUserId()): ?>
                 <ul class="dropdown-menu">
-                  <li><a href="<?php echo $this->webroot; ?>" target="_blank">Ir a la página</a></li>
-                  <li><a href="<?php echo $this->webroot; ?>changePassword">Cambiar Contraseña</a></li>
-                  <li><a href="<?php echo $this->webroot.'logout'; ?>">Cerrar Sesión</a></li>
+                  <li><a href="<?php echo $this->webroot; ?>" target="_blank">Go to page</a></li>
+                  <li><a href="<?php echo $this->webroot; ?>changePassword">Change password</a></li>
+                  <li><a href="<?php echo $this->webroot.'logout'; ?>">Log out</a></li>
                 </ul>
               <?php else: ?>
                 <ul class="dropdown-menu">

@@ -24,8 +24,7 @@ class PaymentsController extends AppController {
 
 			if ($this->request->data['Payment']['metodo_pago'] == 'paypal') {
 				$this->with_paypal($this->request->data);
-			} elseif ($this->request->data['Payment']['metodo_pago'] == '123pago') {
-				# code...
+				die();
 			} elseif ($this->request->data['Payment']['metodo_pago'] == 'mercadopago') {
 				$this->with_mercadopago($this->request->data);
 			}

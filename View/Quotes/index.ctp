@@ -58,7 +58,7 @@
           </fieldset>          
       </article>
 <p>
-<?php echo $this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, mostrando {:current} Quote de {:count} en total.')));?>
+<?php echo $this->Paginator->counter(array('format' => __('Page {:page} from {:pages}, showing {:current} Quote from {:count}.')));?>
 </p>
 <ul class="pagination">
 <?php

@@ -19,7 +19,7 @@
               </div>
               <div class="col-md-6">
                 <div class=" margenesVerticales" style="text-align: right;">
-                  <buttom onclick="window.location.href=WEBROOT+'works/add';" class="btn btn-primary">Add Work</buttom>
+                  <button onclick="window.location.href=WEBROOT+'works/add';" class="btn btn-primary">Add Work</button>
                 </div>
               </div>
               <div style="clear:both;"></div>
@@ -55,7 +55,7 @@
           </fieldset>          
       </article>
 <p>
-<?php echo $this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, mostrando {:current} Works de {:count} en total.')));?>
+<?php echo $this->Paginator->counter(array('format' => __('Page {:page} from {:pages}, showing {:current} Works from {:count}.')));?>
 </p>
 <ul class="pagination">
 <?php

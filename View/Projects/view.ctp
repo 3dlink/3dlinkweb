@@ -1,18 +1,18 @@
 <article class="card shadow-1">
   <?php //debug($project['Personal']); ?>
   <fieldset>
-      <legend>Proyecto<?php echo ': '; if (!empty($project)) { echo '<small>'.$project['Project']['name'].'</small>'; }?></legend>
+      <legend>Project<?php echo ': '; if (!empty($project)) { echo '<small>'.$project['Project']['name'].'</small>'; }?></legend>
       <div class="margenesHorizontales">
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Nombre: </label>
+				<label>Name: </label>
                 <?php echo h($project['Project']['name'])?>
 			</div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Cliente:</label>
+				<label>Client:</label>
                 <?php echo h($project['Client']['company_name'])?>
                 </select>
 			</div>
@@ -22,13 +22,13 @@
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-                <label>Fecha de Inicio:</label>
+                <label>Start date:</label>
                 <?php echo h($project['Project']['init_date'])?>
 			</div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Fecha de Entrega:</label>
+				<label>Completion date:</label>
                 <?php echo h($project['Project']['end_date'])?>
 			</div>
       		</div>
@@ -37,7 +37,7 @@
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-                <label>Lider de Proyecto:</label>
+                <label>Project leader:</label>
               
              <?php echo h($project['Personal']['name']); ?>
             </div>
@@ -45,7 +45,7 @@
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				<label>Programadores Asignados:</label>
+				<label>Programmers assigned:</label>
 
         <table class="table table-striped">
 
@@ -68,13 +68,13 @@
       	<div>
           <div class="col-md-6">
             <div class="form-group">
-                <label>Precio:</label>
+                <label>Price:</label>
                 <?php echo h($project['Project']['price'])?>
            </div>
           </div>
       		<div class="col-md-6">
       			<div class="form-group">
-                <label>Costo del Proyecto:</label>
+                <label>Project cost:</label>
                 <table>
                   
                     <tr>
@@ -88,7 +88,7 @@
         <div>
           <div class="col-md-6">
             <div class="form-group">
-                <label>Asana URL:</label>
+                <label>Asana's URL:</label>
                 <a href="<?php echo h($project['Project']['asana_url'])?>" target='_blank'><?php echo h($project['Project']['asana_url'])?></a> 
             </div>
           </div>
@@ -103,14 +103,14 @@
       	<div>
           <div class="col-md-6">
             <div class="form-group">
-            <label>Tipo:</label>
+            <label>Type:</label>
                 <?php echo h($project['Project']['type'])?>
             </div>
           </div>
       		
           <div class="col-md-6">
             <div class="form-group">
-        <label>Moneda:</label>
+        <label>Currency:</label>
                 <?php echo h($project['Project']['currency'])?>
       </div>
           </div>
@@ -119,23 +119,15 @@
       	<div>
       		<div class="col-md-12">
       			<div class="form-group">
-                <label>Descripción:</label>
+                <label>Description:</label>
                 <p><?php echo nl2br($project['Project']['description'])?></p>
                 
 			</div>
       		</div>
       		<div class="margenesVerticales" style="text-align:right;">
-	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'projects';" title="regresar" value = "Atr&aacute;s" style="width: 79px;">
-                  <?php
-                    // require('fpdf.php');
+	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'projects';" title="regresar" value = "Back" style="width: 79px;">
 
-                    // $pdf = new FPDF();
-                    // $pdf->AddPage();
-                    // $pdf->SetFont('Arial','B',16);
-                    // $pdf->Cell(40,10,'¡Hola, Mundo!');
-                    // $pdf->Output();
-                  ?>
-                  <input type = "button" class="btn btn-primary" onclick="window.open(WEBROOT+'projects/imprimir/<?php echo $project['Project']['id']; ?>','_blank')" title="Click para imprimir" value = "Imprimir" style="width: 79px;"> 	  
+                  <input type = "button" class="btn btn-primary" onclick="window.open(WEBROOT+'projects/imprimir/<?php echo $project['Project']['id']; ?>','_blank')" title="Click para imprimir" value = "Print" style="width: 79px;"> 	  
 				</div>
       	</div>    
 </div>          

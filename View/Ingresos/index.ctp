@@ -8,24 +8,24 @@ $year_hoy = date("y");
  <form id="pipigrandote" class="right" role="search" method="get">
    <div class="input-group" style="float:left;">
       <select id='filtro'  name="filtro">
-        <option value=''>Seleccione mes</option>
-        <option value='01'>enero</option>
-        <option value='02'>febrero</option>
-        <option value='03'>marzo</option>
-        <option value='04'>abril</option>
-        <option value='05'>mayo</option>
-        <option value='06'>junio</option>
-        <option value='07'>julio</option>
-        <option value='08'>agosto</option>
-        <option value='09'>septiembre</option>
-        <option value='10'>octubre</option>
-        <option value='11'>noviembre</option>
-        <option value='12'>diciembre</option>
+        <option value=''>Select month</option>
+        <option value='01'>january</option>
+        <option value='02'>february</option>
+        <option value='03'>march</option>
+        <option value='04'>april</option>
+        <option value='05'>may</option>
+        <option value='06'>june</option>
+        <option value='07'>july</option>
+        <option value='08'>august</option>
+        <option value='09'>september</option>
+        <option value='10'>october</option>
+        <option value='11'>november</option>
+        <option value='12'>december</option>
       </select>
     </div>
     <div class="input-group" style="float:left;">
       <select id='year-fil'  name="year-fil">
-        <option value=''>Seleccione año</option>
+        <option value=''>Select year</option>
         <option value='2016'>2016</option>
 
         <option value='2017'>2017</option>
@@ -37,20 +37,20 @@ $year_hoy = date("y");
 
       <article class="card shadow-1">
           <fieldset>
-            <legend style="float:left;width:50%;">Ingresos del mes de 
-              <?php if($mes_hoy=='01'){ echo 'enero';}
-                    if($mes_hoy=='02'){ echo 'febrero';}
-                    if($mes_hoy=='03'){ echo 'marzo';}
-                    if($mes_hoy=='04'){ echo 'abril';}
-                    if($mes_hoy=='05'){ echo 'mayo';}
-                    if($mes_hoy=='06'){ echo 'junio';}
-                    if($mes_hoy=='07'){ echo 'julio';}
-                    if($mes_hoy=='08'){ echo 'agosto';}
-                    if($mes_hoy=='09'){ echo 'septiembre';}
-                    if($mes_hoy=='10'){ echo 'octubre';}
-                    if($mes_hoy=='11'){ echo 'noviembre';}
-                    if($mes_hoy=='12'){ echo 'diciembre';}
-              ?> </legend>
+            <legend style="float:left;width:50%;">
+              <?php if($mes_hoy=='01'){ echo 'January';}
+                    if($mes_hoy=='02'){ echo 'February';}
+                    if($mes_hoy=='03'){ echo 'March';}
+                    if($mes_hoy=='04'){ echo 'April';}
+                    if($mes_hoy=='05'){ echo 'May';}
+                    if($mes_hoy=='06'){ echo 'June';}
+                    if($mes_hoy=='07'){ echo 'July';}
+                    if($mes_hoy=='08'){ echo 'August';}
+                    if($mes_hoy=='09'){ echo 'September';}
+                    if($mes_hoy=='10'){ echo 'October';}
+                    if($mes_hoy=='11'){ echo 'November';}
+                    if($mes_hoy=='12'){ echo 'December';}
+              ?> incomes </legend>
 
             <legend style="float:right;width:50%;">Total: <?php echo '<span style="color:green;">'; echo $total; echo'</span>'?> </legend>
             <!--Search Open-->
@@ -65,7 +65,7 @@ $year_hoy = date("y");
               </div>
               <div class="col-md-6">
                 <div class=" margenesVerticales" style="text-align: right;">
-                  <buttom onclick="window.location.href=WEBROOT+'ingresos/add';" class="btn btn-primary">Add Ingreso</buttom>
+                  <buttom onclick="window.location.href=WEBROOT+'ingresos/add';" class="btn btn-primary">Add Income</buttom>
                 </div>
               </div>
               <div style="clear:both;"></div>
@@ -74,9 +74,9 @@ $year_hoy = date("y");
             <div class="margenesHorizontales">
               <table class="table table-striped">
                 <tr>
-                  <th>Fecha</th>
-                  <th>Concepto</th>
-                  <th>Monto</th>
+                  <th>Date</th>
+                  <th>Concept</th>
+                  <th>Amount</th>
                   <th></th>
                 </th>
                 

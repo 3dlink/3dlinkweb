@@ -6,7 +6,7 @@
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-      				        <label>Nombre: </label>
+      				        <label>Name: </label>
                       <?php echo h($personal['Personal']['name'])?>
       			</div>
       		</div>
@@ -25,20 +25,20 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-                <label>Telefono:</label>
+                <label>Phone number:</label>
                 <?php echo h($personal['Personal']['phone'])?>
                 </select>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-        <label>Email Corporativo: </label>
+        <label>Corporate email: </label>
                 <?php echo h($personal['Personal']['email_company'])?>
       </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
-        <label>Email Personal:</label>
+        <label>Personal email:</label>
                 <?php echo h($personal['Personal']['email_personal'])?>
                 </select>
       </div>
@@ -48,13 +48,13 @@
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-                <label>Cargo:</label>
+                <label>Job:</label>
                 <?php echo h($personal['Cargo']['name'])?>
 			      </div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				        <label>Numero de cuenta:</label>
+				        <label>Account number:</label>
                 <?php echo h($personal['Personal']['account_number'])?>
 			      </div>
       		</div>
@@ -63,13 +63,13 @@
       	<div>
       		<div class="col-md-6">
       			<div class="form-group">
-                <label>Tipo de cuenta:</label>
+                <label>Account type:</label>
                 <?php echo h($personal['Personal']['account_type'])?>
 			      </div>
       		</div>
       		<div class="col-md-6">
       			<div class="form-group">
-				        <label>Banco:</label>
+				        <label>Bank:</label>
                 <?php echo h($personal['Personal']['bank'])?>
 			      </div>
       		</div>
@@ -78,7 +78,7 @@
         <div>
           <div class="col-md-6">
             <div class="form-group">
-                <label>Trabajo en 3DLinkweb:</label>
+                <label>Position at 3DLinkweb:</label>
                 <?php echo h($personal['Personal']['job'])?>
             </div>
           </div>
@@ -87,14 +87,14 @@
       	<div>
           <div class="col-md-12">
             <div class="form-group">
-                <label>Biografia:</label>
+                <label>Biography:</label>
                 <p><?php echo nl2br($personal['Personal']['bio'])?></p>
                 
             </div>
           </div>
       		<div class="col-md-12">
       			<div class="form-group">
-                <label>Observaciones:</label>
+                <label>Observations:</label>
                 <p><?php echo nl2br($personal['Personal']['observations'])?></p>
                 
 			      </div>
@@ -106,7 +106,7 @@
 
           <div class="col-md-12">
               <div class="form-group">
-                <label>Imagen actual</label>
+                <label>Actual image</label>
                 <div id="imagenes_content">
                   <div id="img_edit" class="img_edit">
                     <img src="<?php echo $this->webroot.'files/'.$personal['Personal']['photo']; ?>" style="width:25%;">
@@ -116,10 +116,10 @@
           </div>
 
           <div class="margenesHorizontales">
-            <label>Proyectos:</label>
+            <label>Projects:</label>
               <table class="table table-striped">
                 <tr>
-                  <th>Nombre</th>
+                  <th>Name</th>
                   <th>Status</th>
                   <th></th>
                 </th>
@@ -143,9 +143,9 @@
               </table>
             </div> 
       		<div class="margenesVerticales" style="text-align:right;">
-	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'personals';" title="regresar" value = "Atr&aacute;s" style="width: 79px;"> 
+	                <input type = "button" class="btn btn-primary" onclick="window.location.href = WEBROOT+'personals';" title="regresar" value = "Back" style="width: 79px;"> 
 
-                  <input type = "button" class="btn btn-primary" onclick="window.open(WEBROOT+'personals/imprimir/<?php echo $personal['Personal']['id']; ?>','_blank')" title="Click para imprimir" value = "Imprimir" style="width: 79px;">	  
+                  <input type = "button" class="btn btn-primary" onclick="window.open(WEBROOT+'personals/imprimir/<?php echo $personal['Personal']['id']; ?>','_blank')" title="Click para imprimir" value = "Print" style="width: 79px;">	  
 				  </div>
       	</div>    
 </div>        

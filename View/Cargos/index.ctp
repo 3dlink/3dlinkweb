@@ -1,5 +1,5 @@
 <!-- <div class="cargos index">
-	<h2><?php echo __('Cargos'); ?></h2>
+	<h2><?php echo __('Jobs'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<thead>
 	<tr>
@@ -50,7 +50,7 @@
  <!--List  Open-->
       <article class="card shadow-1">
           <fieldset>
-            <legend>Cargos</legend>
+            <legend>Jobs</legend>
             <!--Search Open-->
             <div class="margenesHorizontales">
               <div class="col-md-6">
@@ -67,7 +67,7 @@
               </div>
               <div class="col-md-6">
                 <div class=" margenesVerticales" style="text-align: right;">
-                  <buttom onclick="window.location.href=WEBROOT+'cargos/add';" class="btn btn-primary">Add Cargo</buttom>
+                  <buttom onclick="window.location.href=WEBROOT+'cargos/add';" class="btn btn-primary">Add Job</buttom>
                 </div>
               </div>
               <div style="clear:both;"></div>
@@ -76,8 +76,8 @@
             <div class="margenesHorizontales">
               <table class="table table-striped">
                 <tr>
-                  <th>Nombre</th>
-                  <th>Salario</th>
+                  <th>Name</th>
+                  <th>Salary</th>
                   <th></th>
                 </th>
 
@@ -103,7 +103,7 @@
           </fieldset>          
       </article>
 <p>
-<?php echo $this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, mostrando {:current} Cargos de {:count} en total.')));?>
+<?php echo $this->Paginator->counter(array('format' => __('Page {:page} from {:pages}, showing {:current} Cargos from {:count}.')));?>
 </p>
 <ul class="pagination">
 <?php

@@ -28,9 +28,9 @@
             <div class="margenesHorizontales">
               <table class="table table-striped">
                 <tr>
-                  <th>Nombre</th>
-                  <th>Pais</th>
-                  <th>Tipo</th>
+                  <th>Name</th>
+                  <th>Country</th>
+                  <th>Type</th>
                   <th>Email</th>
                   <th></th>
                 </th>
@@ -61,7 +61,7 @@
           </fieldset>          
       </article>
 <p>
-<?php echo $this->Paginator->counter(array('format' => __('Página {:page} de {:pages}, mostrando {:current} Client de {:count} en total.')));?>
+<?php echo $this->Paginator->counter(array('format' => __('Page {:page} from {:pages}, showing {:current} Client from {:count}.')));?>
 </p>
 <ul class="pagination">
 <?php

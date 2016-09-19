@@ -13,7 +13,7 @@ class PDF_Personal extends FPDF{
 // Cabecera de página
 	function Header(){
 	    // Logo
-	    $this->Image('img/HeaderReporte.PNG',0,8,200);
+	    $this->Image('img/HeaderReporte.PNG',-12,0,230);
 	    $this->SetFillColor(0,0,0);
 
 	    // Arial bold 15
@@ -26,7 +26,7 @@ class PDF_Personal extends FPDF{
 	    $this->Ln(20);
 	}
 	function Footer(){
-	    $this->Image('img/footerReporte.PNG',0,265,200);
+	    $this->Image('img/footerReporte.PNG',-8,265,235);
 	}
 
 }
@@ -80,6 +80,7 @@ class PersonalsController extends AppController {
 			$this->Personal->create();
 			if ($this->Personal->save($this->request->data)) {
 				$this->Session->setFlash(__('The personal has been saved.'));
+				$this->_compress($this->request->data['Personal']['photo']);
 				return $this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The personal could not be saved. Please, try again.'));

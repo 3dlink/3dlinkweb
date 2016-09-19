@@ -28,10 +28,10 @@
             <div class="margenesHorizontales">
               <table class="table table-striped">
                 <tr>
-                  <th>Nombre</th>
-                  <th>Cliente</th>
-                  <th>Tipo</th>
-                  <th>Lider de Proyecto</th>
+                  <th>Name</th>
+                  <th>Client</th>
+                  <th>Type</th>
+                  <th>Project leader</th>
                   <th>Status</th>
                   <th></th>
                 </th>
