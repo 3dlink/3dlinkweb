@@ -537,13 +537,41 @@ $('.design-sel').click(function(){
   $('#development_cont').removeClass('meet_active');
 });
 
+toastr.options = {
+  "closeButton": false,
+  "debug": false,
+  "newestOnTop": false,
+  "progressBar": false,
+  "positionClass": "toast-top-center",
+  "preventDuplicates": true,
+  "onclick": null,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
 
 });
 
 $('#submit1').click(function(){
 
+    var pat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    
     if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
-      alert("<?php echo __('Please write your name, email and your question.') ?>");
+      toastr["error"]("<?php echo __('Please write your name, email and your question.') ?>");
+    }
+    else if (!pat.test($('#email').val())){
+            toastr["error"]("<?php 
+              if($this->session->read('Config.language') == 'esp') echo 'Debe colocar un correo electrónico valido';
+              else {
+                echo 'You must place a valid email';
+              }
+            ?>");
     }
     else{
         $('#submit1').html("<?php echo __("Wait...") ?>");
@@ -557,7 +585,7 @@ $('#submit1').click(function(){
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            alert("<?php echo __('Thanks for your contact, we will contact you soon.')?>");
+            toastr["error"]("<?php echo __('Thanks for your contact, we will contact you soon.')?>");
             $('#submit1').html("<?php echo __("SUBMIT") ?>");
             $('#name').val('');
             $('#email').val('');
@@ -573,8 +601,18 @@ $('#submit1').click(function(){
 
 $('#submit2').click(function(){
 
+    var pat = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
     if($('#email').val() == "" || $('#question').val() == "" || $('#name').val() == "" ){
-      alert('<? php echo __("Please write your name, email and your question.") ?>');
+      toastr["error"]('<? php echo __("Please write your name, email and your question.") ?>');
+    }
+    else if (!pat.test($('#email').val())){
+            toastr["error"]("<?php 
+              if($this->session->read('Config.language') == 'esp') echo 'Debe colocar un correo electrónico valido';
+              else {
+                echo 'You must place a valid email';
+              }
+            ?>");
     }
     else{
         $('#submit2').html("<?php echo __("Wait...") ?>");
@@ -588,7 +626,7 @@ $('#submit2').click(function(){
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            alert('<?php echo __("Thanks for your contact, we will contact you soon.")?>');
+            toastr["success"]('<?php echo __("Thanks for your contact, we will contact you soon.")?>');
             $('#submit2').html("<?php echo __("SUBMIT") ?>");
             $('#name').val('');
             $('#email').val('');

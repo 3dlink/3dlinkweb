@@ -34,6 +34,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->Html->css('slick');
 	echo $this->Html->css('animate');
 	echo $this->Html->css('multiple-select');
+	echo $this->Html->css('toastr.min');
 
 	echo $this->Html->script('jquery-2.2.0.min');
 	echo $this->Html->script('owl.carousel.min');
@@ -42,6 +43,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	echo $this->Html->script('slick.min');
 	echo $this->Html->script('scrollTo');
 	echo $this->Html->script('multiple-select');
+	echo $this->Html->script('toastr.min');
 
 
 	echo $this->fetch('meta');
@@ -68,9 +70,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			})
 
 
-			$('.menu-options-mobile a').on('click', function(){
-				$('.myMenuMobile .navbar-toggler').click();
-			})
+			// $('.menu-options-mobile a').on('click', function(){
+			// 	$('.myMenuMobile .navbar-toggler').click();
+			// })
 
 			$('.myMenuMobile .navbar-toggler').on('click', function(event) {
 				event.preventDefault();
@@ -89,7 +91,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						height: "toggle"
 					}, 2000);
 				}
-
 			})
 
 			if( $(window).width() <= 770 ){
@@ -104,7 +105,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						$('.myMenuMobile .navbar-toggler').click();
 					}
 					$('.navbar-menu2').css('display', 'none');
-					$('.myMenuWeb ul').css('display', 'block')
+					$('.myMenuWeb ul').css('display', 'block');
 				}
 				else{
 					if($('.navbar-menu').hasClass('open')){
@@ -124,7 +125,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				<img class="menuMobileImg" src="img/Logo-Home.png">
 			</div>
 			<div class="menu-options-mobile">
-				<a onclick="$('body').scrollTo('#aboutus',2000);" class="animate2">
+				<a onclick="$('.myMenuMobile .navbar-toggler').click(); setTimeout(function() {$('body').scrollTo('#aboutus',2000);}, 2200);" class="animate2">
 					<span class="desc animate2">
 						<?php 
         					if ($this->session->read('Config.language') == 'eng'){
@@ -138,7 +139,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				</a>
 				<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
 
-				<a onclick="$('body').scrollTo('#o-work',2000);" class="animate2">
+				<a onclick="$('.myMenuMobile .navbar-toggler').click(); setTimeout(function() {$('body').scrollTo('#o-work',2000);}, 2200);" class="animate2">
 					<span class="desc animate2"> 
 						<?php 
         					if ($this->session->read('Config.language') == 'eng'){
@@ -152,7 +153,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				</a>
 				<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
 
-				<a onclick="$('body').scrollTo('#w-offer',2000);"  class="animate2">
+				<a onclick="$('.myMenuMobile .navbar-toggler').click(); setTimeout(function() {$('body').scrollTo('#w-offer',2000);}, 2200);"  class="animate2">
 					<span class="desc animate2"> 
 						<?php 
         					if ($this->session->read('Config.language') == 'eng'){
@@ -166,7 +167,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 				</a>
 				<div class="liner-menu" style="margin: 0 auto; margin-top:6vh; margin-bottom:6vh;"></div>
 
-				<a onclick="$('body').scrollTo('#contactus',2000);" class="animate2">
+				<a onclick="$('.myMenuMobile .navbar-toggler').click(); setTimeout(function() {$('body').scrollTo('#contactus',2000);}, 2150);" class="animate2">
 					<span class="desc animate2"> 
 						<?php 
         					if ($this->session->read('Config.language') == 'eng'){
