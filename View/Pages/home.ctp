@@ -585,7 +585,7 @@ $('#submit1').click(function(){
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            toastr["error"]("<?php echo __('Thanks for your contact, we will contact you soon.')?>");
+            toastr["success"]("<?php echo __('Thanks for your contact, we will contact you soon.')?>");
             $('#submit1').html("<?php echo __("SUBMIT") ?>");
             $('#name').val('');
             $('#email').val('');
@@ -639,6 +639,5 @@ $('#submit2').click(function(){
 
 
 });
-
 
 </script>

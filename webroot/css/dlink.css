@@ -469,6 +469,7 @@ body{
 .bluebar{
   border: 7px solid #1bd8e7;
   width:100%;
+  border-width: 7px 0;
 }
 
 .carousel-container2{
@@ -1432,6 +1433,13 @@ body{
     .design-sel{
       margin-top: 10px;
     }
+
+    .arrow-black-left{
+      right: 101%;
+    }
+    .arrow-black-right{
+      left: 101%;
+    }
   }
 
   @media(max-width: 770px){
@@ -1459,7 +1467,12 @@ body{
     }
 
     .language{
-      top: 20px !important;
+      left: 5% !important;
+      font-size: 15px;
+    }
+
+    .logo-home-img{
+      width: 35%;
     }
 
   }
@@ -1859,6 +1872,11 @@ body{
     font-weight: bold;
     text-decoration: none;
   }
+
+  .language a:focus{
+    outline: none;
+  }
+
 
   .language ul{
     list-style: none;
