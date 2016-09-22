@@ -1,7 +1,7 @@
 <article class="card shadow-1">
   <fieldset>
 
-      <legend>Cargo<?php echo ': '; if (!empty($personal)) { echo '<small>'.$personal['Personal']['name'].'</small>'; }?></legend>
+      <legend>Staff member<?php echo ': '; if (!empty($personal)) { echo '<small>'.$personal['Personal']['name'].'</small>'; }?></legend>
       <div class="margenesHorizontales">
       	<div>
       		<div class="col-md-6">

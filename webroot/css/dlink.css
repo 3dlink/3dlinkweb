@@ -972,7 +972,7 @@ body{
 
 .navbar-fixed-right {
   position: fixed;
-  top: 5%;
+  top: 40px;
   right: 5%;
   border-radius: 0px;
 }
@@ -1468,7 +1468,7 @@ body{
 
     .language{
       left: 5% !important;
-      font-size: 15px;
+      font-size: 18px !important;
     }
 
     .logo-home-img{
@@ -1859,9 +1859,11 @@ body{
     position: absolute;
     z-index: 1000 !important;
     right: 5%;
-    top: 1%; 
+    top: 50px; 
     color: #00deec;
     font-size: 12px;
+    display: table;
+    line-height: 1;
   }
 
   .language a{
