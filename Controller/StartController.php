@@ -9,6 +9,40 @@ class StartController extends AppController{
 	public $components = array('Paginator', 'Session');
 	public $uses = array('Egreso','Ingreso','Personal');
 
+	public function sendAppMail()
+	{
+		$this->autoRender = false;
+		 if (isset($_SERVER['HTTP_ORIGIN'])) {
+	        header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+	        header('Access-Control-Allow-Credentials: true');
+	        header('Access-Control-Max-Age: 86400');    // cache for 1 day
+    	}
+ 
+	    // Access-Control headers are received during OPTIONS requests
+	    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+	 
+	        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+	            header("Access-Control-Allow-Methods: GET, POST, OPTIONS");         
+	 
+	        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+	            header("Access-Control-Allow-Headers:        {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+	    }
+	    
+	    $from = 'info@3dlinkweb.com';
+		$to = array('o0serras0o@gmail.com');
+		$subject=  "A contact has been requested";
+
+		$mensaje=
+		"Has recibido un nuevo mensaje de: \n\n\n"
+		."<b>Nombre:</b> ".$this->request->data['name']."\n"
+		."<b>Teléfono:</b> ".$this->request->data['phone']."\n"
+		."<b>Correo:</b> ".$this->request->data['email']."\n"
+		."<b>Contenido:</b> ".$this->request->data['question']."\n";
+
+		$this->__enviar_correo($from, $to, $subject, $mensaje);
+
+		return json_encode(1);
+	}
 
 	public function sendMail(){
 		$this->autoRender = false;
@@ -37,8 +71,6 @@ class StartController extends AppController{
 		->emailFormat('html')
 		->send($contenido);
 	}
-
-
 
 	public function upload($action = 0) {
 		$this->autoRender = false;

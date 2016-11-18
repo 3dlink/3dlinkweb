@@ -24,7 +24,6 @@ class PaymentsController extends AppController {
 
 			if ($this->request->data['Payment']['metodo_pago'] == 'paypal') {
 				$this->with_paypal($this->request->data);
-				die();
 			} elseif ($this->request->data['Payment']['metodo_pago'] == 'mercadopago') {
 				$this->with_mercadopago($this->request->data);
 			}
@@ -293,6 +292,9 @@ class PaymentsController extends AppController {
 
 // }
 
+// o0serras0o-facilitator-1@gmail.com
+// 12345678
+
 
 //BUYER
 // "id": 226796438
@@ -306,3 +308,6 @@ class PaymentsController extends AppController {
 // "email": "test_user_63622623@testuser.com"
 
 // }
+
+// o0serras0o-buyer-1@gmail.com
+// 12345678

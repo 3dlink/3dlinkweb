@@ -14,7 +14,7 @@
 		public $components = array('Session','RequestHandler', 'Usermgmt.UserAuth');
 		function beforeFilter(){
 			$this->userAuth();
-
+			$this->response->header('Access-Control-Allow-Origin', '*');
 		}
 		private function userAuth(){
 			$this->UserAuth->beforeFilter($this);
