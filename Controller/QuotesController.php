@@ -103,4 +103,17 @@ class QuotesController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+	
+	
+/**
+ * get method
+ *
+ * @throws NotFoundException
+ * @return void
+ */
+	public function getQuotes() {
+		$this->autoRender = false;
+		$allQuotes = $this->Quote->find('all');
+		return json_encode($allQuotes);
+	}
 }
